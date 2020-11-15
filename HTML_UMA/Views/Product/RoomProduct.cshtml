@@ -1,0 +1,529 @@
+﻿@model IEnumerable<HTML_UMA.Models.Product>
+@{
+    ViewBag.Title = "CategoryProduct";
+    var dataMenu = ViewBag.NameCategory as HTML_UMA.Models.Menu;
+    var child = ViewBag.Categorychild as IEnumerable<HTML_UMA.Models.Menu>;
+}
+<div class="main-container col2-left-layout">
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="breadcrumb-wrapper">
+                        <ul class="breadcrumb">
+                            <li class="home">
+                                <a href="/" title="Quay lại trang chủ">
+                                    <span class="fa fa-home"></span>
+                                </a>
+                            </li>
+                            <li class="category9">
+                                <a href="Product/Room" title="">
+                                    Sản phẩm
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-top">
+    </div>
+    <div class="container">
+        <div class="main row">
+            <div class="col-left sidebar uma-lg-2 col-md-3 col-sm-4 col-xs-12">
+                <div class="block categories hidden-xs">
+                    <div class="block-contents">
+                        <style type="text/css">
+                            #cssmenu.two-level > ul > li > a:after {
+                                background-image: url("/skin/frontend/uma/default/images/icons/arrow.svg");
+                            }
+                        </style>
+                        @Html.Action("MenuRoomlv2", "Menu")
+                    </div>
+                </div>
+
+                <div class="block block-layered-nav">
+                    <div class="block-title hidden-lg hidden-md hidden-sm">
+                        <div class="wrapper">
+                            <span class="text text-uppercase">Filter</span>
+                            <div class="toggle-filter-display">
+                                <span class="icon" style="background: url('https://uma.vn/skin/frontend/uma/default/images/icons/filters.svg') no-repeat;"></span>
+                            </div>
+                        </div>
+                        <script type="text/javascript">
+                            $j(".block-layered-nav").on("click", ".toggle-filter-display", function (event) {
+                                $current = $j(event.currentTarget);
+                                $current.closest(".block-layered-nav").toggleClass("open");
+                            })
+                        </script>
+                    </div>
+                    <div class="block-content hidden-xs">
+                        <div class="filter-state">
+                        </div>
+                        <div id="narrow-by-list" class="filters">
+                            <div class="filter clearfix sort-products">
+                                <style type="text/css">
+                                    .sort-container .caret {
+                                        width: 20px;
+                                        height: 20px;
+                                        background: url("https://uma.vn/skin/frontend/uma/default/images/icons/arrow.svg") no-repeat;
+                                    }
+                                </style>
+                                <div class="sort-container">
+                                    <div class="header">
+                                        <h4>
+                                            Xếp theo:
+                                            <div class="hidden-lg hidden-md hidden-sm toggle-display">
+                                                <span class="icon" style="background: url('https://uma.vn/skin/frontend/uma/default/images/icons/filters.svg') no-repeat;"></span>
+                                            </div>
+                                        </h4>
+                                    </div>
+                                    <div class="contents hidden-xs">
+                                        <select class="form-control product-sort-select">
+                                            <option data-value="1">Giá  cao đến thấp</option>
+                                            <option data-value="2">Giá  thấp đến cao</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter clearfix">
+                                <div class="header">
+                                    <h4>
+                                        Lọc theo giá :
+                                    </h4>
+                                </div>
+                                <div class="contents ">
+                                    <p class="text-center hidden-xs">
+                                        <span>Giá từ:</span>
+                                    </p>
+                                    <section class="range-slider">
+                                        <span class="rangeValues">0 VNĐ - 5000000 VNĐ</span>
+                                        <input value="0" min="0" max="5000000" step="500" type="range">
+                                        <input value="5000000" min="0" max="5000000" step="500" type="range">
+                                    </section>
+                                    <div class="text-center">
+                                        <button class="filter-price">Lọc sản phẩm</button>
+                                    </div>
+                                    <style>
+                                        section.range-slider {
+                                            position: relative;
+                                            width: 100%;
+                                            height: 100px;
+                                            float: left;
+                                            text-align: center;
+                                        }
+
+                                            section.range-slider input[type="range"] {
+                                                pointer-events: none;
+                                                position: absolute;
+                                                -webkit-appearance: none;
+                                                -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+                                                border: none;
+                                                border-radius: 14px;
+                                                background: #c41230;
+                                                box-shadow: inset 0 1px 0 0 #cdc6c6, inset 0 -1px 0 0 #d9d4d4;
+                                                -webkit-box-shadow: inset 0 1px 0 0 #cdc6c6, inset 0 -1px 0 0 #d9d4d4;
+                                                overflow: hidden;
+                                                left: 0;
+                                                top: 50px;
+                                                width: 100%;
+                                                outline: none;
+                                                height: 12px;
+                                                margin: 0;
+                                                padding: 0;
+                                            }
+
+                                                section.range-slider input[type="range"]::-webkit-slider-thumb {
+                                                    pointer-events: all;
+                                                    position: relative;
+                                                    z-index: 1;
+                                                    outline: 0;
+                                                    -webkit-appearance: none;
+                                                    width: 20px;
+                                                    height: 20px;
+                                                    border: none;
+                                                    border-radius: 14px;
+                                                    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c41230), color-stop(100%, #413f41));
+                                                    /* android <= 2.2 */
+                                                    background-image: -webkit-linear-gradient(top, #dad8da 0, #413f41 100%);
+                                                    /* older mobile safari and android > 2.2 */
+                                                    background-image: linear-gradient(to bottom, #dad8da 0, #413f41 100%);
+                                                    /* W3C */
+                                                }
+
+                                                section.range-slider input[type="range"]::-moz-range-thumb {
+                                                    pointer-events: all;
+                                                    position: relative;
+                                                    z-index: 10;
+                                                    -moz-appearance: none;
+                                                    width: 20px;
+                                                    height: 20px;
+                                                    border: none;
+                                                    border-radius: 14px;
+                                                    background-image: linear-gradient(to bottom, #c41230 0, #c41230 100%);
+                                                    /* W3C */
+                                                }
+
+                                                section.range-slider input[type="range"]::-ms-thumb {
+                                                    pointer-events: all;
+                                                    position: relative;
+                                                    z-index: 10;
+                                                    -ms-appearance: none;
+                                                    width: 20px;
+                                                    height: 20px;
+                                                    border-radius: 14px;
+                                                    border: 0;
+                                                    background-image: linear-gradient(to bottom, #dad8da 0, #413f41 100%);
+                                                    /* W3C */
+                                                }
+
+                                                section.range-slider input[type="range"]::-moz-range-track {
+                                                    position: relative;
+                                                    z-index: -1;
+                                                    background-color: black;
+                                                    border: 0;
+                                                }
+
+                                                section.range-slider input[type="range"]:last-of-type::-moz-range-track {
+                                                    -moz-appearance: none;
+                                                    background: none transparent;
+                                                    border: 0;
+                                                }
+
+                                                section.range-slider input[type="range"]::-moz-focus-outer {
+                                                    border: 0;
+                                                }
+
+                                        .filter-price {
+                                            margin: auto;
+                                        }
+                                    </style>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="filter clearfix">
+                                <div class="header">
+                                    <h4>
+                                        Lọc theo màu sắc:
+                                        <div class="hidden-lg hidden-md hidden-sm toggle-display">
+                                            <span class="icon" style="background: url('https://uma.vn/skin/frontend/uma/default/images/icons/filters.svg') no-repeat;"></span>
+                                        </div>
+                                    </h4>
+                                </div>
+                                <div class="contents hidden-xs">
+                                    <ol class="configurable-swatch-list">
+                                        <li style="line-height: 19px;">
+                                            <span class="swatch-link has-image" data-id-color="6">
+                                                <span class="swatch-label" style="height:15px; width:15px;">
+                                                    <img src="https://uma.vn/media/catalog/swatches/2/15x15/media/beige.png" alt="Be" title="Be" width="15" height="15">
+                                                </span>
+                                            </span>
+                                        </li>
+                                        <li style="line-height: 19px;">
+                                            <span class="swatch-link has-image" data-id-color="1">
+                                                <span class="swatch-label" style="height:15px; width:15px;">
+                                                    <img src="https://uma.vn/media/catalog/swatches/2/15x15/media/orange.png" alt="Cam" title="Cam" width="15" height="15">
+                                                </span>
+                                            </span>
+                                        </li>
+                                        <li style="line-height: 19px;">
+                                            <span class="swatch-link has-image" data-id-color="9">
+                                                <span class="swatch-label" style="height:15px; width:15px;">
+                                                    <img src="https://uma.vn/media/catalog/swatches/2/15x15/media/pink.png" alt="Hồng" title="Hồng" width="15" height="15">
+                                                </span>
+                                            </span>
+                                        </li>
+                                        <li style="line-height: 19px;">
+                                            <span class="swatch-link has-image" data-id-color="3">
+                                                <span class="swatch-label" style="height:15px; width:15px;">
+                                                    <img src="https://uma.vn/media/catalog/swatches/2/15x15/media/brown.png" alt="Nâu" title="Nâu" width="15" height="15">
+                                                </span>
+                                            </span>
+                                        </li>
+                                        <li style="line-height: 19px;">
+                                            <span class="swatch-link has-image" data-id-color="13">
+                                                <span class="swatch-label" style="height:15px; width:15px;">
+                                                    <img src="https://uma.vn/media/catalog/swatches/2/15x15/media/mixed.png" alt="Nhiều màu" title="Nhiều màu" width="15" height="15">
+                                                </span>
+                                            </span>
+                                        </li>
+                                        <li style="line-height: 19px;">
+                                            <span class="swatch-link has-image" data-id-color="10">
+                                                <span class="swatch-label" style="height:15px; width:15px;">
+                                                    <img src="https://uma.vn/media/catalog/swatches/2/15x15/media/purple.png" alt="Tím" title="Tím" width="15" height="15">
+                                                </span>
+                                            </span>
+                                        </li>
+                                        <li style="line-height: 19px;">
+                                            <span class="swatch-link has-image" data-id-color="11">
+                                                <span class="swatch-label" style="height:15px; width:15px;">
+                                                    <img src="https://uma.vn/media/catalog/swatches/2/15x15/media/white.png" alt="Trắng" title="Trắng" width="15" height="15">
+                                                </span>
+                                            </span>
+                                        </li>
+                                        <li style="line-height: 19px;">
+                                            <span class="swatch-link has-image" data-id-color="2">
+                                                <span class="swatch-label" style="height:15px; width:15px;">
+                                                    <img src="https://uma.vn/media/catalog/swatches/2/15x15/media/yellow.png" alt="Vàng" title="Vàng" width="15" height="15">
+                                                </span>
+                                            </span>
+                                        </li>
+                                        <li style="line-height: 19px;">
+                                            <span class="swatch-link has-image" data-id-color="4">
+                                                <span class="swatch-label" style="height:15px; width:15px;">
+                                                    <img src="https://uma.vn/media/catalog/swatches/2/15x15/media/grey.png" alt="Xám" title="Xám" width="15" height="15">
+                                                </span>
+                                            </span>
+                                        </li>
+                                        <li style="line-height: 19px;">
+                                            <span class="swatch-link has-image" data-id-color="5">
+                                                <span class="swatch-label" style="height:15px; width:15px;">
+                                                    <img src="https://uma.vn/media/catalog/swatches/2/15x15/media/blue.png" alt="Xanh dương" title="Xanh dương" width="15" height="15">
+                                                </span>
+                                            </span>
+                                        </li>
+                                        <li style="line-height: 19px;">
+                                            <span class="swatch-link has-image" data-id-color="12">
+                                                <span class="swatch-label" style="height:15px; width:15px;">
+                                                    <img src="https://uma.vn/media/catalog/swatches/2/15x15/media/green.png" alt="Xanh lá" title="Xanh lá" width="15" height="15">
+                                                </span>
+                                            </span>
+                                        </li>
+                                        <li style="line-height: 19px;">
+                                            <span class="swatch-link has-image" data-id-color="7">
+                                                <span class="swatch-label" style="height:15px; width:15px;">
+                                                    <img src="https://uma.vn/media/catalog/swatches/2/15x15/media/black.png" alt="Đen" title="Đen" width="15" height="15">
+                                                </span>
+                                            </span>
+                                        </li>
+                                        <li style="line-height: 19px;">
+                                            <span class="swatch-link has-image" data-id-color="8">
+                                                <span class="swatch-label" style="height:15px; width:15px;">
+                                                    <img src="https://uma.vn/media/catalog/swatches/2/15x15/media/red.png" alt="Đỏ" title="Đỏ" width="15" height="15">
+                                                </span>
+                                            </span>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <script type="text/javascript">
+                            $j(".block-layered-nav .filter").on("click", ".toggle-display", function (event) {
+                                $current = $j(event.currentTarget);
+                                $current.closest(".filter").toggleClass("open")
+                                    .siblings(".filter").removeClass("open");
+                            })
+                        </script>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-main uma-lg-8 col-md-9 col-sm-8 col-xs-12">
+
+                <div class="container-fluid categories-landing-page nopadding">
+                    <div class="categories">
+                        @foreach (var item in child)
+                        {
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 uma-xxs-6 category">
+                                <div class="contents">
+                                    <div class="image">
+                                        <a href="@Url.Action("RoomProduct","Product", new { Menu_ID = item.Menu_ID})">
+                                            <img class="img-responsive" src="@item.Image" title="Nệm" width="100%">
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <p>
+                                            <a href="@Url.Action("RoomProduct","Product", new { Menu_ID = item.Menu_ID})" class="name text-uppercase">@item.Name <span>@Html.Action("getCountProduct", new { Menu_ID = item.Menu_ID})</span></a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        }
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <h3 class="page-title" data-menu-id="@dataMenu.Menu_ID">
+                            <span>@dataMenu.Name</span>
+                        </h3>
+                    </div>
+                    <div class="row">
+                        <div class="category-products clearfix">
+                            <div class="products-grid clearfix">
+                                @if (Model != null)
+                                {
+                                    foreach (var item in Model)
+                                    {
+                                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 uma-xxs-12 item product page-break" data-page="1" data-id="@item.Menu_ID">
+                                            <div class="wrapper text-center">
+                                                <a href="@Url.Action("ProductDetail", "Product", new { pro_ID = item.pro_ID})" title="@item.pro_Name" class="product-image">
+                                                    <img width="100%" height="100%" class="img-responsive" src="@item.pro_Image" alt="@item.pro_Name">
+                                                </a>
+                                                <div class="product-function">
+                                                    <span>@item.pro_Name</span>
+                                                </div>
+                                                <div class="product-name text-uppercase">
+                                                    <a href="" title="GRAFFITI">@item.pro_Description</a>
+                                                </div>
+                                                <div class="product-size">
+                                                    <span>@item.pro_Size</span>
+                                                </div>
+                                                <div class="product-price">
+
+
+
+                                                    <div class="price-box">
+                                                        <span class="regular-price" id="product-price-46">
+                                                            <span class="price">@item.pro_price VNĐ</span>
+                                                        </span>
+
+                                                    </div>
+
+                                                </div>
+                                                <div class="actions">
+                                                    <div title="Thêm vào Danh mục yêu thích" class="button btn-wishlist">
+                                                        <a href="">Yêu thích</a>
+                                                    </div>
+                                                    <div title="Mua hàng" class="button btn-cart">
+                                                        <a href="@Url.Action("addcart","Product", new { pro_ID = item.pro_ID})">Mua hàng</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                                else
+                                {
+                                    <p>San pham chua co</p>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-bottom">
+    </div>
+</div>
+<script>
+    var Menu_ID = $('.page-title').data('menu-id');
+                                        var x;
+                                        var y;
+                                        function getVals() {
+                                            // Get slider values
+                                            var parent = this.parentNode;
+                                            var slides = parent.getElementsByTagName("input");
+                                            var slide1 = parseFloat(slides[0].value);
+                                            var slide2 = parseFloat(slides[1].value);
+                                            // Neither slider will clip the other, so make sure we determine which is larger
+                                            if (slide1 > slide2) { var tmp = slide2; slide2 = slide1; slide1 = tmp; }
+
+                                            var displayElement = parent.getElementsByClassName("rangeValues")[0];
+                                            x = slide1;
+                                            y = slide2;
+                                            displayElement.innerHTML = " " + slide1 + " Đ - " + slide2 + " Đ";
+                                            //event
+
+                                        }
+                                        $('.filter-price').click(function () {
+                                            $.ajax({
+                                                url: '/Product/Price',
+                                                type: 'GET',
+                                                data: { beginprice: x, endprice: y, Menu_ID: Menu_ID },
+                                                success: function (data) {
+                                                    $('.products-grid').empty();
+                                                    $('.products-grid').html(data);
+                                                }
+                                            });
+                                        });
+                                        window.onload = function () {
+                                            // Initialize Sliders
+                                            var sliderSections = document.getElementsByClassName("range-slider");
+                                            for (var x = 0; x < sliderSections.length; x++) {
+                                                var sliders = sliderSections[x].getElementsByTagName("input");
+                                                for (var y = 0; y < sliders.length; y++) {
+                                                    if (sliders[y].type === "range") {
+                                                        sliders[y].oninput = getVals;
+                                                        // Manually trigger event first time to display values
+                                                        sliders[y].oninput();
+                                                    }
+                                                }
+                                            }
+                                        }
+</script>
+
+<script>
+    $(function () {
+        //Fix categorys
+        $('.category:first-child').removeClass('col-lg-4 col-md-6')
+        $('.category:first-child').addClass('col-lg-8 col-md-8')
+        $('.has-sub').find('ul').removeClass('sub-menu')
+        //orhter
+        var $id = $('.page-title').data('menu-id');
+        var $list = $('li[class="has-sub"]');
+        $list.each(function (index, e) {
+            var $checkid = $(e).data('id');
+            console.log($checkid)
+            if ($checkid == $id) {
+                $(this).addClass('selected');
+                $(this).closest('li[class="has-sub"]').addClass('selected');
+            }
+        });
+    });
+    var Menu_id = $('.product').data('id');
+    var $listimge = $('.has-image');
+    $('.has-image').click(function () {
+        var check = $(this).data('id-color');
+        $listimge.each(function (index, e) {
+            var $id = $(this).data('id-color');
+            if ($id == check) {
+                $.ajax({
+                    url: '/Product/SearchColor',
+                    type: 'POST',
+                    data: { Menu_ID: Menu_id, color: $id },
+                    success: function (data) {
+                        console.log(data);
+                        $('.products-grid').empty();
+                        $('.products-grid').html(data);
+                    }
+                });
+            }
+        });
+    });
+    $('.product-sort-select').change(function () {
+        var select = $(this).find('option:selected').data('value');
+        var Menu_id = $('.product ').data('id');
+        if (select == 1) {
+            $.ajax({
+                url: '/Product/Orderby',
+                type: 'POST',
+                data: { Menu_ID: Menu_id, orderby: 1 },
+                success: function (data) {
+                    console.log(data);
+                    $('.products-grid').empty();
+                    $('.products-grid').html(data);
+
+                }
+            });
+        }
+        else {
+            $.ajax({
+                url: '/Product/Orderby',
+                type: 'POST',
+                data: { Menu_ID: Menu_id, orderby: 2 },
+                success: function (data) {
+                    console.log(data);
+                    $('.products-grid').empty();
+                    $('.products-grid').html(data);
+                }
+            });
+        }
+    });
+</script>
+
+
+
+

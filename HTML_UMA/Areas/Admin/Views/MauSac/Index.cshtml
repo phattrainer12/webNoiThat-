@@ -1,0 +1,65 @@
+﻿@model IEnumerable<HTML_UMA.Models.Color>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="#">Admin</a>
+    </li>
+    <li class="breadcrumb-item active">Màu sắc</li>
+</ol>
+<div class="row">
+    <div class="col-md-6">
+        <p>
+            <a href="@Url.Action("Create")"><button class="button-create">Tạo mới</button></a>
+        </p>
+    </div>
+    <div class="col-md-4 text-right">
+        <form action="/Admin/MauSac/TimKiem">
+            <div class="input-group">
+                <input class="form-control ui-autocomplete-input" name="search" type="text" id="form-search" placeholder="Tìm kiếm màu sắc" autocomplete="off"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+                <span class="input-group-append">
+                    <button class="btn btn-primary" type="button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="text-center">
+    <h2>Màu sắc</h2>
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            Màu sắc
+        </th>
+        <th>
+            Mã màu
+        </th>
+        <th>
+            Chức Năng
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameColor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Code)
+        </td>
+        <td>
+            @Html.ActionLink("Chỉnh sửa", "Edit", new { id=item.Color_ID }) |
+            @Html.ActionLink("Chi tiết", "Details", new { id=item.Color_ID }) |
+            @Html.ActionLink("Xóa", "Delete", new { id=item.Color_ID })
+        </td>
+    </tr>
+}
+
+</table>

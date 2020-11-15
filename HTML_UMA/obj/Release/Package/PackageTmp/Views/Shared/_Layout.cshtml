@@ -1,0 +1,693 @@
+﻿@{ 
+    var UserAccount = Session["User"] as HTML_UMA.Models.User;
+    var Location = Session["Location"];
+}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="vi" lang="vi">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>SHOME |  Siêu thị Nội thất &amp; Trang trí</title>
+    <meta name="description" content="Hãy đến với siêu thị nội thất SHOME để tìm kiếm những sản phẩm nội thất cho phòng khách, phòng ngủ, phòng ăn, nhà bếp, nhà tắm đến phòng hoc và làm việc." />
+    <meta name="keywords" content="nội thất SHOME, nội thất, trang trí nội thất, noi that, trang tri noi that, siêu thị nội thất, nội thất phòng ngủ, nội thất phòng khách, nội thất bếp, sieu thi noi that" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" href="~/media/favicon/default/favicon_1_.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="~/media/favicon/default/favicon_1_.ico" type="image/x-icon" />
+    <link href="~/font-awesome/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/media/css_secure/a128a7167c64f5a712150b71f7cf71a3.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="~/media/css_secure/f82d2130b692727fba6ade9cd5a84d3b.css" media="print" />
+    <link href="~/media/css_secure/Googltranslate.css" rel="stylesheet" />
+    <link href="~/Content/jquery-ui-1.9.2.custom/css/base/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="~/media/js/c6732d62162f0b7121d125f2f7494701.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Content/jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.min.js"></script>
+    <!--Js UI Autocomplete-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--end-->
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="media/js/a1b929cc4dcd76025b6908c0285983e0.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="~/js/ematic/ematix.min.js"></script>
+</head>
+<body class=" cms-index-index cms-home" style="position: relative!important; min-height: 100%!important; top: 0px!important;">
+    <div class="wrapper">
+        <div class="mobile-navigation visible-xs visible-sm">
+            <div class="wrapper">
+                <div class="overlay"></div>
+                <div class="inner-wrap">
+                    <div class="buttons text-right">
+                        <a class="btn-close">
+                            <span class="icon">
+                                <img width="20px" height="20px"
+                                     src="~/skin/frontend/uma/default/images/icons/close.svg" />
+                            </span>
+                        </a>
+                    </div>
+                    <div>
+                        <h3 class="menu-header">
+                            <i class="fa fa-user"></i>
+                            <span>Tài khoản</span>
+                        </h3>
+                        <ul class="menuitems">
+                            <li>
+                                <a href="@Url.Action("Login","Account")">
+                                    Đăng nhập
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Signin","Account")">
+                                    Đăng ký
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="categories">
+                        <h3 class="menu-header">
+                            <i class="fa fa-list"></i>
+                            <span>Nh&oacute;m s&#7843;n ph&#7849;m</span>
+                        </h3>
+                        @Html.Action("MenuMobile","TestMenu")
+                        <script type="text/javascript">
+                            $j(function () {
+                                $j("#dl-menu").dlmenu({
+                                    animationClasses: {
+                                        classin: "dl-animate-in-2",
+                                        classout: "dl-animate-out-2"
+                                    }
+                                });
+                            });
+                        </script>
+                    </div>
+                    <div>
+                        <h3 class="menu-header">
+                            <i class="fa fa-link"></i>
+                            <span>Liên kết</span>
+                        </h3>
+                        <ul class="menuitems">
+                            <li>
+                                <a href="/">
+                                    Trang chủ
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Suppot/Ourshop">
+                                    Danh sách cửa hàng
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="social-media">
+                        <ul>
+                            <li class="facebook">
+                                <a href="" target="_blank">
+                                    <span class="icon" style="background: url('/skin/frontend/uma/default/images/icons/social-media-icons-30x30.svg') no-repeat;"></span>
+                                </a>
+                            </li>
+                            <li class="twiter">
+                                <a href="" target="_blank">
+                                    <span class="icon" style="background: url('/skin/frontend/uma/default/images/icons/social-media-icons-30x30.svg') no-repeat;"></span>
+                                </a>
+                            </li>
+                            <li class="google-plus">
+                                <a href="" target="_blank">
+                                    <span class="icon" style="background: url('/skin/frontend/uma/default/images/icons/social-media-icons-30x30.svg') no-repeat;"></span>
+                                </a>
+                            </li>
+                            <li class="youtube">
+                                <a href="" target="_blank">
+                                    <span class="icon" style="background: url('/skin/frontend/uma/default/images/icons/social-media-icons-30x30.svg') no-repeat;"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="popups-container">                
+                <div class="popup cart">
+                    <div class="container">
+                        <div class="contents">
+                            <div class="popup-header">
+                                <div class="cart-item-amount">
+                                    <p class="amount empty">Giỏ hàng của bạn</p>
+                                </div>
+
+                                <div class="btn-close" title="đóng">
+                                    <i class="fa fa-close"></i>
+                                </div>
+                            </div>
+                            <div class="popup-details">
+                                <div class="wishlist-items-list popup-details">
+                                    <ul class="mini-products-list mCustomScrollbar _mCS_4">
+                                        <div id="mCSB_4" class="mCustomScrollBox mCS-dark-thin mCSB_vertical mCSB_inside" tabindex="0">
+                                            <div id="mCSB_4_container" class="mCSB_container" style="position:relative; top:0; left:0;" dir="ltr">
+
+                                            </div>
+                                        </div>
+                                    </ul>
+                                    <script type="text/javascript">decorateList('wishlist-sidebar');</script>
+                                </div>
+                            </div>
+                                            <div class="popup-footer">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                                            <p class="highlight">Tạm tính:</p>
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                                            <p class="number highlight"><span class="cart-total"></span><span>VNĐ</span></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cart-actions popup-buttons">
+                                                <a href="@Url.Action("Cart","Product")">
+                                                    <button class="button btn-view-cart">Xem giỏ hàng</button>
+                                                </a>
+                                                <a href="@Url.Action("CheckUser","Product")">
+                                                    <button class="button btn-checkout-cart bg-red">
+                                                        Thanh toán
+                                                    </button>
+                                                </a>
+                                            </div>
+                                            <script type="text/javascript">
+                                                $j(".popups-container .popup.cart .mini-products-list").mCustomScrollbar({
+                                                    axis: "y",
+                                                    theme: "dark-thin",
+                                                    mouseWheel: {
+                                                        scrollAmount: "auto"
+                                                    }
+                                                });
+                                            </script>
+                                        </div>
+                                    </ul>
+                                </div>
+
+                            </div>
+                <div class="popup wishlist">
+                    <div class="container">
+                        <div class="contents">
+                            <div class="popup-header">
+                                <p>Danh sách yêu thích</p>
+                            </div>
+                            <div class="popup-details">
+                                <div class="cart-items-list">
+                                    <ul class="mini-products-list mCustomScrollbar _mCS_1 mCS_no_scrollbar">
+                                        <div id="mCSB_1" class="mCustomScrollBox mCS-dark-thin mCSB_vertical mCSB_inside">
+                                            <div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y">
+
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="popup-buttons view-wishlist">
+                                <button class="btn btn-info btn-wishlist bg-red" type="button" onclick="window.location.href = local+'/Account/ListFavourist'">
+                                    <span>Xem Danh sách yêu thích</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                                /**
+                                 * allow to add item to wishlist and show popup dynamically
+                                 */
+                        var local = window.location.origin;
+                                $j(function () {
+                                    $j("body").on("click", ".btn-wishlist > a", function (event) {
+                                        event.stopPropagation();
+                                        event.preventDefault();
+                                        var $link = $j(event.currentTarget),
+                                            $button = $link.closest(".button");
+
+                                        if (!$button.hasClass("disabled") && $link.length) {
+                                            $button.addClass("disabled").attr("disabled", "disabled");
+                                            $j.ajax({
+                                                url: $link.attr("href"),
+                                                method: "POST",
+                                                dataType: "json",
+                                                data: {
+                                                    "is_ajax": true
+                                                }
+                                            }).then(
+                                                function (response) {
+                                                    //console.info("success :: ", response);
+                                                },
+                                                function (xhr, error, obj) {
+                                                    //console.error("error :: ", error);
+                                                }
+                                                ).always(
+                                                function () {
+                                                    $button.removeClass("disabled").removeAttr("disabled");
+                                                    $.get(local+'/Product/getFavourist', function (data) {
+                                                        $('.wishlist').find('#mCSB_1_container').html(data);
+                                                        $('.wishlist').addClass("active");
+                                                        
+                                                    }); 
+                                                    //MagentoApp.showWishlistPopup(load_wishlist_url);
+                                                    // auto close after 5 seconds
+                                                    window.timeout_popup_ids = window.timeout_popup_ids || [];
+                                                    window.timeout_popup_ids.push(
+                                                        setTimeout(function () {
+                                                            $j(".popups-container .popup.wishlist").removeClass("active");
+                                                        }, 10000)
+                                                    );
+                                                }
+                                                );
+                                        }
+                                    });
+                                });
+                    </script>
+                </div>
+            </div>
+            <div class="page">
+                <header class="header-container">
+                    <div class="top">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12 contact-preferences">
+                                    <div class="contact text-left">
+                                        <div class="visible-xs visible-sm mobile-logo-group">
+                                            <a class="website-nav-toggle" title="Toogle navigation">
+                                                <span class="icon"></span>
+                                            </a>
+                                            <a class="website-mobile-logo" title="Go to homepage" href="/">
+                                                <img src="~/media/LogoWebsite/Logo_small.jpg" style="height: 24px; width: 90px;" />
+                                            </a>
+                                        </div>
+                                        <div class="hidden-xs hidden-sm">
+
+                                            <div class="contact text-uppercase">
+                                                <span class="item our-shops">
+                                                    <a href="/Support/Ourshop">Cửa hàng</a>
+                                                </span>
+                                                <span class="sep">|</span>
+                                                <span class="item phone-number">
+                                                    <span>Liên hệ: </span>
+                                                    <span class="highlight">0236.3575179</span>
+                                                </span>
+                                                <span class="sep">|</span>
+                                                <span class="item live-support">
+                                                    <a>Hỗ trợ</a>
+                                                </span>
+                                                <span class="sep">|</span>
+                                                <span class="item faq">
+                                                    <a href="">Faq</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="preferences text-right">
+                                        @if (UserAccount != null)
+                                        {
+                                            <div class="account popup-link hidden-xs hidden-sm">
+                                                <div class="visible-lg visible-md">
+                                                    <a href="/Account/UserInformation">
+                                                        <i class="fa ui-icon-person"></i>
+                                                        <b>Hi @UserAccount.user_Name</b>
+                                                    </a>
+                                                    <span class="separator">|</span>
+                                                    <a href="@Url.Action("Logout","Account")">
+                                                        <b class="text-uppercase">Thoát</b>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="account popup-link hidden-xs hidden-sm">
+                                                <div class="visible-lg visible-md">
+                                                    <a href="@Url.Action("Login","Account")">
+                                                        <b class="text-uppercase">Đăng nhập</b>
+                                                    </a>
+                                                    <span class="separator">|</span>
+                                                    <a href="@Url.Action("Signin","Account")">
+                                                        <b class="text-uppercase">Đăng kí</b>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        }
+                                        <div class="cart popup-link">
+                                            <div class="text" title="Giỏ hàng">
+                                                <a class="clearfix btn-open-popup" href="" data-popup="cart">
+                                                    <span class="icon">
+                                                        <span class="number total-cart">0</span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="stock-region popup-link hidden">
+                                            <div>
+                                                <div class="text text-left">
+                                                    <a class="clearfix btn-open-popup" data-popup="regions">
+                                                        <span class="icon"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="languages popup-link">
+                                            <div id="google_translate_element"></div>
+                                            <script type="text/javascript">
+                                                function googleTranslateElementInit() {
+                                                    new google.translate.TranslateElement({ pageLanguage: 'vi', includedLanguages: 'en,ja,vi', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
+                                                }
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="middle hidden-sm hidden-xs">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <!-- logo -->
+                                    <a class="logo" href="/">
+                                        <img src="~/media/LogoWebsite/LogoShome_Ver3.jpg" class="img-responsive" />
+                                    </a>
+                                    <p class="webName">Siêu thị nội thất và trang trí</p>
+                                    <!-- search -->
+                                    <div class="search">
+                                        <div class="search-container">
+                                            <form id="search_mini_form" action="/Product/Search" method="get">
+                                                <div class="form-search">
+                                                    <input type="text" name="value" id="search" class="input-text" maxlength="128" placeholder="TÌM KIẾM" />
+                                                    <button class="submit" title="Tìm">
+                                                        <img src="~/skin/frontend/uma/default/images/icons/magnifier-tool-white.svg" width="22px" height="22px" />
+                                                    </button>
+                                                </div>
+                                            </form>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @Html.Action("Menu", "TestMenu")
+                </header>
+                @RenderBody()
+                <div class="footer-container">
+                    <div class="desktop hidden-sm hidden-xs">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 wrapper">
+                                    <div class="left">
+                                        <div class="logo">
+                                            @*<img width="135px" height="35px" src="~/media/LogoWebsite/Logo_normal.jpg" />*@
+                                        </div>
+                                        <div class="info">
+                                            <p class="text-uppercase">
+                                                <strong class="group-name">CÔNG TY TNHH MTV SẢN XUẤT VÀ CUNG CẤP NỘI THẤT VIỆT TÂY ÂU</strong>
+                                            </p>
+                                            <p>
+                                                <strong>Địa chỉ:</strong> <span>284-286 Phan Châu Trinh, </span><br />
+                                                <span>Phường Bình Hiên, Quận Hải Châu, TP Đà Nẵng </span>
+                                            </p>
+                                            <p>
+                                                <strong>Mã số thuế: 0401752783</strong><br />
+                                                <span>Tài khoản ngân hàng: 160514851010270</span><br />
+                                                <span>tại NH Eximbank, Chi Nhánh Hùng Vương, Đà Nẵng</span>
+                                            </p>
+                                            <p>
+                                                <span>Hotline:  0905 717879 - 0931 993179</span>
+                                                <br />
+                                                <span>Hoặc</span>
+                                                <br />
+                                                <strong>Liên hệ Email:</strong> <span> pkd@shomevietnam.vn</span>
+                                                <br />
+                                                <span>Facebook: facebook.com/shomevietnam</span>
+                                            </p>
+                                        </div>
+                                        <div class="social-media">
+                                            <p class="text-uppercase">
+                                                <strong>Tìm chúng tôi tại</strong>
+                                            </p>
+                                            <div>
+                                                <a href="https://www.facebook.com/shomevietnam" class="facebook">
+                                                    <span class="icon" style="background: #FFF url('/skin/frontend/uma/default/images/icons/social-media-icons-36x36.svg') no-repeat;"></span>
+                                                </a>
+                                                <a href="" class="twiter">
+                                                    <span class="icon" style="background: #FFF url('/skin/frontend/uma/default/images/icons/social-media-icons-36x36.svg') no-repeat;"></span>
+                                                </a>
+                                                <a href="" class="google-plus">
+                                                    <span class="icon" style="background: #FFF url('/skin/frontend/uma/default/images/icons/social-media-icons-36x36.svg') no-repeat;"></span>
+                                                </a>
+                                                <a href="" class="youtube">
+                                                    <span class="icon" style="background: #FFF url('/skin/frontend/uma/default/images/icons/social-media-icons-36x36.svg') no-repeat;"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="links">
+
+                                            <ul class="groups">
+                                                <li class="link-1">
+                                                    <p class="text text-uppercase">
+                                                        <strong class="group-name">Về SHOME</strong>
+                                                    </p>
+                                                    <ul class="links">
+                                                        <li><a href="@Url.Action("Badrequest","Support")" />Tin tức SHOME</a></li>
+                                                        <li><a href="@Url.Action("Badrequest","Support")" />Tuyển dụng</a></li>
+                                                        <li><a href="@Url.Action("Contact","Support")" />Liên hệ</a></li>
+                                                        <li><a href="@Url.Action("Law","Support")" />Chính sách & Điều khoản</a></li>
+                                                        <li><a href="@Url.Action("FAQ","Support")" />F.A.Q</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="link-2">
+                                                    <p class="text text-uppercase">
+                                                        <strong class="group-name">Thiết kế nội thất</strong>
+                                                    </p>
+                                                    <ul class="links">
+                                                        <li><a href="@Url.Action("Badrequest","Support")" />Thiết kế 3D</a></li>
+                                                        <li><a href="@Url.Action("Badrequest","Support")" />Quy trình làm việc</a></li>
+                                                        <li><a href="@Url.Action("Badrequest","Support")" />Công trình của SHOME</a></li>
+                                                        <li><a href="@Url.Action("Badrequest","Support")" />Hướng dẫn & mẹo vặt</a></li>
+                                                        <li><a href="@Url.Action("Badrequest","Support")" />Nguồn cảm hứng</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="link-3">
+                                                    <p class="text text-uppercase">
+                                                        <strong class="group-name">Site Map</strong>
+                                                    </p>
+                                                    <ul class="links">
+                                                        <li>
+                                                            <a href="/Product/Product">Sản phẩm</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/Product/Room">Phòng</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/Product/NewProduct">Hàng mới về</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="@Url.Action("About","Product")">Về SHOME</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="@Url.Action("Catalogue2017","product")">Catalogue 2017</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/Product/HotProduct">Bán Chạy Nhất</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="copyright">
+                                            <span>
+                                                <div>Copyright &copy; 2018 by Shome - All rights reserved.</div>
+                                            </span>
+                                            <span>
+                                                <a href="http://online.gov.vn/HomePage/CustomWebsiteDisplay.aspx?DocId=43917" target="_blank">
+                                                    <img class="img-responsive" src="https://uma.vn/skin/frontend/uma/default/images/logo-dathongbao.png" width="145px" height="55px" data-pin-nopin="1" />
+                                                </a>
+                                            </span>
+                                            <span>
+                                                <img class="img-responsive" src="/skin/frontend/uma/default/images/logo-master-card.svg" width="80" height="45" data-pin-nopin="1" />
+                                            </span>
+                                            <span>
+                                                <img class="img-responsive" src="/skin/frontend/uma/default/images/logo-visa-payment.svg" width="120" height="70" data-pin-nopin="1" />
+                                            </span>
+                                        </div>
+                                        <div class="horizontal-line"></div>
+                                        <div class="scrolltop-button"
+                                             onclick="$j('body, html').animate({ scrollTop: 0 }, 800);"
+                                             style="background: url('/skin/frontend/uma/default/images/icons/scrolltop.svg') no-repeat;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="mobile hidden-lg hidden-md">
+                        <div class="container">
+                            <div class="row copyright">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <p class="text-center cp-text">
+                                        <span>Mã số thuế &copy; 0401752783.</span>
+                                        <span>Tài khoản ngân hàng: 160514851010270 tại NH Eximbank, Chi Nhánh Hùng Vương, Đà Nẵng</span>
+                                    </p>
+                                    <p class="text-center cr-text">
+                                        <span>Copyright &copy; 2018 by TÂY ÂU- All rights reserved.</span>
+                                        <br />
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row social-links">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="text-center link-container">
+                                        <a href="#" target="_blank" class="facebook">
+                                            <span class="icon" style="background: url('~/skin/frontend/uma/default/images/icons/social-media-icons-30x30.svg') no-repeat;"></span>
+                                        </a>
+                                        <a href="#" target="_blank" class="twiter">
+                                            <span class="icon" style="background: url('~/skin/frontend/uma/default/images/icons/social-media-icons-30x30.svg') no-repeat;"></span>
+                                        </a>
+                                        <a href="#" target="_blank" class="google-plus">
+                                            <span class="icon" style="background: url('~/skin/frontend/uma/default/images/icons/social-media-icons-30x30.svg') no-repeat;"></span>
+                                        </a>
+                                        <a href="#" target="_blank" class="youtube">
+                                            <span class="icon" style="background: url('~/skin/frontend/uma/default/images/icons/social-media-icons-30x30.svg') no-repeat;"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Click buy product-->
+                <script type="text/javascript">
+                    $j(function () {
+                        /**
+                         * allow to add item to shopping cart and show popup dynamically
+                         */
+                        var local = window.location.origin;
+                        $.get(local + '/Product/getCart', function (data) {
+                            $('.cart').find('#mCSB_1_container').html(data);
+                        });
+                        $j(document.body).on("click", ".btn-cart a", function (event) {
+                            event.preventDefault();
+                            event.stopPropagation();
+
+                            var $link = $j(event.currentTarget),
+                                $button = $link.closest(".button");
+                            if ($button.hasClass("stock-alert")) {
+                                return false;
+                            }
+                            //
+                            if (!$button.hasClass("disabled") && $link.length) {
+                                $button.addClass("disabled").attr("disabled", "disabled");
+                                $j.ajax({
+                                    url: $link.attr("href"),
+                                    method: "POST",
+                                    dataType: "json",
+                                    data: {
+                                        "is_ajax": true
+                                    }
+                                }).then(
+                                    function () {
+
+                                    },
+                                    function (xhr, error, obj) {
+                                        // console.error("error :: ", error);
+                                    }
+                                ).always(
+                                    function () {
+                                        $button.removeClass("disabled").removeAttr("disabled");
+                                        $.get(local + '/Product/getCart', function (data) {
+                                            $('.cart').find('#mCSB_1_container').html(data);
+                                            $('.cart').addClass("active");
+                                        });
+                                        //auto close after 5 seconds
+                                        window.timeout_popup_ids = window.timeout_popup_ids || [];
+                                        window.timeout_popup_ids.push(
+                                            setTimeout(function () {
+                                                $j(".popups-container .popup.cart").removeClass("active");
+                                            }, 5000)
+                                        );
+                                    }
+                                );
+                            }
+                        });
+                    });
+                </script>
+                <script>
+                    $.ajax({
+                        url: '/Product/ModelSearch',
+                        success: function (data) {
+                            var model = JSON.parse(data);
+                            $("#search").autocomplete({
+                                minLength: 0,
+                                source: function (request, response) {
+                                    var results = $.ui.autocomplete.filter(model, request.term);
+
+                                    response(results.slice(0, 10));
+                                },
+                                focus: function (event, ui) {
+                                    return false;
+                                }
+                            })
+                                .data("autocomplete")._renderItem = function (ul, item) {
+                                    return $("<li>")
+                                        .data("item.autocomplete", item)
+                                        .append('<a href="/SanPham/ChiTietSanPham?MaSanPham=' + item.Id + '">' + '<img src="' + item.pro_Image + '" style="height:40px; width: 40px;"></img>  ' + item.pro_Name + '</a>')
+                                        .appendTo(ul);
+                                };
+                        }
+                    });
+                </script>
+                <script>
+                    $.ajax({
+                        url: '/Product/ModelSearch',
+                        success: function (data) {
+                            var model = JSON.parse(data);
+                            $("#search2").autocomplete({
+                                minLength: 0,
+                                source: function (request, response) {
+                                    var results = $.ui.autocomplete.filter(model, request.term);
+
+                                    response(results.slice(0, 10));
+                                },
+                                focus: function (event, ui) {
+                                    return false;
+                                }
+                            })
+                                .data("autocomplete")._renderItem = function (ul, item) {
+                                    return $("<li>")
+                                        .data("item.autocomplete", item)
+                                        .append('<a href="/SanPham/ChiTietSanPham?MaSanPham='+item.Id+'">' + '<img src="' + item.pro_Image + '" style="height:40px; width: 40px;"></img>  ' + item.pro_Name + '</a>')
+                                        .appendTo(ul);
+                                };
+                        }
+                    });
+                </script>
+            </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
+<script>
+    var color = $('.has-image');
+    color.click(function () {
+        var thiscl = $(this).data('id-color');
+        color.each(function () {
+            var cpc = $(this).data('id-color');
+            if (thiscl == cpc) {
+                $(this).css("border", "1px solid");
+                scrolltop();
+            } else {
+                $(this).css("border", "none");
+            }
+            
+        })
+    })
+    function scrolltop() {
+        $('body, html').animate({ scrollTop: 0 }, 800);
+    }
+</script>
+

@@ -1,0 +1,62 @@
+﻿@model PagedList.IPagedList<HTML_UMA.Models.Product>
+@{
+    ViewBag.Title = "AjaxLoading";
+    Layout = null;
+}
+            @if (Model != null)
+            {
+                foreach (var item in Model)
+                {
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 uma-xxs-12 item product page-break" data-page="@item.pro_ID" data-color="@item.Color_ID">
+                        <div class="wrapper text-center">
+                            @if (item.sale.Equals(true))
+                            {
+                                <div class="product-set set">
+                                    <span>Set</span>
+                                </div>
+                            }
+                            <a href="@Url.Action("ChiTietSanPham","SanPham", new { MaSanPham = item.pro_ID})" title="@item.pro_Name" class="product-image">
+                                <img width="100%" height="100%" class="img-responsive" src="@item.pro_Image" alt="@item.pro_Name">
+                            </a>
+                            <div class="product-function">
+                                <span>@item.pro_Name</span>
+                            </div>
+                            <div class="product-name text-uppercase">
+                                <a href="@Url.Action("ChiTietSanPham","SanPham", new { MaSanPham = item.pro_ID})" title="GRAFFITI">@item.pro_Description</a>
+                            </div>
+                            <div class="product-size">
+                                <span>@item.pro_Size</span>
+                            </div>
+                            <div class="product-price">
+                                <div class="price-box">
+                                    <span class="regular-price" id="product-price-46">
+                                        <span class="price">@Html.Raw(string.Format("{0:#,#}", item.pro_price))</span><span>VNĐ</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="actions">
+                                <div title="Thêm vào Danh mục yêu thích" class="button btn-wishlist">
+                                    <a href="">Yêu thích</a>
+                                </div>
+                                <div title="Mua hàng" class="button btn-cart">
+                                    <a href="@Url.Action("addcart","Product", new { pro_ID = item.pro_ID})">Mua hàng</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p>Sản phẩm đang cập nhật</p>
+            }
+<div class="page-list" style="display: none;">
+    <span>@(Model.PageCount)</span>
+</div>
+
+
+
+
+
+
+

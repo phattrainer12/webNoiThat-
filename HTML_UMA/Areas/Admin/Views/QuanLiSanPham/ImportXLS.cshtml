@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "ImportXLS";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="title">
+    <h2>ImportXLS</h2>
+    <button class="button-click" onclick="location.href='/Admin/QuanLiSanPham/DownloadFile';">Tải file mẫu</button>
+</div>
+@using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationMessage("errorXSL")
+        @Html.ValidationMessage("errorFile")
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            <label class="control-label col-md-12">1.File xls theo định dạng mẫu</label>
+            <div class="col-md-10">
+                <label class="col-md-2">Chọn file XLS</label>
+                <input class="button-click" name="xlsFile" type="file" required accept=".xlsx"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-12">2.Chọn hình ảnh cho sản phẩm ứng với thông tin và số lượng như trên file XLS đề xuất</label>
+            <div class="col-md-10">
+                <label class="col-md-2">Chọn file ảnh</label>
+                <input class="button-click" name="image" type="file" accept="image/*" required multiple/>
+            </div>
+        </div>
+        <input class="button-submit" type="submit" value="Thêm"/>
+    </div>
+}

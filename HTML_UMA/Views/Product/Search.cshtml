@@ -1,0 +1,133 @@
+﻿@model IEnumerable<HTML_UMA.Models.Product>
+@{
+    ViewBag.Title = "Search";
+}
+<div class="main-container col1-layout">
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="breadcrumb-wrapper">
+                        <ul class="breadcrumb">
+                            <li class="home">
+                                <a href="/" title="Quay lại trang chủ">
+                                    <span class="fa fa-home"></span>
+                                </a>
+                            </li>
+                            <li class="search">
+                                <a>Tìm kiếm</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-top">
+    </div>
+    <div class="container">
+        <div class="main row">
+            <div class="col-main col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div>
+                    <h3 class="page-title">Kết quả</h3>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="sort-products hidden">
+                            <style type="text/css">
+                                .sort-container .caret {
+                                    width: 20px;
+                                    height: 20px;
+                                    background: url("~/skin/frontend/uma/default/images/icons/arrow.svg") no-repeat;
+                                }
+                            </style>
+
+                            <div class="sort-container">
+                                <div class="contents">
+                                    <select onchange="setLocation(this.value)" class="form-control product-sort-select">
+                                        <option selected="selected" value="http://uma.vn/vi/catalogsearch/result/index/?dir=asc&amp;order=search&amp;q=ghe">Search result</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="category-products clearfix">
+                            <div class="products-grid clearfix">
+                                @if (Model != null)
+                                {
+                                    foreach (var item in Model)
+                                    {
+                                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 uma-xxs-12 item product page-break" data-page="1">
+                                            <div class="wrapper text-center">
+                                                <a href="@Url.Action("ChiTietSanPham","SanPham", new { MaSanPham = item.pro_ID})" title="@item.pro_Description" class="product-image">
+                                                    <img width="100%" height="100%" class="img-responsive" src="@item.pro_Image">
+                                                </a>
+                                                <div class="product-function">
+                                                    <span>@item.pro_Name</span>
+                                                </div>
+                                                <div class="product-name text-uppercase">
+                                                    <a href="@Url.Action("ChiTietSanPham","SanPham", new { MaSanPham = item.pro_ID})" title="MALABAR">@item.pro_Description</a>
+                                                </div>
+                                                <div class="product-size">
+                                                    <span>@item.pro_Size</span>
+                                                </div>
+                                                <div class="product-price">
+
+
+
+                                                    <div class="price-box">
+                                                        <span class="regular-price" id="product-price-2262">
+                                                            <span class="price">@item.pro_price VNĐ</span>
+                                                        </span>
+
+                                                    </div>
+
+                                                </div>
+                                                <div class="actions">
+                                                    <div title="Thêm vào Danh mục yêu thích" class="button btn-wishlist">
+                                                        <a href="">Yêu thích</a>
+                                                    </div>
+
+                                                    <div title="Mua hàng" class="button btn-cart">
+                                                        <a href="@Url.Action("addCart","Product", new { pro_ID = item.pro_ID})">Mua hàng</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    }
+                                }
+                                else
+                                {
+                                    <h2 class="text-uppercase">Không tìm thấy sản phù hợp</h2>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+    $j(document).on('product-media-loaded', function() {
+                                    ConfigurableMediaImages.init('small_image');
+                                    ConfigurableMediaImages.setImageFallback(2262, $j.parseJSON('{"option_labels":[],"small_image":{"2262":"https:\/\/uma.vn\/media\/catalog\/product\/cache\/2\/small_image\/210x\/602f0fa2c1f0d1ba5e241f914e856ff9\/M\/A\/MALABAR_MALABAR_0000001029581_DINING_ROOM_-_Stools_and_Benches_7657_20170615170346994160.jpg"},"base_image":[]}'));
+                                    ConfigurableMediaImages.setImageFallback(1687, $j.parseJSON('{"option_labels":[],"small_image":{"1687":"https:\/\/uma.vn\/media\/catalog\/product\/cache\/2\/small_image\/210x\/602f0fa2c1f0d1ba5e241f914e856ff9\/A\/A\/AALBORG_AALBORG_0000001060959_DINING_ROOM_-_Dining_chairs_10794_20170320081509029585.jpg"},"base_image":[]}'));
+                                    ConfigurableMediaImages.setImageFallback(1688, $j.parseJSON('{"option_labels":[],"small_image":{"1688":"https:\/\/uma.vn\/media\/catalog\/product\/cache\/2\/small_image\/210x\/602f0fa2c1f0d1ba5e241f914e856ff9\/A\/A\/AALBORG_AALBORG_0000001060966_DINING_ROOM_-_Dining_chairs_10795_20170320084534551493.jpg"},"base_image":[]}'));
+                                    ConfigurableMediaImages.setImageFallback(212, $j.parseJSON('{"option_labels":[],"small_image":{"212":"https:\/\/uma.vn\/media\/catalog\/product\/cache\/2\/small_image\/210x\/602f0fa2c1f0d1ba5e241f914e856ff9\/A\/L\/ALBANY_ALBANY_0000001021806_DINING_ROOM_-_Dining_chairs_6879_20160829091034823382.jpg"},"base_image":[]}'));
+                                    ConfigurableMediaImages.setImageFallback(664, $j.parseJSON('{"option_labels":[],"small_image":{"664":"https:\/\/uma.vn\/media\/catalog\/product\/cache\/2\/small_image\/210x\/602f0fa2c1f0d1ba5e241f914e856ff9\/A\/N\/ANKOR_ANKOR_0000001003017_DINING_ROOM_-_Dining_chairs_4999_20161005023214841928.jpg"},"base_image":[]}'));
+                                    ConfigurableMediaImages.setImageFallback(2356, $j.parseJSON('{"option_labels":[],"small_image":{"2356":"https:\/\/uma.vn\/media\/catalog\/product\/cache\/2\/small_image\/210x\/602f0fa2c1f0d1ba5e241f914e856ff9\/A\/R\/ARTUR_ARTUR_0000001078268_DINING_ROOM_-_Dining_chairs_12525_20170615192050355517.jpg"},"base_image":[]}'));
+                                    ConfigurableMediaImages.setImageFallback(591, $j.parseJSON('{"option_labels":[],"small_image":{"591":"https:\/\/uma.vn\/media\/catalog\/product\/cache\/2\/small_image\/210x\/602f0fa2c1f0d1ba5e241f914e856ff9\/A\/T\/ATTILA_ATTILA_0000001059472_DINING_ROOM_-_Dining_chairs_10646_20160923075711987198.jpg"},"base_image":[]}'));
+                                    ConfigurableMediaImages.setImageFallback(262, $j.parseJSON('{"option_labels":[],"small_image":{"262":"https:\/\/uma.vn\/media\/catalog\/product\/cache\/2\/small_image\/210x\/602f0fa2c1f0d1ba5e241f914e856ff9\/B\/A\/BARCELONA_BARCELONA_0000000000338_DINING_ROOM_-_Dining_chairs_1009_20160830073038971088.jpg"},"base_image":[]}'));
+                                    ConfigurableMediaImages.setImageFallback(2357, $j.parseJSON('{"option_labels":[],"small_image":{"2357":"https:\/\/uma.vn\/media\/catalog\/product\/cache\/2\/small_image\/210x\/602f0fa2c1f0d1ba5e241f914e856ff9\/B\/A\/BATISTA_BATISTA_0000001074666_DINING_ROOM_-_Dining_chairs_12165_20170615195455265799.jpg"},"base_image":[]}'));
+                                    ConfigurableMediaImages.setImageFallback(264, $j.parseJSON('{"option_labels":[],"small_image":{"264":"https:\/\/uma.vn\/media\/catalog\/product\/cache\/2\/small_image\/210x\/602f0fa2c1f0d1ba5e241f914e856ff9\/B\/A\/BAVARIA_BAVARIA_0000000000340_DINING_ROOM_-_Dining_chairs_1013_20171017024834113252.jpg"},"base_image":[]}'));
+                                    ConfigurableMediaImages.setImageFallback(668, $j.parseJSON('{"option_labels":[],"small_image":{"668":"https:\/\/uma.vn\/media\/catalog\/product\/cache\/2\/small_image\/210x\/602f0fa2c1f0d1ba5e241f914e856ff9\/B\/A\/BAVARIA_BAVARIA_0000000000342_DINING_ROOM_-_Dining_chairs_1012_20161005020319646356.jpg"},"base_image":[]}'));
+                                    ConfigurableMediaImages.setImageFallback(669, $j.parseJSON('{"option_labels":[],"small_image":{"669":"https:\/\/uma.vn\/media\/catalog\/product\/cache\/2\/small_image\/210x\/602f0fa2c1f0d1ba5e241f914e856ff9\/B\/A\/BAVARIA_BAVARIA_0000000000341_DINING_ROOM_-_Dining_chairs_1011_20161005022720997894.jpg"},"base_image":[]}'));
+                $j(document).trigger('configurable-media-images-init', ConfigurableMediaImages);
+                                });
+                </script>
+            </div>
+            <div id="resultLoading" style="display: none; width: 100%; height: 100%; position: absolute; z-index: 10000000; top: 0px; left: 0px;"><div style="width: 100%; text-align: center; position: absolute; left: 0px; margin-top: 22em; font-size: 16px; z-index: 10; color: rgb(255, 255, 255);"><img src="media/magehouse/slider/default/ajax-loader.gif"><div>Fetching Results... Please wait...</div></div><div class="bg" style="background: rgb(0, 0, 0); opacity: 0.7; width: 100%; height: 100%; position: absolute; top: 0px;"></div></div>
+        </div>
+    </div>
+    <div class="container-bottom">
+    </div>
+</div>

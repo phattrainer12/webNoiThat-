@@ -1,0 +1,45 @@
+﻿@model HTML_UMA.Models.Product
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<br></br>
+
+<h3>Bạn có muốn xóa sản phẩm này không?</h3>
+<div>
+    <h4>@Model.pro_Name</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã sản phẩm: @Html.DisplayFor(model => model.pro_code)
+        </dt>
+        <dt>
+            Tên: @Html.DisplayFor(model => model.pro_Name)
+        </dt>
+        <dt>
+            Giá: @Html.DisplayFor(model => model.pro_price)
+        </dt>
+
+        <dt>
+            Hình ảnh:
+        </dt>
+
+        <dd>
+            <img src="@Model.pro_Image" width="100" height="100"/>
+        </dd>
+        <dt>
+            Danh mục: @Html.DisplayFor(model => model.Menu.Name)
+        </dt>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Trở về", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,18 @@
+﻿@model IEnumerable<HTML_UMA.Models.Menu>
+@{
+    Layout = null;
+}
+@if ((int)ViewBag.Count > 0)
+{
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li class="has-sub" data-id="@item.Menu_ID">
+                <a class="text" href="@Url.Action("RoomProduct","Product", new { Menu_ID = item.Menu_ID})">@item.Name</a>
+            </li>
+        }
+
+    </ul>
+}
+
+

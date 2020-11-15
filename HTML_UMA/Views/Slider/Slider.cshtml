@@ -1,0 +1,122 @@
+﻿@model IEnumerable<HTML_UMA.Models.Slider>
+@{ 
+    Layout = null;
+}
+<div class="slider">
+    <div class="magestore-bannerslider">
+        <div class="magestore-bannerslider-standard">
+            <div class="container uma-custom-slider full-width-slider" data-slider-id="1">
+                <div class="items">
+                    <div class="item">
+                        <div class="item-image">
+                            <a href="" target="_self"
+                               onclick="bannerClicks('1','1')">
+                                <img class="img-responsive hidden-sm hidden-xs"
+                                     alt=""
+                                     src="~/media/wysiwyg/bannerslider/b/a/banner-home-slide-xmas-sale-desktop-vi.png" />
+                                <img class="img-responsive visible-sm visible-xs"
+                                     alt=""
+                                     src="~/media/wysiwyg/bannerslider/b/a/banner-home-slide-xmas-sale-mobile-vi.png" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-image">
+                            <a href="" target="_self"
+                               onclick="bannerClicks('1','1')">
+                                <img class="img-responsive hidden-sm hidden-xs"
+                                     alt=""
+                                     src="~/media/wysiwyg/bannerslider/b/a/banner-home-slide-calendar-desktop-vi_2.jpg" />
+                                <img class="img-responsive visible-sm visible-xs"
+                                     alt=""
+                                     src="~/media/wysiwyg/bannerslider/b/a/banner-home-slide-calendar-mobile-en_2.jpg" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-image">
+                            <a href="" target="_self"
+                               onclick="bannerClicks('1','1')">
+                                <img class="img-responsive hidden-sm hidden-xs"
+                                     alt=""
+                                     src="~/media/wysiwyg/bannerslider/b/a/banner-home-slide-stefano-desktop-vi.jpg" />
+                                <img class="img-responsive visible-sm visible-xs"
+                                     alt=""
+                                     src="~/media/wysiwyg/bannerslider/b/a/banner-home-slide-stefano-mobile-vi.jpg" />
+                            </a>
+                        </div>
+                    </div>
+                    @foreach (var item in Model)
+                    {
+                        <div class="item">
+                            <div class="item-image">
+                                <a href="" target="_self"
+                                   onclick="bannerClicks('1','1')">
+                                    <img class="img-responsive hidden-sm hidden-xs"
+                                         alt=""
+                                         src="@item.slide_Image" />
+                                    <img class="img-responsive visible-sm visible-xs"
+                                         alt=""
+                                         src="@item.slide_Image" />
+                                </a>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <script type="text/javascript">
+                                $j(document).ready(function () {
+                                    var $slider_selector = ".uma-custom-slider[data-slider-id='"
+                                        + '1'
+                                        + "'] .items";
+                                    $j($slider_selector).slick({
+                                        dots: true,
+                                        arrows: true,
+                                        prevArrow: "<img class='slick-prev' src='/skin/frontend/uma/default/images/sliders/light/md-left.svg' />",
+                                        nextArrow: "<img class='slick-next' src='/skin/frontend/uma/default/images/sliders/light/md-right.svg' />",
+                                        infinite: true,
+                                        slidesToShow: 1,
+                                        slidesToScroll: 1,
+                                        autoplay: true,
+                                        speed: 2000,
+                                        autoplaySpeed: 6000,
+                                        adaptiveHeight: true,
+                                        responsive: [
+                                            {
+                                                breakpoint: 768,
+                                                settings: {
+                                                    speed: 1000,
+                                                    autoplaySpeed: 4000,
+                                                    prevArrow: "<img class='slick-prev' src='/skin/frontend/uma/default/images/sliders/light/sm-left.svg' />",
+                                                    nextArrow: "<img class='slick-next' src='/skin/frontend/uma/default/images/sliders/light/sm-right.svg' />",
+                                                }
+                                            },
+                                            {
+                                                breakpoint: 425,
+                                                settings: {
+                                                    speed: 1000,
+                                                    autoplaySpeed: 4000,
+                                                    prevArrow: "<img class='slick-prev' src='/skin/frontend/uma/default/images/sliders/light/xs-left.svg' />",
+                                                    nextArrow: "<img class='slick-next' src='/skin/frontend/uma/default/images/sliders/light/xs-right.svg' />",
+                                                }
+                                            }
+                                        ]
+                                    });
+                                });
+                </script>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+                                Event.observe(window, 'load', function () {
+                                    banner_ids = '282,276,278,280,281,144';
+                                    slider_id = '1';
+                                    imp_url = '/vi/bannerslider/index/impress/';
+                                    new Ajax.Request(imp_url, {
+                                        method: 'post',
+                                        parameters: { banner_ids: banner_ids, slider_id: slider_id },
+                                        onFailure: '',
+                                        onSuccess: ''
+                                    });
+                                });
+    </script>
+</div>

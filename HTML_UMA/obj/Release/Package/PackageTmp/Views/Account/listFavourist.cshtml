@@ -1,0 +1,150 @@
+﻿@model IEnumerable<HTML_UMA.Models.Favourite>
+@{
+    ViewBag.Title = "listFavourist";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="main-container col1-layout">
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="breadcrumb-wrapper">
+                        <ul class="breadcrumb">
+                            <li class="Home">
+                                <a href="/" title="Home">
+                                    HOME
+                                </a>
+                            </li>
+                            <li class="Product">
+                                <a href="/Account/UserInformation">Thông tin tài khoản</a>
+                            </li>
+                            <li class="Wishlist">
+                                <a>Wishlist</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-top">
+    </div>
+    <div class="container">
+        <div class="main row">
+            <div class="col-main col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="my-account">
+                    <div class="my-wishlist">
+                        <div class="wrapper">
+                            <table class="data-table text-uppercase" id="wishlist-table">
+                                <thead class="header hidden-xs">
+                                    <tr>
+                                        <th class="text-center" width="25%">Sản phẩm</th>
+                                        <th class="text-center" width="25%">Hình ảnh</th>
+                                        <th class="text-center" width="25%">Giá</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="body">
+                                    @if (Model != null)
+                                    {
+                                        foreach (var item in Model)
+                                        {
+                                            <tr class="desktop hidden-xs" data-id="@item.pro_ID">
+                                                <td align="center" class="product-name-function">
+                                                    <div class="product-function text-capitalize">@item.Product.pro_Name</div>
+                                                    <div class="product-name">
+                                                        <a href="">
+                                                            <span class="text-uppercase">@item.Product.pro_Description</span>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                                <td align="center" class="product-price">
+                                                    <img class="text-uppercase" src="@item.Product.pro_Image" style="width:80px; height:80px;" />
+                                                </td>
+                                                <td align="center" class="availability">
+                                                    <strong class="text-uppercase">@Html.Raw(string.Format("{0:#,#}", item.Product.pro_price)) <span>VNĐ</span></strong>
+                                                </td>
+                                                <td align="right">
+
+                                                    <div class="button btn-cart">
+                                                        <a class="text-uppercase" href="@Url.Action("addCart","Product", new { pro_ID = item.pro_ID})">
+                                                            Mua hàng
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="mobile visible-xs">
+                                                <td colspan="7">
+                                                    <div class="top-box">
+                                                        <div class="product-name-function">
+                                                            <div class="product-function">
+                                                                <span class="text-uppercase">@item.Product.pro_Name</span>
+                                                            </div>
+                                                            <div class="product-name">
+                                                                <a href="">
+                                                                    <span class="text-uppercase">@item.Product.pro_Description</span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="buttons text-right">
+                                                            <div class="button btn-cart">
+                                                                <a href="" title="Add to cart">
+                                                                    <img src="https://uma.vn/skin/frontend/uma/default/images/icons/plus-light.svg">
+                                                                </a>
+                                                            </div>
+                                                            <div class="button btn-remove">
+                                                                <a title="Loại bỏ mặt hàng">
+                                                                    <img src="https://uma.vn/skin/frontend/uma/default/images/icons/close-light.svg">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="bottom-box">
+                                                        <div class="left">
+                                                            <div class="product-image">
+                                                                <a href="" title="MOZART" class="product-image">
+                                                                    <img class="img-responsive" src="" width="180px" height="180px" alt="">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="right">
+                                                            <div class="product-price">
+                                                                <div class="text">
+                                                                    <strong class="text-uppercase">Đơn giá:</strong>
+                                                                </div>
+                                                                <div class="value">
+                                                                    <strong>@Html.Raw(string.Format("{0:#,#}", item.Product.pro_price))</strong>
+                                                                </div>
+                                                            </div>
+                                                            <div class="product-availability">
+                                                                <div class="text">
+                                                                    <strong class="text-uppercase">Avail:</strong>
+                                                                </div>
+                                                                <div class="value">
+                                                                    <strong>
+                                                                        <span class="in-stock">@item.Product.pro_Status</span>
+                                                                    </strong>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <p>Chưa có sản phẩm nào</p>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-bottom">
+    </div>
+</div>

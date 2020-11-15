@@ -1,0 +1,225 @@
+﻿@model HTML_UMA.Models.OrderDetail
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>OrderDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.detail_TotalBegin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.detail_TotalBegin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.detail_fee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.detail_fee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.detail_Totalmoney)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.detail_Totalmoney)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.detail_ShipName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.detail_ShipName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.detail_ShipLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.detail_ShipLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.detail_ShipPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.detail_ShipPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.detail_ShipEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.detail_ShipEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.detail_ShipProvince)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.detail_ShipProvince)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.detail_ShipDistrict)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.detail_ShipDistrict)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.detail_ShipTown)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.detail_ShipTown)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.detail_ShipStreet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.detail_ShipStreet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.detail_PayName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.detail_PayName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.detail_PayLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.detail_PayLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.detail_PayPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.detail_PayPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.detail_PayEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.detail_PayEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.detail_PayProvince)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.detail_PayProvince)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.detail_PayDistrict)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.detail_PayDistrict)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.detail_PayTown)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.detail_PayTown)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.detail_PayStreet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.detail_PayStreet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.detail_dateorder)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.detail_dateorder)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.detail_note)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.detail_note)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.checked)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.checked)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Order.pro_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Order.pro_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaleCode.sale_code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaleCode.sale_code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.user_PassWord)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.user_PassWord)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,74 @@
+﻿@model PagedList.IPagedList<HTML_UMA.Models.OrderDetail>
+@using PagedList.Mvc
+
+@{
+    ViewBag.Title = "TimKiem";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="text-center">
+    <h2>Báo cáo bán hàng</h2>
+</div>
+<table class="table">
+    <tr>
+        <th class="text-center">
+            Mã hóa đơn
+        </th>
+        <th class="text-center">
+            Tổng hóa đơn
+        </th>
+        <th class="text-center">
+            Người nhận
+        </th>
+        <th class="text-center">
+            Người thanh toán
+        </th>
+        <th class="text-center">
+            Trạng thái
+        </th>
+        <th class="text-center">
+            Chức năng
+        </th>
+        <th colspan="2"></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr class="text-center">
+            <td>
+                @item.detail_ID
+            </td>
+            <td>
+                @item.detail_Totalmoney <span>VNĐ</span>
+            </td>
+            <td>
+                @item.detail_ShipLastName @item.detail_ShipName
+            </td>
+            <td>
+                @item.detail_PayLastName  @item.detail_PayName
+            </td>
+            @if (item.@checked == true)
+            {
+                <td style="color: forestgreen">
+                    Đã kiểm tra
+                </td>
+            }
+            else
+            {
+                <td style="color: red">
+                    Chưa kiểm tra
+                </td>
+            }
+            <td>
+                @Html.ActionLink("Chi tiết", "Details", new { id = item.detail_ID }) |
+            </td>
+        </tr>
+    }
+
+</table>
+<div class="text-center">
+    @Html.PagedListPager(Model, page => Url.Action("TimKiem",
+   new { search = ViewBag.search, page }))
+</div>
+
+

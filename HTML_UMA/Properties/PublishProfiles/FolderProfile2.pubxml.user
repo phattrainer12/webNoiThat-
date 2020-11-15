@@ -1,0 +1,1744 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\Administrator\Desktop\PublicUMA\PublicfileUMA</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="ApplicationInsights.config">
+      <publishTime>12/22/2017 13:58:23</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>02/22/2013 08:43:40</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>02/22/2013 08:43:40</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>12/22/2017 13:58:23</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>10/23/2017 13:15:18</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>10/23/2017 13:15:20</publishTime>
+    </File>
+    <File Include="bin/Facebook.dll">
+      <publishTime>04/13/2015 15:48:00</publishTime>
+    </File>
+    <File Include="bin/HTML_UMA.dll">
+      <publishTime>01/08/2018 13:49:56</publishTime>
+    </File>
+    <File Include="bin/HTML_UMA.pdb">
+      <publishTime>01/08/2018 13:49:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>11/30/2016 16:07:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>12/07/2016 11:45:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>12/07/2016 11:50:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>12/06/2016 15:15:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>12/07/2016 11:49:10</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>12/07/2016 11:50:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>12/06/2016 15:09:52</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>05/05/2017 09:59:26</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>01/05/2012 11:08:46</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>08/03/2014 20:33:56</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe.config">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>04/13/2017 15:47:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>04/13/2017 15:47:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>04/13/2017 15:47:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>04/13/2017 15:47:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>04/13/2017 15:47:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>04/13/2017 15:47:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>04/13/2017 15:47:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Win32.Primitives.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Console.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.FileVersionInfo.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.Process.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Compression.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.DriveInfo.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Pipes.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.AccessControl.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Claims.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Algorithms.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Encoding.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Primitives.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.X509Certificates.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Principal.Windows.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Text.Encoding.CodePages.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Threading.Thread.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.ValueTuple.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.ReaderWriter.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XmlDocument.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.XDocument.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>01/28/2015 04:02:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>02/11/2014 15:26:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>01/28/2015 04:02:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>09/10/2013 17:28:38</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>12/22/2017 13:57:52</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>12/22/2017 13:57:52</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>12/22/2017 13:57:29</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>12/22/2017 13:57:29</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/css/font-awesome.css">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/css/font-awesome.min.css">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/fonts/fontawesome-webfont.eot">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/fonts/fontawesome-webfont.svg">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/fonts/fontawesome-webfont.woff">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/fonts/FontAwesome.otf">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/HELP-US-OUT.txt">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/less/animated.less">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/less/bordered-pulled.less">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/less/core.less">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/less/fixed-width.less">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/less/font-awesome.less">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/less/icons.less">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/less/larger.less">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/less/list.less">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/less/mixins.less">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/less/path.less">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/less/rotated-flipped.less">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/less/screen-reader.less">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/less/stacked.less">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/less/variables.less">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/scss/font-awesome.scss">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/scss/_animated.scss">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/scss/_bordered-pulled.scss">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/scss/_core.scss">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/scss/_fixed-width.scss">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/scss/_icons.scss">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/scss/_larger.scss">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/scss/_list.scss">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/scss/_mixins.scss">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/scss/_path.scss">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/scss/_rotated-flipped.scss">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/scss/_screen-reader.scss">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/scss/_stacked.scss">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="font-awesome/font-awesome-4.7.0/scss/_variables.scss">
+      <publishTime>12/22/2017 18:52:05</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>12/22/2017 13:57:52</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>12/22/2017 13:57:52</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>12/22/2017 13:57:52</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>12/22/2017 13:57:52</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>12/22/2017 13:57:29</publishTime>
+    </File>
+    <File Include="HtmlPage1.html">
+      <publishTime>01/05/2018 23:46:35</publishTime>
+    </File>
+    <File Include="js/ematic/ematix.min.js">
+      <publishTime>12/22/2017 14:51:25</publishTime>
+    </File>
+    <File Include="js/jquery/jquery-1.10.2.js">
+      <publishTime>12/22/2017 14:51:25</publishTime>
+    </File>
+    <File Include="js/waypoint/jquery.waypoints.js">
+      <publishTime>12/22/2017 14:51:25</publishTime>
+    </File>
+    <File Include="media/catalog/230px/ALI_ALI_1.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/ALI_ALI_8.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/BANG_BANG_STORAGE_FURNITURE_Bookcases.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/BATISTA_BATISTA_DINING_ROOM_-_Dining_chairs.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/BEDFORD_BEDFORD_6.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/BEDFORD_BEDFORD_8.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/BIANCA_BIANCA.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/BIANCA_BIANCA_DINING_ROOM_Dining_chairs.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/BIANCA_BIANCA_DINING_ROOM_Dining_tables.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/CAFE_ROYALE4.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/CAFE_ROYALE_CAFE_ROYALE.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/CARAVELLE_CARAVELLE.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/CASTELL_CASTEL.jpg">
+      <publishTime>01/08/2018 13:07:14</publishTime>
+    </File>
+    <File Include="media/catalog/230px/Chair.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/chair1.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/Chairdinner.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/CLARK_CLARK_LIVING_ROOM_Coffee_Tables_and_Side_Tables.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/COSSACK_COSSACK 1.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/COSSACK_COSSACK.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/DORA_DORA %282%29.jpg">
+      <publishTime>01/08/2018 13:07:14</publishTime>
+    </File>
+    <File Include="media/catalog/230px/DORA_DORA.jpg">
+      <publishTime>01/08/2018 13:07:14</publishTime>
+    </File>
+    <File Include="media/catalog/230px/DORA_DORA_ 1.jpg">
+      <publishTime>01/08/2018 13:07:14</publishTime>
+    </File>
+    <File Include="media/catalog/230px/DORA_DORA_.jpg">
+      <publishTime>01/08/2018 13:07:14</publishTime>
+    </File>
+    <File Include="media/catalog/230px/DORA_DORA_0.jpg">
+      <publishTime>01/08/2018 13:07:14</publishTime>
+    </File>
+    <File Include="media/catalog/230px/DORA_DORA_2.jpg">
+      <publishTime>01/08/2018 13:07:14</publishTime>
+    </File>
+    <File Include="media/catalog/230px/FRODO_FRODO_0.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/Giuong1.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/Giuong10.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/Giuong2.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/Giuong3.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/Giuong4.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/Giuong5.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/Giuong6.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/Giuong7.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/Giuong8.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/Giuong9.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/GRAFFITI_GRAFFITI.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/GRAFFITI_GRAFFITI_.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/GRAFFITI_GRAFFITI_9.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/HARRIS_HARRIS2.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/IT_IT_LIVING_ROOM_TV_and_Media_Furniture.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/JOHN_BLUND_JOHN_BLUND.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/KAPPA_KAPPA_3.jpg">
+      <publishTime>01/08/2018 13:07:14</publishTime>
+    </File>
+    <File Include="media/catalog/230px/KITKA_KITKA_7.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/KITKA_KITKA_DINING_ROOM_Dining_chairs.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/KITKA_KITKA_DINING_ROOM_Dining_tables.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/LOKA_LOKA_LIVING_ROOM_Display_Shelves.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/LOKKO_LOKKO_STORAGE_FURNITURE_Bookcases.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/LUCAS_LUCAS_4.jpg">
+      <publishTime>01/08/2018 13:07:14</publishTime>
+    </File>
+    <File Include="media/catalog/230px/MALABAR_MALABAR_DINING_ROOM_Stools_and_Benches.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/MILLY_MILLY_STORAGE_FURNITURE_-Secondary_Storage.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/MOA_MOA_RUGS_FLOOR_MATS_Rugs_and_Carpets.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/MOZART_MOZART.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/MOZART_MOZART_0000001048520_BEDROOM_-_Beds_9551_20160826061834442275.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/MOZART_MOZART_DINING_ROOM_-_Stools_and_Benches.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/MOZART_MOZART_LIVING_ROOM_TV_and_Media_Furniture.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/NAGASAKI_NAGASAKI_.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/NAGASAKI_NAGASAKI_0.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/NAGASAKI_NAGASAKI_DINING_ROOM_Stools_and_Benches.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/NEBULA_NEBULA_6.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/NIKKI_NIKKI_LIVING_ROOM_Display_Shelves.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/NIKOS_NIKOS_SMALL_STORAGE_Boxes_Crates_and_Baskets.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/PADDY_PADDY_0.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/PADDY_PADDY_5.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/PILLATON_PILLATON_LIVING_ROOM_Sofas.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/PILOT_PILOT.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/PILOT_PILOT_STORAGE_FURNITURE_-_Bookcases.jpg">
+      <publishTime>01/08/2018 13:05:21</publishTime>
+    </File>
+    <File Include="media/catalog/230px/QATAR_QATAR_0.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/230px/RALLY_RALLY_STORAGE_FURNITURE_Bookcase.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/230px/RISTORANTE_RISTORANTE_7.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/230px/RIVIERA_RIVIERA_7.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/230px/RIVIERA_RIVIERA_GREEN_ROOM_-_Outdoor_Tables.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/230px/RIVIERA_RIVIERA_GREEN_ROOM_Outdoor_Chairs_and_Benches.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/230px/SANDUR_SANDUR.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/230px/SAO_MAI_SAO_MAI_KITCHEN_Storing.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/230px/SAXON_SAXON_SMALL_STORAGE_Boxes_Crates_and_Baskets.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/230px/STEP_STEP.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/230px/STEP_STEP_0.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/230px/STEP_STEP_7.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/230px/STRATUS_STRATUS8.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/230px/STRATUS_STRATUS_2.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/230px/STRATUS_STRATUS_8.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/230px/TEMASEK_TEMASEKLIVING_ROOM_Sofa_Beds.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/230px/TOTEM_TOTEM.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/230px/VIKING_FREJA_VIKING_FREJA_9.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/230px/VIKING_FREJA_VIKING_FREJA_LIVING_ROOM_Living_Room_Chairs_and_Arm_Chairs.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/230px/VIKING_TOR_VIKING_TOR_LIVING_ROOM_Living_Room_Chairs_and_Arm_Chairs.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/230px/WRANGLER_WRANGLER_01.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/230px/WRANGLER_WRANGLER_2.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/230px/YOKOHAMA_YOKOHAMA_0000000004282_BEDROOM_-_Beds_211_20160928090002032286.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/230px/YOKOHAMA_YOKOHAMA_0000000004285_BEDROOM_-_Beds_213_20160928091504131082.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/230px/YOKOHAMA_YOKOHAMA_0000000004287_BEDROOM_-_Beds_218_20160928071338554000.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/230px/YOKOHAMA_YOKOHAMA_0000000004288_BEDROOM_-_Beds_216_20160928075739786415.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/230px/YOKOHAMA_YOKOHAMA_6.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/230px/YOKOHAMA_YOKOHAMA_7.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/230px/đsa.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/che_1_1.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/che_1_2.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/thumb_beds-and-mattresses_desktop.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/thumb_beds-and-mattresses_mobile.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/thumb_kitchen-accessories_desktop.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/thumb_kitchen-accessories_mobile.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/thumb_kitchen-furniture_desktop.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/thumb_kitchen-furniture_mobile.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/uma-shop-by-room-bathroom-furnitures_2.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/uma-shop-by-room-bathroom-furnitures_3.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/uma_-_banner_-_shop_by_product_-_tables.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/uma_banner_shop_by_products_mirrors.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/uma_banner_shop_by_products_mirrors_mobile.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/uma_banner_shop_by_product_storages.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/uma_banner_shop_by_product_storages_mobile.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/uma_banner_shop_by_product_wardrobes_bedroom_organising.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/uma_banner_shop_by_product_wardrobes_bedroom_organising_mobile.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/uma_shop_by_products_Sofas_Livingoom_chairs_2_.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/uma_shop_by_products_Sofas_Livingoom_chairs_mobile_2_.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/uma_shop_by_product_chair_stool_step_ladder.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/uma_shop_by_product_chair_stool_step_ladder_mobile.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/uma_shop_by_product_decoration.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/uma_shop_by_product_decoration_mobile.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/uma_shop_by_product_desks_office_chairs_mobile.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/uma_shop_by_product_lighting.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/uma_shop_by_product_lighting_mobile_1.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/uma_shop_by_product_livingroom_rugs_and_mats.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/uma_shop_by_product_livingroom_rugs_and_mats_mobile.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/uma_shop_by_product_office_desk_chairs.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/uma_shop_by_product_tables_mobile.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/uma_shop_by_product_tableware.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/uma_shop_by_product_tableware_mobile.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/uma_shop_by_product_textiles.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/uma_shop_by_product_textiles_mobile.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/uma_shop_by_product_TV_Media_cabinet.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/category/uma_shop_by_product_TV_Media_cabinet_mobile.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/chekoke.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/che_1_1.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/che_1_2.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/connena.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/display-shelves_2.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/obelix.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/ristorante.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/thumb_artificial-candles-tealights-and-holders_desktop.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/thumb_artificial-flowers-and-plants_desktop.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/thumb_bedrooms-organizing_mobile.jpg">
+      <publishTime>01/08/2018 13:05:22</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/thumb_beds-and-mattresses_desktop.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/thumb_beds-and-mattresses_mobile.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/thumb_beds_desktop.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/thumb_boxes-crates-and-baskets_desktop.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/thumb_dining-chairs_desktop.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/thumb_kitchen-accessories_desktop.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/thumb_kitchen-accessories_mobile.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/thumb_kitchen-cabinets_desktop.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/thumb_kitchen-cabinets_desktop_1.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/thumb_kitchen-furniture_desktop.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/thumb_kitchen-furniture_mobile.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/thumb_kitchen-organizing_desktop_1.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/thumb_kitchen-organizing_desktop_590x260.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/thumb_kitchen-preparing_desktop.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/thumb_kitchen-preparing_desktop_1.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/thumb_kitchen-storages_desktop.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/thumb_kitchen-storing_desktop.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/thumb_kitchen-storing_desktop_1.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/thumb_kitchen-textiles_desktop.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/thumb_mattresses_desktop.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/thumb_waste-bins_desktop.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma-shop-by-room-bathroom-furnitures_1.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma-shop-by-room-bathroom-furnitures_2.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma-shop-by-room-bathroom-furnitures_3.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma-shop-by-room-bathroom-set-and-accessories_1.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_-_banner_-_shop_by_product_-_tables.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_banner_shop_by_products_mirrors.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_banner_shop_by_products_mirrors_mobile.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_banner_shop_by_product_bookcases_1.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_banner_shop_by_product_stools_and_benches %281%29.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_banner_shop_by_product_stools_and_benches.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_banner_shop_by_product_storages.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_banner_shop_by_product_storages_mobile.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_banner_shop_by_product_wardrobes_bedroom_organising.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_banner_shop_by_product_wardrobes_bedroom_organising_mobile.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_banner_shop_by_room_bedroom_bedside_table.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_banner_shop_by_room_bedroom_chest_of_drawers.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_banner_shop_by_room_bedroom_decorative_cushions_covers.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_banner_shop_by_room_bedroom_wardrobes.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_banner_shop_by_room_diningroom_dining_chairs.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_banner_shop_by_room_diningroom_lighting.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_banner_shop_by_room_diningroom_rugs_and_mats.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_banner_shop_by_room_diningroom_step_ladder.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_banner_shop_by_room_diningroom_stools_and_benches.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_banner_shop_by_room_diningroom_tableware.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_banner_shop_by_room_hall_entrance_furniture.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_banner_shop_by_room_hall_entrance_hall_shelves.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_banner_shop_by_room_livingroom_bookcases %281%29.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_banner_shop_by_room_livingroom_bookcases .jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_banner_shop_by_room_livingroom_bookcases.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_banner_shop_by_room_livingroom_livingroom_cabinet.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_banner_shop_by_room_livingroom_rugs_and_mats.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_banner_shop_by_room_office_desk.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_products_lightings_ceiling_lamps.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_products_lightings_floor_lamps.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_products_rugs_mats.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_products_Sofas_Livingoom_chairs_2_.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_products_Sofas_Livingoom_chairs_mobile_2_.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_chair_stool_step_ladder.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_chair_stool_step_ladder_mobile.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_clocks_1.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_decoration .jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_decoration.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_decoration_1.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_decoration_mobile.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_desks_office_chairs_mobile.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_dressing_mirrors.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_frames.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_lighting.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_lighting_1.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_lighting_2.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_lighting_mobile_1.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_livingroom_rugs_and_mats.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_livingroom_rugs_and_mats_2.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_livingroom_rugs_and_mats_mobile.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_office_chairs.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_office_desk.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_office_desk_chairs.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_paintings_and_picture_frames.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_standing_mirror.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_step_ladder.jpg">
+      <publishTime>01/08/2018 13:05:23</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_tables_mobile.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_tableware.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_tableware_mobile.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_table_desk_lamps.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_textiles.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_textiles_mobile.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_TV_Media_cabinet.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_TV_Media_cabinet_mobile.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_vases.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_product_wall_mirror.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_rooms_bean_bags_poufs.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_rooms_bed.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_rooms_bedlinen.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_rooms_bedroom_mirrors.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_rooms_coffee_tables.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_rooms_curtains_1.JPG">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_rooms_cushions_covers.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_rooms_decoration.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_rooms_decoration_1.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_rooms_dining_tables.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_rooms_dressing_table.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_rooms_inner_cushions_duvets.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_rooms_lighting.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_rooms_lighting_1.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_rooms_mattresses.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_rooms_rugs_and_mats.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_rooms_seat_cushions.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_rooms_sideboards.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_rooms_side_table.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_rooms_table_linens.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_rooms_TV_Media_cabinets.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_room_hall_entrance.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_room_hall_entrance_-_mirror.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_room_home_office_study.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/uma_shop_by_room_livingroom.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/catalog/lagerImage/walter.jpg">
+      <publishTime>01/08/2018 13:05:24</publishTime>
+    </File>
+    <File Include="media/css_secure/a128a7167c64f5a712150b71f7cf71a3.css">
+      <publishTime>01/08/2018 01:47:23</publishTime>
+    </File>
+    <File Include="media/css_secure/f26c30f99165a5b7b5b2a071186814bd.css">
+      <publishTime>01/08/2018 01:47:23</publishTime>
+    </File>
+    <File Include="media/css_secure/f82d2130b692727fba6ade9cd5a84d3b.css">
+      <publishTime>01/08/2018 01:47:23</publishTime>
+    </File>
+    <File Include="media/js/039054f52827d54607380f62fc49b0b7.js">
+      <publishTime>01/08/2018 01:47:23</publishTime>
+    </File>
+    <File Include="media/js/04854c14b18e1ef6d4e66607d6e2ee55.js">
+      <publishTime>01/08/2018 01:47:23</publishTime>
+    </File>
+    <File Include="media/js/5da136b570fb7dcaa00407a44a01cccb.js">
+      <publishTime>01/08/2018 01:47:23</publishTime>
+    </File>
+    <File Include="media/js/a1b929cc4dcd76025b6908c0285983e0.js">
+      <publishTime>01/08/2018 01:47:23</publishTime>
+    </File>
+    <File Include="media/js/a692fdc8046b624ccd6bcfe55635c3c0.js">
+      <publishTime>01/08/2018 01:47:23</publishTime>
+    </File>
+    <File Include="media/js/c6732d62162f0b7121d125f2f7494701.js">
+      <publishTime>01/08/2018 01:47:23</publishTime>
+    </File>
+    <File Include="media/magehouse/slider/default/ajax-loader.gif">
+      <publishTime>01/08/2018 01:47:23</publishTime>
+    </File>
+    <File Include="media/wysiwyg/bannerslider/b/a/banner-featured-categories-dining-table-desktop.jpg">
+      <publishTime>01/08/2018 01:47:23</publishTime>
+    </File>
+    <File Include="media/wysiwyg/bannerslider/b/a/banner-featured-categories-dining-table-mobile.jpg">
+      <publishTime>01/08/2018 01:47:23</publishTime>
+    </File>
+    <File Include="media/wysiwyg/bannerslider/b/a/banner-featured-categories-kitchen-storing-desktop.jpg">
+      <publishTime>01/08/2018 01:47:23</publishTime>
+    </File>
+    <File Include="media/wysiwyg/bannerslider/b/a/banner-featured-categories-kitchen-storing-mobile.jpg">
+      <publishTime>01/08/2018 01:47:24</publishTime>
+    </File>
+    <File Include="media/wysiwyg/bannerslider/b/a/banner-featured-categories-lamp-desktop.jpg">
+      <publishTime>01/08/2018 01:47:24</publishTime>
+    </File>
+    <File Include="media/wysiwyg/bannerslider/b/a/banner-featured-categories-lamp-mobile.jpg">
+      <publishTime>01/08/2018 01:47:24</publishTime>
+    </File>
+    <File Include="media/wysiwyg/bannerslider/b/a/banner-featured-categories-tv-bench-desktop.jpg">
+      <publishTime>01/08/2018 01:47:24</publishTime>
+    </File>
+    <File Include="media/wysiwyg/bannerslider/b/a/banner-featured-categories-tv-bench-mobile.jpg">
+      <publishTime>01/08/2018 01:47:24</publishTime>
+    </File>
+    <File Include="media/wysiwyg/bannerslider/b/a/banner-home-slide-calendar-desktop-vi_2.jpg">
+      <publishTime>01/08/2018 01:47:24</publishTime>
+    </File>
+    <File Include="media/wysiwyg/bannerslider/b/a/banner-home-slide-calendar-mobile-en_2.jpg">
+      <publishTime>01/08/2018 01:47:24</publishTime>
+    </File>
+    <File Include="media/wysiwyg/bannerslider/b/a/banner-home-slide-cobra-desktop-vi_3.jpg">
+      <publishTime>01/08/2018 01:47:24</publishTime>
+    </File>
+    <File Include="media/wysiwyg/bannerslider/b/a/banner-home-slide-cobra-mobile-vi_3.jpg">
+      <publishTime>01/08/2018 01:47:24</publishTime>
+    </File>
+    <File Include="media/wysiwyg/bannerslider/b/a/banner-home-slide-stefano-desktop-vi.jpg">
+      <publishTime>01/08/2018 01:47:24</publishTime>
+    </File>
+    <File Include="media/wysiwyg/bannerslider/b/a/banner-home-slide-stefano-desktop-vi.png">
+      <publishTime>01/08/2018 01:47:24</publishTime>
+    </File>
+    <File Include="media/wysiwyg/bannerslider/b/a/banner-home-slide-stefano-mobile-vi.jpg">
+      <publishTime>01/08/2018 01:47:24</publishTime>
+    </File>
+    <File Include="media/wysiwyg/bannerslider/b/a/banner-home-slide-stefano-mobile-vi.png">
+      <publishTime>01/08/2018 01:47:24</publishTime>
+    </File>
+    <File Include="media/wysiwyg/bannerslider/b/a/banner-home-slide-xmas-sale-desktop-vi.png">
+      <publishTime>01/08/2018 01:47:24</publishTime>
+    </File>
+    <File Include="media/wysiwyg/bannerslider/b/a/banner-home-slide-xmas-sale-mobile-vi.png">
+      <publishTime>01/08/2018 01:47:24</publishTime>
+    </File>
+    <File Include="media/wysiwyg/bannerslider/c/u/cushion-cover-vi.jpg">
+      <publishTime>01/08/2018 01:47:24</publishTime>
+    </File>
+    <File Include="media/wysiwyg/bannerslider/d/e/decoration-vi_1.jpg">
+      <publishTime>01/08/2018 01:47:24</publishTime>
+    </File>
+    <File Include="media/wysiwyg/bannerslider/d/e/desk-vi.png">
+      <publishTime>01/08/2018 01:47:24</publishTime>
+    </File>
+    <File Include="media/wysiwyg/bannerslider/d/i/dining-table-vi.jpg">
+      <publishTime>01/08/2018 01:47:24</publishTime>
+    </File>
+    <File Include="media/wysiwyg/bannerslider/m/o/mob-vi.png">
+      <publishTime>01/08/2018 01:47:24</publishTime>
+    </File>
+    <File Include="Models/Model1.edmx.diagram">
+      <publishTime>01/06/2018 21:02:23</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>12/22/2017 13:57:52</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>12/22/2017 13:57:51</publishTime>
+    </File>
+    <File Include="Scripts/GoogleLogin.js">
+      <publishTime>12/31/2017 16:11:15</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>12/22/2017 13:57:53</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>12/22/2017 13:57:53</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>12/22/2017 13:57:53</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>12/22/2017 13:58:13</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>12/22/2017 13:58:13</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>12/22/2017 13:58:13</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>12/22/2017 13:58:13</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>12/22/2017 13:58:10</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>12/22/2017 13:58:12</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>12/22/2017 13:58:12</publishTime>
+    </File>
+    <File Include="skin/frontend/base/default/aw_blog/images/icon_blog.png">
+      <publishTime>12/22/2017 14:51:29</publishTime>
+    </File>
+    <File Include="skin/frontend/base/default/css/magestore/bannerslider/image/close-tiny.png">
+      <publishTime>12/22/2017 14:51:29</publishTime>
+    </File>
+    <File Include="skin/frontend/base/default/css/slider/images/ui-bg_diagonals-thick_18_b81900_40x40.png">
+      <publishTime>12/22/2017 14:51:29</publishTime>
+    </File>
+    <File Include="skin/frontend/base/default/css/slider/images/ui-bg_diagonals-thick_20_666666_40x40.png">
+      <publishTime>12/22/2017 14:51:29</publishTime>
+    </File>
+    <File Include="skin/frontend/base/default/css/slider/images/ui-bg_flat_10_000000_40x100.png">
+      <publishTime>12/22/2017 14:51:29</publishTime>
+    </File>
+    <File Include="skin/frontend/base/default/css/slider/images/ui-bg_glass_100_f6f6f6_1x400.png">
+      <publishTime>12/22/2017 14:51:29</publishTime>
+    </File>
+    <File Include="skin/frontend/base/default/css/slider/images/ui-bg_glass_100_fdf5ce_1x400.png">
+      <publishTime>12/22/2017 14:51:29</publishTime>
+    </File>
+    <File Include="skin/frontend/base/default/css/slider/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>12/22/2017 14:51:29</publishTime>
+    </File>
+    <File Include="skin/frontend/base/default/css/slider/images/ui-bg_gloss-wave_35_f6a828_500x100.png">
+      <publishTime>12/22/2017 14:51:29</publishTime>
+    </File>
+    <File Include="skin/frontend/base/default/css/slider/images/ui-bg_highlight-soft_100_eeeeee_1x100.png">
+      <publishTime>12/22/2017 14:51:29</publishTime>
+    </File>
+    <File Include="skin/frontend/base/default/css/slider/images/ui-bg_highlight-soft_75_ffe45c_1x100.png">
+      <publishTime>12/22/2017 14:51:29</publishTime>
+    </File>
+    <File Include="skin/frontend/base/default/css/slider/images/ui-icons_222222_256x240.png">
+      <publishTime>12/22/2017 14:51:29</publishTime>
+    </File>
+    <File Include="skin/frontend/base/default/css/slider/images/ui-icons_228ef1_256x240.png">
+      <publishTime>12/22/2017 14:51:29</publishTime>
+    </File>
+    <File Include="skin/frontend/base/default/css/slider/images/ui-icons_ef8c08_256x240.png">
+      <publishTime>12/22/2017 14:51:29</publishTime>
+    </File>
+    <File Include="skin/frontend/base/default/css/slider/images/ui-icons_ffd27a_256x240.png">
+      <publishTime>12/22/2017 14:51:29</publishTime>
+    </File>
+    <File Include="skin/frontend/base/default/css/slider/images/ui-icons_ffffff_256x240.png">
+      <publishTime>12/22/2017 14:51:29</publishTime>
+    </File>
+    <File Include="skin/frontend/base/default/images/widgets/i_block-list.gif">
+      <publishTime>12/22/2017 14:51:29</publishTime>
+    </File>
+    <File Include="skin/frontend/base/default/images/widgets/i_widget-link.gif">
+      <publishTime>12/22/2017 14:51:29</publishTime>
+    </File>
+    <File Include="skin/frontend/base/default/images/widgets/i_widget-new.gif">
+      <publishTime>12/22/2017 14:51:29</publishTime>
+    </File>
+    <File Include="skin/frontend/base/default/js/infinitescroll/ias_config.js">
+      <publishTime>12/22/2017 14:51:29</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/fonts/arial/Arial.eot">
+      <publishTime>12/22/2017 14:51:29</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/fonts/arial/Arial.ttf">
+      <publishTime>12/22/2017 14:51:29</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/fonts/arial/Arial.woff">
+      <publishTime>12/22/2017 14:51:29</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/fonts/SFUFutura/SFUFuturaBold.TTF">
+      <publishTime>12/22/2017 14:51:29</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/fonts/SFUFutura/SFUFuturaBook.TTF">
+      <publishTime>12/22/2017 14:51:29</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/fonts/SFUFutura/SFUFuturaExtraBold.TTF">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/fonts/SFUFutura/SFUFuturaHeavy.TTF">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/fonts/SFUFutura/SFUFuturaLight.TTF">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/fonts/SFUFutura/SFUFuturaRegular.TTF">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/cms/homepage/our-address-map-small.png">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/icons/arrow.svg">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/icons/close.svg">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/icons/flags/en-32x21.svg">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/icons/header-icons.svg">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/icons/logo2-big.svg">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/icons/logo2-small.svg">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/icons/magnifier-tool-white.svg">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/icons/regions/hanoi-colored.jpg">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/icons/regions/hanoi-grayscale.jpg">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/icons/regions/map-icon.svg">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/icons/regions/saigon-colored.jpg">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/icons/regions/saigon-grayscale.jpg">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/icons/scrolltop.svg">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/icons/social-media-icons-30x30.svg">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/icons/social-media-icons-36x36.svg">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/icons/social-media-icons-42x42.svg">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/icons/social-media-icons-60x60.svg">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/icons/socials/fb-icon.svg">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/icons/socials/google-icon.svg">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/logo-dathongbao.png">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/logo-master-card.svg">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/logo-visa-payment.svg">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/sliders/dark/md-left.svg">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/sliders/dark/md-right.svg">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/sliders/dark/sm-left.svg">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/sliders/dark/sm-right.svg">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/sliders/light/md-left.svg">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/sliders/light/md-right.svg">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/sliders/light/sm-left.svg">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/sliders/light/sm-right.svg">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/sliders/light/xs-left.svg">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/sliders/light/xs-right.svg">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/sprite-icons-s8f81fe6753.png">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/images/uma-logo-vn.png">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/lib/bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/lib/bootstrap/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/lib/bootstrap/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/lib/bootstrap/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/lib/dlmenu/fonts/icomoon.eot">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/lib/dlmenu/fonts/icomoon.svg#icomoon">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/lib/dlmenu/fonts/icomoon.ttf">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/lib/dlmenu/fonts/icomoon.woff">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/lib/slick/ajax-loader.gif">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/lib/slick/fonts/slick.eot">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/lib/slick/fonts/slick.svg#slick">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/lib/slick/fonts/slick.ttf">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="skin/frontend/uma/default/lib/slick/fonts/slick.woff">
+      <publishTime>12/22/2017 14:51:30</publishTime>
+    </File>
+    <File Include="Views/Account/Login.cshtml">
+      <publishTime>12/31/2017 18:25:36</publishTime>
+    </File>
+    <File Include="Views/Account/Signin.cshtml">
+      <publishTime>12/26/2017 20:58:18</publishTime>
+    </File>
+    <File Include="Views/Admin/CompanyManage.cshtml">
+      <publishTime>01/04/2018 22:01:48</publishTime>
+    </File>
+    <File Include="Views/Admin/Create.cshtml">
+      <publishTime>01/04/2018 17:18:48</publishTime>
+    </File>
+    <File Include="Views/Admin/CreateCompany.cshtml">
+      <publishTime>01/04/2018 22:07:14</publishTime>
+    </File>
+    <File Include="Views/Admin/CreateGroup.cshtml">
+      <publishTime>01/06/2018 21:26:19</publishTime>
+    </File>
+    <File Include="Views/Admin/CreateMenu.cshtml">
+      <publishTime>01/06/2018 21:58:44</publishTime>
+    </File>
+    <File Include="Views/Admin/CreateSlider.cshtml">
+      <publishTime>01/04/2018 17:22:15</publishTime>
+    </File>
+    <File Include="Views/Admin/Edit.cshtml">
+      <publishTime>01/04/2018 17:18:39</publishTime>
+    </File>
+    <File Include="Views/Admin/EditGroup.cshtml">
+      <publishTime>01/06/2018 21:13:49</publishTime>
+    </File>
+    <File Include="Views/Admin/EditMenu.cshtml">
+      <publishTime>01/07/2018 14:35:16</publishTime>
+    </File>
+    <File Include="Views/Admin/EditSlider.cshtml">
+      <publishTime>01/04/2018 15:47:58</publishTime>
+    </File>
+    <File Include="Views/Admin/GroupManage.cshtml">
+      <publishTime>01/06/2018 21:56:27</publishTime>
+    </File>
+    <File Include="Views/Admin/Index.cshtml">
+      <publishTime>01/04/2018 17:22:15</publishTime>
+    </File>
+    <File Include="Views/Admin/MenuManage.cshtml">
+      <publishTime>01/06/2018 22:08:36</publishTime>
+    </File>
+    <File Include="Views/Admin/SliderManage.cshtml">
+      <publishTime>01/04/2018 17:22:15</publishTime>
+    </File>
+    <File Include="Views/Home/About.cshtml">
+      <publishTime>01/06/2018 22:33:06</publishTime>
+    </File>
+    <File Include="Views/Home/Contact.cshtml">
+      <publishTime>12/22/2017 13:57:29</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>12/22/2017 16:39:53</publishTime>
+    </File>
+    <File Include="Views/Menu/childrent.cshtml">
+      <publishTime>12/24/2017 15:03:52</publishTime>
+    </File>
+    <File Include="Views/Menu/childrentleft.cshtml">
+      <publishTime>01/07/2018 20:25:36</publishTime>
+    </File>
+    <File Include="Views/Menu/Menu.cshtml">
+      <publishTime>01/07/2018 21:53:31</publishTime>
+    </File>
+    <File Include="Views/Menu/Menuleft.cshtml">
+      <publishTime>01/07/2018 19:58:25</publishTime>
+    </File>
+    <File Include="Views/Menu/Menulv2.cshtml">
+      <publishTime>01/07/2018 20:25:32</publishTime>
+    </File>
+    <File Include="Views/Menu/MenuRoomchildlv2.cshtml">
+      <publishTime>01/07/2018 20:25:03</publishTime>
+    </File>
+    <File Include="Views/Menu/MenuRoomlv2.cshtml">
+      <publishTime>01/07/2018 20:36:00</publishTime>
+    </File>
+    <File Include="Views/Payment/Onepage.cshtml">
+      <publishTime>12/31/2017 00:01:59</publishTime>
+    </File>
+    <File Include="Views/Payment/step1.cshtml">
+      <publishTime>01/03/2018 19:11:49</publishTime>
+    </File>
+    <File Include="Views/Payment/step2.cshtml">
+      <publishTime>01/03/2018 19:11:35</publishTime>
+    </File>
+    <File Include="Views/Payment/Step3.cshtml">
+      <publishTime>01/06/2018 23:12:14</publishTime>
+    </File>
+    <File Include="Views/Product/About.cshtml">
+      <publishTime>12/22/2017 18:39:39</publishTime>
+    </File>
+    <File Include="Views/Product/Cart.cshtml">
+      <publishTime>01/06/2018 22:40:06</publishTime>
+    </File>
+    <File Include="Views/Product/Catalogue2017.cshtml">
+      <publishTime>01/07/2018 16:27:23</publishTime>
+    </File>
+    <File Include="Views/Product/CategoryProduct.cshtml">
+      <publishTime>01/08/2018 02:56:30</publishTime>
+    </File>
+    <File Include="Views/Product/CategoryProuct.cshtml">
+      <publishTime>12/23/2017 18:53:39</publishTime>
+    </File>
+    <File Include="Views/Product/getCart.cshtml">
+      <publishTime>01/07/2018 16:23:22</publishTime>
+    </File>
+    <File Include="Views/Product/Group.cshtml">
+      <publishTime>01/08/2018 03:11:18</publishTime>
+    </File>
+    <File Include="Views/Product/GroupIndex.cshtml">
+      <publishTime>01/07/2018 16:26:52</publishTime>
+    </File>
+    <File Include="Views/Product/GroupProduct.cshtml">
+      <publishTime>01/07/2018 01:56:41</publishTime>
+    </File>
+    <File Include="Views/Product/HotProduct.cshtml">
+      <publishTime>01/08/2018 03:19:48</publishTime>
+    </File>
+    <File Include="Views/Product/Index.cshtml">
+      <publishTime>01/08/2018 13:19:31</publishTime>
+    </File>
+    <File Include="Views/Product/InteriorDecoration.cshtml">
+      <publishTime>01/07/2018 01:50:24</publishTime>
+    </File>
+    <File Include="Views/Product/NewProduct.cshtml">
+      <publishTime>01/08/2018 03:00:34</publishTime>
+    </File>
+    <File Include="Views/Product/Orderby.cshtml">
+      <publishTime>12/27/2017 19:20:56</publishTime>
+    </File>
+    <File Include="Views/Product/Price.cshtml">
+      <publishTime>01/05/2018 00:38:12</publishTime>
+    </File>
+    <File Include="Views/Product/Product.cshtml">
+      <publishTime>01/07/2018 16:52:23</publishTime>
+    </File>
+    <File Include="Views/Product/ProductDetail.cshtml">
+      <publishTime>01/08/2018 02:55:25</publishTime>
+    </File>
+    <File Include="Views/Product/Room.cshtml">
+      <publishTime>01/08/2018 03:02:34</publishTime>
+    </File>
+    <File Include="Views/Product/RoomProduct.cshtml">
+      <publishTime>01/07/2018 20:29:52</publishTime>
+    </File>
+    <File Include="Views/Product/Search.cshtml">
+      <publishTime>01/07/2018 20:57:43</publishTime>
+    </File>
+    <File Include="Views/Product/SearchColor.cshtml">
+      <publishTime>12/28/2017 00:48:43</publishTime>
+    </File>
+    <File Include="Views/Products/Create.cshtml">
+      <publishTime>01/06/2018 21:47:25</publishTime>
+    </File>
+    <File Include="Views/Products/Delete.cshtml">
+      <publishTime>01/03/2018 21:42:32</publishTime>
+    </File>
+    <File Include="Views/Products/Details.cshtml">
+      <publishTime>01/03/2018 20:41:59</publishTime>
+    </File>
+    <File Include="Views/Products/Edit.cshtml">
+      <publishTime>01/03/2018 20:42:00</publishTime>
+    </File>
+    <File Include="Views/Products/Index.cshtml">
+      <publishTime>01/06/2018 21:55:56</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>12/22/2017 13:57:29</publishTime>
+    </File>
+    <File Include="Views/Shared/Payment_layout.cshtml">
+      <publishTime>01/03/2018 17:48:03</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>01/08/2018 13:44:46</publishTime>
+    </File>
+    <File Include="Views/Shared/_LayoutAdmin.cshtml">
+      <publishTime>01/06/2018 21:08:18</publishTime>
+    </File>
+    <File Include="Views/Slider/Slider.cshtml">
+      <publishTime>01/04/2018 22:17:41</publishTime>
+    </File>
+    <File Include="Views/Support/Badrequest.cshtml">
+      <publishTime>01/08/2018 13:48:07</publishTime>
+    </File>
+    <File Include="Views/Support/Contact.cshtml">
+      <publishTime>01/08/2018 13:41:01</publishTime>
+    </File>
+    <File Include="Views/Support/FAQ.cshtml">
+      <publishTime>12/22/2017 19:46:30</publishTime>
+    </File>
+    <File Include="Views/Support/Law.cshtml">
+      <publishTime>12/22/2017 19:58:31</publishTime>
+    </File>
+    <File Include="Views/Support/Ourshop.cshtml">
+      <publishTime>01/06/2018 23:49:09</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>12/22/2017 13:57:29</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>12/22/2017 13:57:29</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>01/08/2018 13:50:00</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

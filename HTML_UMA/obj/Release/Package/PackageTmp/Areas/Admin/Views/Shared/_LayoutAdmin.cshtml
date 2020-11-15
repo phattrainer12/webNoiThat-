@@ -1,0 +1,419 @@
+﻿@{
+    var UserAccount = Session["User"] as HTML_UMA.Models.User;
+    int count = Convert.ToInt32(Session["notify"]);
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Shome Admin</title>
+    <!-- Bootstrap core ~Admin/css/-->
+    <link href="~/Content/PagedList.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Content/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom fonts for this template-->
+    <script src="~/js/jquery/jquery-1.10.2.js"></script>
+    <link href="~/Areas/Admin/Content/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- Page level plugin ~Admin/css/-->
+    <link href="~/Areas/Admin/Content/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet" />
+    <link href="~/Content/jquery-ui-1.9.2.custom/css/base/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template-->
+    <link href="~/Areas/Admin/Content/css/sb-admin.min.css" rel="stylesheet" />
+    <script src="~/Content/jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.min.js"></script>
+    <style>
+        .opa1 {
+            opacity: 0.1!important;
+        }
+
+        .opa2 {
+            opacity: 0.2 !important;
+        }
+
+        .opa3 {
+            opacity: 0.3 !important;
+        }
+
+        .opa4 {
+            opacity: 0.4 !important;
+        }
+
+        .opa5 {
+            opacity: 0.5 !important;
+        }
+
+        .opa6 {
+            opacity: 0.6 !important;
+        }
+
+        .opa7 {
+            opacity: 0.7 !important;
+        }
+
+        .opa8 {
+            opacity: 0.8 !important;
+        }
+
+        .opa9 {
+            opacity: 0.9 !important;
+        }
+        .ui-autocomplete {
+            z-index: 1040 !important;
+        }
+
+        .button-create {
+            background-color: #4e7218;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 16px;
+            margin: 4px 2px;
+            opacity: 1;
+            transition: 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+            .button-create:hover {
+                opacity: 0.7;
+            }
+
+        .button-click {
+            background-color: #4e7218;
+            border: none;
+            color: white;
+            padding: 10px 16px;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 16px;
+            margin: 4px 2px;
+            opacity: 1;
+            transition: 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .button-submit {
+            background-color: #d4e3e5;
+            border: none;
+            color: #333333;
+            padding: 10px 16px;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 16px;
+            margin: 4px 2px;
+            opacity: 1;
+            transition: 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .button-click:hover {
+            opacity: 0.7;
+        }
+
+        .button-submit:hover {
+            opacity: 0.8;
+        }
+    </style>
+    <style type="text/css">
+        table {
+            font-family: verdana,arial,sans-serif;
+            font-size: 11px;
+            color: #333333;
+            border-width: 1px;
+            border-color: #a9c6c9;
+            border-collapse: collapse;
+        }
+
+            table th {
+                border-width: 1px;
+                padding: 8px;
+                border-style: solid;
+                border-color: #a9c6c9;
+                background: #4e7218;
+            }
+
+            table td {
+                border-width: 1px;
+                padding: 8px;
+                border-style: solid;
+                border-color: #a9c6c9;
+            }
+
+        .oddrowcolor {
+            background-color: #d4e3e5;
+        }
+
+        .evenrowcolor {
+            background-color: #c3dde0;
+        }
+    </style>
+
+    <script>
+        $.ajax({
+            url: '/Admin/QuanLiSanPham/ModelSearch',
+            success: function (data) {
+                var model = JSON.parse(data);
+                $("#form-search").autocomplete({
+                    minLength: 0,
+                    source: function (request, response) {
+                        var results = $.ui.autocomplete.filter(model, request.term);
+
+                        response(results.slice(0, 10));
+                    },
+                    focus: function (event, ui) {
+                        $("#form-search").val(ui.item.label);
+                        return false;
+                    }
+                })
+                    .data("autocomplete")._renderItem = function (ul, item) {
+                        return $("<li>")
+                            .data("item.autocomplete", item)
+                            .append('<a href="/Admin/QuanLiSanPham/Edit/' + item.Id + '">' + '<img src="' + item.pro_Image + '" style="height:40px; width: 40px;"></img>' + item.label + '</a>')
+                            .appendTo(ul);
+                    };
+            }
+        });
+    </script>
+    <script>
+        $.ajax({
+            url: '/Admin/QuanLiSanPham/Notify',
+            success: function (data) {
+                var obj = JSON.parse(data);
+                var count = obj.length;
+                if (count != 0) {
+                    $('.d-lg-block').append('<i class="fa fa-fw fa-circle"></i>');
+                    for (var i = 0; i < count; i++) {
+                        var html = '<a class="dropdown-item" href="/Admin/BaoCao/Details/'+ obj[i].ID+'"><span class="text-danger"><strong>Đơn hàng mới số:' + obj[i].ID + ' </strong></span></a>';
+                        $('#NotifyOrder').append(html);
+                    }
+                    
+                } else {
+                    var html = '<a class="dropdown-item" href="#"><span class="text-danger"><strong>Trống</strong></span></a>';
+                    $('#NotifyOrder').append(html);
+                }
+            }
+
+        });
+    </script>
+</head>
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <a class="navbar-brand" href="/Admin/QuanLiSanPham/Index">Shome</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Sản Phẩm">
+                    <a class="nav-link" href="/Admin/QuanLiSanPham/Index">
+                        <i class="fa fa-fw fa-product-hunt"></i>
+                        <span class="nav-link-text">Sản phẩm</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Báo Cáo">
+                    <a class="nav-link" href="/Admin/BaoCao/Index">
+                        <i class="fa fa-fw fa-area-chart"></i>
+                        <span class="nav-link-text">Báo cáo</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Liên Hệ">
+                    <a class="nav-link" href="/Admin/Contacts/Index">
+                        <i class="fa fa-fw fa-area-chart"></i>
+                        <span class="nav-link-text">Liên Hệ</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Danh Mục">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+                        <i class="fa fa-fw fa-wrench"></i>
+                        <span class="nav-link-text">Danh mục</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="collapseComponents">
+                        <li>
+                            <a href="/Admin/DanhMuc/Index">Danh mục sản phẩm</a>
+                        </li>
+                        <li>
+                            <a href="/Admin/NhomSanPham/Index">Quản lí nhóm sản phẩm</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Khác">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
+                        <i class="fa fa-fw fa-file"></i>
+                        <span class="nav-link-text">Khác</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="collapseExamplePages">
+                        <li>
+                            <a href="">Slider</a>
+                        </li>
+                        <li>
+                            <a href="/Admin/MauSac/Index">Màu sản phẩm</a>
+                        </li>
+                        <li>
+                            <a href="/Admin/DonVi/Index">Đơn vị sản phẩm</a>
+                        </li>
+                    </ul>
+                </li>
+                @*<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-sitemap"></i>
+                            <span class="nav-link-text">Menu Levels</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="collapseMulti">
+                            <li>
+                                <a href="#">Second Level Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Second Level Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Second Level Item</a>
+                            </li>
+                            <li>
+                                <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti2">Third Level</a>
+                                <ul class="sidenav-third-level collapse" id="collapseMulti2">
+                                    <li>
+                                        <a href="#">Third Level Item</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level Item</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level Item</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-fw fa-link"></i>
+                            <span class="nav-link-text">Link</span>
+                        </a>
+                    </li>*@
+            </ul>
+            <ul class="navbar-nav sidenav-toggler">
+                <li class="nav-item">
+                    <a class="nav-link text-center" id="sidenavToggler">
+                        <i class="fa fa-fw fa-angle-left"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-fw fa-envelope"></i>
+                        <span class="d-lg-none">
+                            Messages
+                            <span class="badge badge-pill badge-primary">12 New</span>
+                        </span>
+                        @*<span class="indicator text-primary d-none d-lg-block">
+                                <i class="fa fa-fw fa-circle"></i>
+                            </span>*@
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="messagesDropdown">
+                        <h6 class="dropdown-header">Thông báo:</h6>
+                        @*<div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">
+                            <strong>David Miller</strong>
+                            <span class="small float-right text-muted">11:21 AM</span>
+                            <div class="dropdown-message small">Hey there! This new version of SB Admin is pretty awesome! These messages clip off when they reach the end of the box so they don't overflow over to the sides!</div>
+                        </a>*@
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i id="notify" class="fa fa-fw fa-bell"></i>
+                        <span class="d-lg-none">
+                            Alerts
+                            <span class="badge badge-pill badge-warning">6 New</span>
+                        </span>
+                        <span class="indicator text-warning d-none d-lg-block">
+                            
+                        </span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="alertsDropdown" id="NotifyOrder">
+                        <h6 class="dropdown-header">Đơn hàng mới:</h6>
+                        @*<div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">
+                            <span class="text-success">
+                                <strong>
+                                    <i class="fa fa-long-arrow-up fa-fw"></i>Status Update
+                                </strong>
+                            </span>
+                            <span class="small float-right text-muted">11:21 AM</span>
+                            <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
+                        </a>*@
+                        
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <form class="form-inline my-2 my-lg-0 mr-lg-2" action="/Admin/QuanLiSanPham/TimKiem">
+                        <div class="input-group">
+                            <input class="form-control" name="search" type="text" id="form-search" placeholder="Tìm kiếm sản phẩm...">
+                            <span class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </form>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                        <i class="fa fa-fw fa-sign-out"></i>Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="content-wrapper">
+        <div class="container-fluid">
+            @RenderBody()
+        </div>
+        <!-- /.container-fluid-->
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+        <!-- Logout Modal-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <a class="btn btn-primary" href="/Account/Logout">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JavaScript-->
+        <script src="~/Areas/Admin/Content/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- Core plugin JavaScript-->
+        <script src="~/Areas/Admin/Content/vendor/jquery-easing/jquery.easing.min.js"></script>
+        <!-- Page level plugin JavaScript-->
+        <script src="~/Areas/Admin/Content/vendor/chart.js/Chart.js"></script>
+        <script src="~/Areas/Admin/Content/vendor/datatables/jquery.dataTables.js"></script>
+        <script src="~/Areas/Admin/Content/vendor/datatables/dataTables.bootstrap4.js"></script>
+        <!-- Custom scripts for all pages-->
+        <script src="~/Areas/Admin/Content/js/sb-admin.min.js"></script>
+    </div>
+</body>
+</html>
+`

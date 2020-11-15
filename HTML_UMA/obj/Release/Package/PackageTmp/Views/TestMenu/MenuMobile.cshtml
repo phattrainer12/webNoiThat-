@@ -1,0 +1,21 @@
+﻿@model IEnumerable<HTML_UMA.Models.Menu>
+    @{ 
+        Layout = null;
+    }
+<div id="dl-menu" class="dl-menuwrapper">
+    <ul class="dl-menu dl-menuopen">
+        @foreach (var item in Model)
+        {
+                <li class="has-sub" data-id="9">
+                    <a href="@item.Link">
+                        <span>@item.Name</span>
+                        <div class="btn-show-child">
+                            <span class="fa fa-chevron-right"></span>
+                        </div>
+                    </a>
+                    @Html.Action("MenuMobilechildlv1", "TestMenu", new { parent_id = item.Menu_ID})
+                </li>
+        }
+        
+    </ul>
+</div>

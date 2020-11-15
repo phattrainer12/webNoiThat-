@@ -1,0 +1,229 @@
+﻿@model IEnumerable<HTML_UMA.Models.Order>
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    var detail = ViewBag.Infordetail as HTML_UMA.Models.OrderDetail;
+
+}
+<style>
+</style>
+<div class="row">
+    <div class="text-center col-lg-12">
+        <h2 class="text-uppercase">Thông tin đơn hàng số @detail.detail_ID</h2>
+    </div>
+    <div class="report-content col-lg-12">
+        <div class="information-content-admin">
+            <div class="check-infor">
+                <div class="col-md-12">
+                    <p style="color: red">@ViewBag.resMess</p>
+                </div>
+                <div class="Ship-infor col-lg-12">
+                    <br />
+                    <div class="title">
+                        <h3>Địa chỉ giao hàng</h3>
+                    </div>
+                    <br />
+                    <table class="payment-info-address">
+                        <tbody>
+                            <tr>
+                                <td><strong>Tên:</strong></td>
+                                <td><span>@detail.detail_ShipLastName</span> <span>@detail.detail_ShipName</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Email:</strong></td>
+                                <td>@detail.detail_ShipEmail</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mobile:</strong></td>
+                                <td>@detail.detail_ShipPhone</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Địa chỉ:</strong></td>
+                                <td>@detail.detail_ShipStreet, Phường/Xã: @detail.detail_ShipTown, Quận: @detail.detail_ShipDistrict</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Thành phố:</strong></td>
+                                <td>@detail.detail_ShipProvince</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br />
+                    <div class="title">
+                        <h3>Địa chỉ Thanh toán</h3>
+                    </div>
+                    <br />
+                    <table class="payment-info-address">
+                        <tbody>
+                            <tr>
+                                <td><strong>Tên:</strong></td>
+                                <td><span>@detail.detail_PayLastName</span> <span>@detail.detail_PayName</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Email:</strong></td>
+                                <td>@detail.detail_PayEmail</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mobile:</strong></td>
+                                <td>@detail.detail_PayPhone</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Địa chỉ:</strong></td>
+                                <td>@detail.detail_PayStreet, Phường/Xã: @detail.detail_PayTown, Quận: @detail.detail_PayDistrict</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Thành phố:</strong></td>
+                                <td>@detail.detail_PayProvince</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-lg-4 money">
+                    <div class="payment-infor-detail">
+                        <br />
+                        <div class="title text-center" style="margin-bottom: 20px;">
+                            <h3 class="text-uppercase">Giá đơn hàng</h3>
+                        </div>
+                        <br />
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Giá ban đầu:</strong></td>
+                                    <td class="begin-price"><span>@Html.Raw(string.Format("{0:#,#}", detail.detail_TotalBegin))</span><span>VNĐ</span>
+                                </tr>
+                                <tr>
+                                    <td><strong>Phí vận chuyển:</strong></td>
+                                    <td>Miễn Phí<span></span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Giảm giá:</strong></td>
+                                    <td>Chưa có <span>VNĐ</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Tổng tiền:</strong></td>
+                                    <td>@Html.Raw(string.Format("{0:#,#}", detail.detail_Totalmoney)) <span>VNĐ</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Phương thức thanh toán:</strong></td>
+                                    <td>@detail.Paymethod</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Mã giao dịch:</strong></td>
+                                    <td>
+                                        @if(detail.apptransid == null && detail.Paymethod.Contains("ZaloPay"))
+                                        {
+                                        <p>Người mua chưa Hoàn thành thành toán</p>
+                                        }
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br />
+
+                    <div class="text-center">
+                        @if (detail.@checked == true)
+                        {
+                            <button class="button-create">Đã Xác nhận</button>
+                        }
+                        else
+                        {
+                            <p>Đơn hàng cần được xác nhận để quản lí sản phẩm trong hệ thống, vui lòng thực hiện việc này!</p>
+                            <form method="post">
+                                <input type="hidden" name="detail_ID" value="@detail.detail_ID"/>
+                                    <button class="button-create">Xác nhận đơn hàng</button>
+                            </form>
+                        }
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="col-lg-12">
+                <br />
+                <div class="title text-center">
+                    <h3 class="page-title homepage-block-title">Sản phẩm</h3>
+                </div>
+                <br />
+                <table class="shoping-cart-items" width="100%">
+                    <thead class="header">
+                        <tr>
+                            <th class="product-image text-center">
+                                <span class="text-uppercase">Hình ảnh</span>
+                            </th>
+                            <th class="product-info text-center">
+                                <span class="text-uppercase"><strong>Sản phẩm</strong></span>
+                            </th>
+                            <th class="product-price hidden-xs text-center">
+                                <span class="text-uppercase"><strong>Đơn giá</strong></span>
+                            </th>
+                            <th class="product-quantity text-center">
+                                <span class="text-uppercase"><strong>Số lượng</strong></span>
+                            </th>
+                            <th class="product-total hidden-xs text-center">
+                                <span class="text-uppercase"><strong>Tổng cộng</strong></span>
+                            </th>
+                        </tr>
+                    </thead>
+                    @foreach (var item in Model)
+                    {
+                        <tbody class="body checkout-cart-item" data-id="@item.cart_ID" data-product-id="@item.pro_ID">
+                            <tr>
+                                <td align="center" class="product-image">
+                                    <a href="/SanPham/ChiTietSanPham?MaSanPham=@item.pro_ID" target="_blank" title="BIANCA" class="product-image">
+                                        <img class="img-responsive" src="@item.pro_Image" width="180px" height="180px" alt="BIANCA">
+                                    </a>
+                                </td>
+                                <td align="center" class="product-info text-center">
+                                    <div class="text-center">
+                                        <a href="@Url.Action("ProductDetail","Product", new {pro_ID = item.pro_ID })">
+                                            <div class="product-function">@item.pro_Name</div>
+                                        </a>
+                                        <div class="product-name text-uppercase">
+                                            <strong>@item.pro_Description</strong>
+                                        </div>
+                                        <div class="hidden-xs product-material-color">
+                                            <span class="product-material">@item.pro_Materials</span>
+                                            <span class="product-color"></span>
+                                        </div>
+                                        <div class="hidden-xs product-size">@item.pro_Size</div>
+
+                                        <div class="visible-xs product-price">
+                                            <div class="price-box">
+                                                <span class="regular-price">
+                                                    <span class="price">@Html.Raw(string.Format("{0:#,#}", item.pro_Price)) VNĐ</span>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                                <td align="center" class="hidden-xs text-center product-price">
+                                    <div class="price-box">
+                                        <span class="regular-price">
+                                            <span class="price">@Html.Raw(string.Format("{0:#,#}", item.pro_Price)) VNĐ</span>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td align="center" class="product-quantity text-center">
+                                    <div class="box-wrapper">
+                                        <input value="@item.cart_Quanty" disabled="disabled" size="4" title="Số lượng" class="text-center input-text item-qty" maxlength="12">
+                                    </div>
+                                </td>
+                                <td align="center" class="hidden-xs text-center product-total">
+                                    <strong>
+                                        <span class="cart-price">
+                                            <span class="price">@Html.Raw(string.Format("{0:#,#}", item.cart_TotalPrice))</span><span>VNĐ</span>
+                                        </span>
+                                    </strong>
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+    <a href="@Url.Action("Index")"><button class="button-create">Quay về</button></a>
+</div>
+
+

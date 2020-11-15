@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "UserInformation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var UserAccount = Session["User"] as HTML_UMA.Models.User;
+}
+<div class="container">
+    <div class="main row">
+        <div class="col-left sidebar uma-lg-2 col-md-3 col-sm-4 col-xs-12">
+            <div class="block block-account">
+                <div class="block-title">
+                    <strong><span>Quản lý tài khoản</span></strong>
+                </div>
+                <div class="block-content">
+                    <ul>
+                        <li class="current"><strong>Thông tin chung</strong></li>
+                        <li><a href="@Url.Action("EditUser","Account")">Thông tin tài khoản</a></li>
+                        <li><a href="/Account/Order">Đơn hàng của tôi</a></li>
+                        <li><a href="/Account/listFavourist">Danh sách yêu thích</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-main uma-lg-8 col-md-9 col-sm-8 col-xs-12">
+            <div class="my-account">
+                <div class="dashboard">
+                    <div class="page-title">
+                        <h3>Thông tin chung</h3>
+                    </div>
+                    <!-- hello message -->
+                    <div class="welcome-msg">
+                        <p class="hello"><strong>Xin chào, @UserAccount.user_Name!</strong></p>
+                        <p>Từ trang này bạn có thể nhìn toàn diện thông tin tài khoản và sự giao dịch của bạn trên hệ thống website của chúng tôi một cách nhanh và chính xác nhất.</p>
+                    </div>
+                    <!-- extra information on the top -->
+                    <div class="box-info account-info">
+                        <div class="box-head">
+                            <h2>Thông tin tài khoản</h2>
+                        </div>
+                        <div class="box-contents container-fluid">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="box">
+                                        <div class="box-title">
+                                            <h3>Thông tin liên hệ</h3>
+                                            <a href="@Url.Action("EditUser","Account")">Sửa</a>
+                                        </div>
+                                        <div class="box-content">
+                                            <p>
+                                                @UserAccount.user_LastName @UserAccount.user_Name
+                                                <br>
+                                                @UserAccount.user_Email
+                                                <br>
+                                               @if (UserAccount.type_register == 1)
+                                               {
+                                                <a href="@Url.Action("changePassword","Account")">Thay đổi mật khẩu</a>
+                                               }
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

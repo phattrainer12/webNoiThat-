@@ -1,0 +1,27 @@
+﻿@model HTML_UMA.Models.Color
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="text-center">
+    <h2>Chi tiết</h2>
+</div>
+
+<div>
+    <h4>@Model.NameColor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Màu sắc : @Html.DisplayFor(model => model.NameColor)
+        </dt>
+        <dt>
+            Mã màu: @Html.DisplayFor(model => model.Code)
+        </dt>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.Color_ID }) |
+    @Html.ActionLink("Trở về", "Index")
+</p>

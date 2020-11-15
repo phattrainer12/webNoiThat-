@@ -1,0 +1,131 @@
+﻿<div style="margin:0px;padding:0px;color:rgb(32,32,32);font-size:16px;font-weight:normal;font-family:Helvetica,Arial,sans-serif!important;line-height:150%!important">
+  <div class="m_-4254789779369466822main-content" style="min-width:360px">
+
+    
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tbody><tr><td colspan="2"></td><td colspan="3" bgcolor="#E8E8E8" height="1px"></td><td colspan="3"></td></tr>
+      <tr>
+        <td bgcolor="#F8F8F8" width="1px"></td>
+        <td bgcolor="#E8E8E8" width="1px"></td>
+        <td bgcolor="#D1D1D1" width="1px"></td>
+
+        
+        <td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          <div class="m_-4254789779369466822header">
+            <div class="m_-4254789779369466822header-banner">
+<table class="m_-4254789779369466822header" lang="header" cellpadding="0" cellspacing="0" width="100%" border="0" style="width:100%">
+    <tbody>
+    <tr>
+        <td width="100%" height="70" valign="top" bgcolor="#183545" style="background:#183545;height:70px">
+            <table cellpadding="0" cellspacing="0" width="100%" height="70" border="0" style="width:100%;height:70px">
+                <tbody>
+                <tr>
+                    <td class="m_-4254789779369466822space40" style="width:20px" width="20"><div lang="space40"></div></td>
+                    <td valign="middle" align="left">
+<div class="m_-4254789779369466822spacer" style="font-size:15px;line-height:15px;height:15px">&nbsp; </div>
+                        <a href="http://www.lazada.vn" style="text-decoration:none" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=vi&amp;q=http://www.lazada.vn&amp;source=gmail&amp;ust=1528392860812000&amp;usg=AFQjCNGphQbk3-YhAmxs9TO6TMqTHlipfw">
+                            <img border="0" alt="" src="https://ci3.googleusercontent.com/proxy/GN8NxQvkOm9wMuiSYx6b2E6Dx9sdNtwxGI2492BeiuwjxtlNMJepcQ99HeSWoODn5EdRfo4H9o9HObD46l5GEb1Yh6ABVFb30-Yu2MeXAfiukBDrvr0ljrZYNv-p1ywOtexpbY8g7r3dgRYPbvNxD9cvTKIdLsYmIA=s0-d-e1-ft#http://static.cdn.responsys.net/i5/responsysimages/lazada/contentlibrary/!images/lazada-logo-vn.jpg" width="100%" style="display:block;max-width:114px;border:none" class="CToWUd">
+                        </a>
+<div class="m_-4254789779369466822spacer" style="font-size:15px;line-height:15px;height:15px">&nbsp; </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+
+    </tbody>
+</table>
+            </div>
+            
+            
+            
+          </div>
+
+          
+          <div class="m_-4254789779369466822section m_-4254789779369466822section--dark">
+            <div class="m_-4254789779369466822section-content">
+              <h2>{Payname}  thân mến,</h2>
+              <p>Đơn hàng <span class="m_-4254789779369466822text-orange-normal">{ID}</span>của bạnđang được xác nhận và giao đến bạn. Bạn sẽ nhận được cuộc gọi từ SHOME chuyển để thông báo thời gian giao hàng cụ thể.</p>
+            </div>
+          </div>
+
+          
+          <div class="m_-4254789779369466822section">
+            <div class="m_-4254789779369466822section-header m_-4254789779369466822section-header--whatsNext">Bước tiếp theo</div>
+            <div class="m_-4254789779369466822section-content m_-4254789779369466822section-content--justify">
+              <ul>    
+				<li>Bạn vui lòng chuẩn bị sẵn số tiền mặt tương ứng để thuận tiện cho việc thanh toán.</li>
+                <li>Bạn có thể kiểm tra ngoại quan sản phẩm (nhãn hiệu, mẫu mã, màu sắc, số lượng, ...) trước khi thanh toán và có thể từ chối nhận hàng nếu không ưng ý. Vui lòng không kích hoạt các thiết bị điện máy-điện tử hoặc dùng thử sản phẩm.</li>
+              </ul>
+            </div>
+          </div>
+
+          
+          <div class="m_-4254789779369466822section">
+            <div class="m_-4254789779369466822section-header m_-4254789779369466822section-header m_-4254789779369466822section-header--deliveredTo">Đơn hàng được giao đến</div>
+            <div class="m_-4254789779369466822section-content">
+              <div class="m_-4254789779369466822two-column-left">
+                  <span class="m_-4254789779369466822text-orange-normal">{ShipName}</span>
+              </div>
+              <div class="m_-4254789779369466822two-column-right">
+                Điện thoại: {ShipPhone}<br>
+                Email: <a href="mailto:+{ShipEmail}" target="_blank">{ShipEmail}<wbr>com</a>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="m_-4254789779369466822section">
+            <div class="m_-4254789779369466822section-header m_-4254789779369466822section-header--itemsDetails">Mã vận đơn</div>
+            <div class="m_-4254789779369466822section-content">
+              <p><span class="m_-4254789779369466822text-blue-big">{ID}</span></p>
+            </div>
+		  </div>
+			  
+          
+          <div class="m_-4254789779369466822section m_-4254789779369466822section--dark">
+            <div class="m_-4254789779369466822section-header m_-4254789779369466822section-header--notes">Lưu ý</div>
+            <div class="m_-4254789779369466822section-content">
+                            <p>Bạn có thể liên hệ trưc tiếp thông qua Hotline: 0905 717879 <a href="http://uma.netplus.vn/" target="_blank">Đường dây nóng của SHOME</a> hoặc liên hệ với chúng tôi tại trang <a href="http://uma.netplus.vn/Support/Contact" target="_blank">Liên hệ</a>.</p>
+
+            </div>
+          </div>
+        </td>
+        
+
+        <td bgcolor="#B3B3B3" width="1px"></td>
+        <td bgcolor="#D1D1D1" width="1px"></td>
+        <td bgcolor="#E8E8E8" width="1px"></td>
+        <td bgcolor="#F8F8F8" width="1px"></td>
+      </tr>
+      <tr><td colspan="2"></td><td colspan="3" bgcolor="#B3B3B3" height="1px"></td><td colspan="3"></td></tr>
+      <tr><td colspan="2"></td><td colspan="3" bgcolor="#D1D1D1" height="1px"></td><td colspan="3"></td></tr>
+      <tr><td colspan="2"></td><td colspan="3" bgcolor="#E8E8E8" height="1px"></td><td colspan="3"></td></tr>
+      <tr><td colspan="2"></td><td colspan="3" bgcolor="#F8F8F8" height="1px"></td><td colspan="3"></td></tr>
+
+    </tbody></table>
+    
+
+
+    <br><br>
+    
+    
+
+    
+    </div></div>

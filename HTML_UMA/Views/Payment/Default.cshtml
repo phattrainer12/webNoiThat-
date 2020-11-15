@@ -1,0 +1,100 @@
+﻿@using ZaloPayHelper;
+@using QRCoder;
+@using System.Drawing;
+@{
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "CheckoutQR in PC web";
+    ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+}
+@{
+    var amount = "50000";
+    ZaloPayHelper zp = new ZaloPayHelper();
+    Bitmap qrCodeImage = new Bitmap(10, 10);
+    bool succ = false;
+    string apptime = (ZaloPayHelper.GetTimeStamp(DateTime.UtcNow) * 1000).ToString();
+    string apptransid = "";
+    if (IsPost)
+    {
+        amount = Request.Form["amount"];
+
+        string transId = new Random().Next(111111, 999999) + "";
+        apptransid = DateTime.Now.ToString("yyMMdd") + "-" + transId;
+
+        Session[apptransid] = 0;//waiting payment
+
+        string appuser = "",
+             embeddata = "{}", item = "ITEM001", description = "Buy an item";
+        Dictionary<string, object> qrOrder = zp.CreateOrderQR(appuser, apptime, amount, apptransid,
+                 embeddata, item, description);
+        if (qrOrder["returncode"].ToString() == "1")
+        {
+            succ = true;
+            QRCodeGenerator qrGenerator = new QRCodeGenerator();
+            string ztk = qrOrder["zptranstoken"].ToString();
+            string jsonQR = "{" + string.Format("\"zptranstoken\":\"{0}\",\"appid\":\"{1}\"", ztk, zp.Config.AppId) + "}";
+            QRCodeData qrCodeData = qrGenerator.CreateQrCode(jsonQR, QRCodeGenerator.ECCLevel.Q);
+            QRCode qrCode = new QRCode(qrCodeData);
+            qrCodeImage = qrCode.GetGraphic(5);
+
+        }
+    }
+}
+<hgroup class="title">
+    <h1>@Page.Title.</h1>
+</hgroup>
+
+<section id="loginForm1">
+    <h2>Input amout and click Checkout button to see ZaloPay QR</h2>
+    <form method="post">
+        <fieldset>
+            <ol>
+                <li class="email">
+                    <label for="amount">Price</label>
+                    <input type="number" id="amount" name="amount" value="@amount" />
+                </li>
+            </ol>
+            <input type="submit" value="Checkout" />
+            @if (succ)
+            {
+                <p id="qrCode">
+                    <img src="@String.Format("data:image/png;base64,{0}", Convert.ToBase64String(ZaloPayHelper.BitmapToBytes(qrCodeImage)))" />
+                </p>
+                <p id="paymentResult" style="color:green; font-weight:bold; font-size:32px;">
+
+                </p>
+                <p>
+                    Open ZaloPay app and scan QR code to pay
+                </p>
+            }
+
+        </fieldset>
+    </form>
+</section>
+<script>
+    var loop = null;
+    $(document).ready(function () {
+        waitingPayment();
+    });
+    function waitingPayment() {
+        loop = setTimeout(function () {
+            checkPayment('@apptransid');
+        }, 5000);
+    }
+    function checkPayment(id) {
+        if (id == "" || id == null || id == undefined) return;
+        var params = {
+            id: id
+        };
+        $.post('QueryOrder.cshtml', params, function (data) {
+            var jItem = data;
+            if (jItem.c == 1) {
+                $('#qrCode').remove();
+                clearTimeout(loop);
+            } else {
+                //alert(jItem.m);
+            }
+            $('#paymentResult').html(jItem.m);
+            waitingPayment();
+        }, 'json');
+    }
+</script>

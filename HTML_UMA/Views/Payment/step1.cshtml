@@ -1,0 +1,372 @@
+﻿ @{
+    Layout = "~/Views/Shared/Payment_layout.cshtml";
+    var datauser = ViewBag.datauser as HTML_UMA.Models.User;
+    var itemview = ViewBag.cart as IEnumerable<HTML_UMA.Models.Order>;
+    var cartAnonymous = ViewBag.cartano as IEnumerable<HTML_UMA.Models.Order>;
+}
+<div id="opc-login" class="section allow active">
+    <div class="step-title"></div>
+    <div id="checkout-step-login" class="step a-item" style="">
+        <div class="checkout-box clearfix">
+            <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                <h3 class="checkout-box-title text-uppercase">Đăng nhập để mua hàng</h3>
+                <div class="checkout-section checkout-methods">
+                    <div class="radio hidden">
+                        <input type="radio" name="checkout_method" id="login:guest" checked="checked" value="guest" class="radio">
+                        <label for="login:guest">Thanh toán không cần đăng ký thành viên</label>
+                    </div>
+                </div>
+                <div class="checkout-section website-login">
+                    <h4 class="section-title text-uppercase">Tài khoản SHOME</h4>
+                    <div class="section-message">Đăng nhập nếu bạn đã là thành viên</div>
+                    <form id="login-form" action="" method="post">
+                        <fieldset class="">
+                            <input name="form_key" type="hidden" value="vgcNE9ZXqptZqF1v">
+                            <div class="form-group">
+                                <input type="text" name="Email" id="login-email" placeholder="Nhập địa chỉ email của bạn" required value="" class="input-text required-entry validate-email form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="PassWord" id="login-password" placeholder="Nhập mật khẩu của bạn" class="input-text required-entry form-control">
+                            </div>
+                            <div id="remember-me-box" class="form-group field">
+                                <div class="checkbox">
+                                    <input type="checkbox" name="persistent_remember_me" class="checkbox" id="remember_mecA35vXUwEZ" checked="checked" title="Remember Me">
+                                    <label for="remember_mecA35vXUwEZ">Nhớ mật khẩu</label>
+                                </div>
+                            </div>
+                            <input name="context" type="hidden" value="checkout">
+                        </fieldset>
+                        <p style="color: red">@Html.ValidationMessage("error")</p>
+                        <div class="login-actions">
+                            <div class="buttons">
+                                <button type="submit" class="button">
+                                    <span class="text-uppercase">Đăng nhập</span>
+                                </button>
+                            </div>
+                            <div class="links">
+                                <div class="forgot-password">
+                                    <a href="@Url.Action("Badrequest","Support")" class="highlight">
+                                        <span>Quên mật khẩu?</span>
+                                    </a>
+                                </div>
+                                <div class="register">
+                                    <span>Bạn chưa có tài khoản?</span>
+                                    <a href="@Url.Action("Signin","Account")" class="highlight">
+                                        <b class="text-uppercase">Đăng ký</b>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="checkout-section social-login">
+                    <h4 class="section-title text-uppercase">hoặc đăng nhập bằng tài khoản xã hội</h4>
+                    <div class="section-message">
+                        Chúng tôi sẽ không đăng hoặc chia sẻ <br> bất cứ thông tin gì bằng tài khoản của bạn nếu bạn không cho phép.
+                    </div>
+                    <div class="container-fluid">
+                        <div class="row buttons text-center">
+                            <div class="social-button facebook">
+                                <a href="@Url.Action("LoginFaceBook","Payment")" class="btn-facebook" id="facebook_login">
+                                    <span>Đăng nhập bằng</span>
+                                    <img src="https://uma.vn/skin/frontend/uma/default/images/icons/socials/fb-icon.svg">
+                                </a>
+                            </div>
+                            <div class="social-button google">
+                                <a class="btn-google" id="google_login" >
+                                    <span>Đăng nhập bằng</span>
+                                    <img src="https://uma.vn/skin/frontend/uma/default/images/icons/socials/google-icon.svg">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkout-section checkout-option">
+                    <h4 class="section-title text-uppercase">hoặc Mua hàng không cần đăng nhập</h4>
+                    <div class="checkout-option-wraper">
+                        <div class="buttons">
+                            <a href="@Url.Action("Step2","Payment")" class="button" style="text-decoration:none">
+                                <span class="text-uppercase" >Mua ngay</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                <h3 class="checkout-box-title text-uppercase">Thông tin đơn đặt hàng</h3>
+                <span class="msg-coupon"></span>
+                <div class="checkout-section order-review">
+                    <form id="discount-coupon-form" action="" method="post">
+                        <div class="discount">
+                            <div class="discount-form">
+                                <div class="coupon-box">
+                                    <input type="hidden" name="remove" id="remove-coupone" value="0">
+                                    <input class="form-control input-coupon-code" id="coupon_code" name="coupon_code" placeholder="NHẬP MÃ" value="">
+                                    <button class="button btn-apply-coupon" onclick="postCoupon(event,this,false)">
+                                        <span class="text-uppercase">Sử dụng</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="order-items-info hidden-xs">
+                        <!-- Freeze Header order-review container-->
+                        <div class="order-items-info-header">
+                            <table>
+                                <thead class="header">
+                                    <tr>
+                                        <th width="25%"></th>
+                                        <th class="text-center" width="35%">
+                                            <span class="text-uppercase"><strong>Sản phẩm</strong></span>
+                                        </th>
+                                        <th class="text-right" width="40%">
+                                            <span class="text-uppercase hidden-xs"><strong>Số lượng &amp; Đơn giá</strong></span>
+                                            <span class="text-uppercase visible-xs"><strong>Số lượng</strong></span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <!-- Body order-review container-->
+                        <div class="order-items-info-body mCustomScrollbar _mCS_2 mCS_no_scrollbar">
+                            <div id="mCSB_2" class="mCustomScrollBox mCS-dark mCSB_vertical mCSB_inside" style="max-height: none;" tabindex="0">
+                                <div id="mCSB_2_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+                                    <table>
+                                        <thead class="header">
+                                            <tr>
+                                                <th width="30%" style="padding:0px;"></th>
+                                                <th class="text-center" width="30%" style="padding:0px;"></th>
+                                                <th class="text-right" width="40%" style="padding:0px;"></th>
+                                            </tr>
+                                        </thead>
+                                            <tbody>
+                                                @if (itemview != null)
+                                                {
+                                                    foreach (var item in itemview)
+                                                    {
+                                                        <tr>
+                                                            <td class="image">
+                                                                <a href="@Url.Action("ChiTietSanPham","SanPham", new { MaSanPham = item.pro_ID})" title="" class="product-image">
+                                                                    <img class="img-responsive mCS_img_loaded" width="120px" src="@item.pro_Image" alt="AVATAR">
+                                                                </a>
+                                                            </td>
+                                                            <td class="name-function text-uppercase">
+                                                                <div class="product-function">@item.pro_Name</div>
+                                                                <div class="product-name">@item.pro_Description</div>
+                                                                <div class="visible-xs">
+                                                                    <div>
+                                                                        <span>@Html.Raw(string.Format("{0:#,#}", item.pro_Price))</span><span>VNĐ</span>
+                                                                    </div>
+
+                                                                    <div class="row-total">
+                                                                        <span class="cart-price">
+                                                                            <span class="price">@Html.Raw(string.Format("{0:#,#}", item.cart_TotalPrice))</span><span>VNĐ</span>
+                                                                        </span>
+
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="price quantity total text-right">
+                                                                <span class="visible-xs">
+                                                                   x @item.cart_Quanty
+                                                                </span>
+                                                                <div class="hidden-xs">
+                                                                    <div>x @item.cart_Quanty</div>
+                                                                    <div class="final-price">
+                                                                        <span class="final-price-product">@Html.Raw(string.Format("{0:#,#}", item.cart_TotalPrice))</span><span>VNĐ</span>
+                                                                    </div>
+                                                                    <div class="row-total">
+                                                                        <span class="cart-price">
+                                                                            <span class="price">@Html.Raw(string.Format("{0:#,#}", item.cart_TotalPrice))</span><span>VNĐ</span>
+                                                                        </span>
+
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    foreach (var item in cartAnonymous)
+                                                    {
+                                                        <tr>
+                                                            <td class="image">
+                                                                <a href="@Url.Action("ChiTietSanPham","SanPham", new { MaSanPham = item.pro_ID})" title="" class="product-image">
+                                                                    <img class="img-responsive mCS_img_loaded" width="120px" src="@item.pro_Image" alt="AVATAR">
+                                                                </a>
+                                                            </td>
+                                                            <td class="name-function text-uppercase">
+                                                                <div class="product-function">@item.pro_Name</div>
+                                                                <div class="product-name">@item.pro_Description</div>
+                                                                <div class="visible-xs">    
+                                                                    <div>
+                                                                        <span>@Html.Raw(string.Format("{0:#,#}", item.pro_Price))</span><span>VNĐ</span>
+                                                                    </div>
+
+                                                                    <div class="row-total">
+                                                                        <span class="cart-price">
+                                                                            <span class="price">@Html.Raw(string.Format("{0:#,#}", item.cart_TotalPrice))</span><span>VNĐ</span>
+                                                                        </span>
+
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="price quantity total text-right">
+                                                                <span class="visible-xs">
+                                                                   x @item.cart_Quanty
+                                                                </span>
+                                                                <div class="hidden-xs">
+                                                                    <div>x @item.cart_Quanty</div>
+                                                                    <div class="final-price">
+                                                                        <span class="final-price-product">@Html.Raw(string.Format("{0:#,#}", item.cart_TotalPrice))</span><span>VNĐ</span>
+                                                                    </div>
+                                                                    <div class="row-total">
+                                                                        <span class="cart-price">
+                                                                            <span class="price">@Html.Raw(string.Format("{0:#,#}", item.cart_TotalPrice))</span><span>VNĐ</span>
+                                                                        </span>
+
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    }
+                                                }
+                                            </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-items-info visible-xs">
+                        <!-- Freeze Header order-review container-->
+                        <div class="order-items-info-header">
+                            <table>
+                                <thead class="header">
+                                    <tr>
+                                        <th width="25%"></th>
+                                        <th class="text-center" width="58%">
+                                            <span class="text-uppercase"><strong>Sản phẩm</strong></span>
+                                        </th>
+                                        <th class="text-right" width="20%">
+                                            <span class="text-uppercase hidden-xs"><strong>Số lượng &amp; Đơn giá</strong></span>
+                                            <span class="text-uppercase visible-xs"><strong>Số lượng</strong></span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <!-- Body order-review container-->
+                       
+                    </div>
+                    <div class="order-checkout-info hidden-xs">
+                        <table>
+                            <thead class="header">
+                                <tr>
+                                    <th width="35%"></th>
+                                    <th class="text-center" width="35%"></th>
+                                    <th class="text-right" width="30%"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td align="left" class="total-text">
+                                        <strong class="text-uppercase">Tổng tiền</strong>
+                                    </td>
+                                    <td align="right" class="total-value">
+                                        <strong class="text-uppercase begin-total-price"></strong><strong>VNĐ</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td align="left" class="total-text">
+                                        <strong class="text-uppercase">Phí vận chuyển</strong>
+                                    </td>
+                                    <td align="right" class="total-value">
+                                        <strong class="text-uppercase">Miễn phí</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td align="left" class="total-text">
+                                        <strong class="text-uppercase">Tổng thanh toán</strong>
+                                    </td>
+                                    <td align="right" class="total-value">
+                                        <strong class="highlight total-price-cart"></strong><strong class="highlight">VNĐ</strong>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="order-checkout-info visible-xs">
+                        <table>
+                            <thead class="header">
+                                <tr>
+                                    <th width="50%"></th>
+                                    <th class="text-center" width="20%"></th>
+                                    <th class="text-right" width="30%"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+
+                                    <td align="left" class="total-text">
+                                        <strong class="text-uppercase">Tổng tiền</strong>
+                                    </td>
+                                    <td></td>
+                                    <td align="right" class="total-value">
+                                        <strong class="text-uppercase begin-total-price"></strong><strong>Đ</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" class="total-text">
+                                        <strong class="text-uppercase">Phí vận chuyển</strong>
+                                    </td>
+                                    <td></td>
+
+                                    <td align="right" class="total-value">
+                                        <strong class="text-uppercase">Miễn phí</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" class="total-text">
+                                        <strong class="text-uppercase">Tổng thanh toán</strong>
+                                    </td>
+                                    <td></td>
+
+                                    <td align="right" class="total-value">
+                                        <strong class="highlight total-price-cart"></strong><strong>VNĐ</strong>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('.Login').addClass('active');
+    $(function () {
+        var beginquanty = 0;
+        var $elementPrice = $('.final-price-product');
+        $elementPrice.each(function () {
+            var price = Number($(this).text().replace(/,/g,""));
+            beginquanty += price;
+        })
+        $('.begin-total-price').text(beginquanty.toFixed(0).replace(/./g, function (c, i, a) {
+                return i && c !== "." && ((a.length - i) % 3 === 0) ? ',' + c : c;
+            }));
+        $('.total-price-cart').text(beginquanty.toFixed(0).replace(/./g, function (c, i, a) {
+            return i && c !== "." && ((a.length - i) % 3 === 0) ? ',' + c : c;
+        }));
+    })
+</script>
+<script type="text/javascript">
+    $j(".order-items-info-body").mCustomScrollbar({
+        theme: "dark",
+        axis: "y",
+    });
+</script>

@@ -1,0 +1,66 @@
+﻿@{
+    Layout = null;
+    var data = ViewBag.cart as IEnumerable<HTML_UMA.Models.Order>;
+}
+@if (data != null)
+{
+    foreach (var item in data)
+    {
+        
+                            <li class="item" data-id="@item.cart_ID">
+                                <div class="product-image">
+                                    <a href="@Url.Action("ChiTietSanPham","SanPham", new { MaSanPham = item.pro_ID})" title="AVATAR" class="product-image">
+                                        <img src="@item.pro_Image" alt="" class="img-responsive mCS_img_loaded">
+                                    </a>
+                                </div>
+                                <div class="product-details">
+                                    <div class="product-function">
+                                        <a href="@Url.Action("ChiTietSanPham","SanPham", new { MaSanPham = item.pro_ID})">
+                                            <strong>@item.pro_Name</strong>
+                                        </a>
+                                    </div>
+                                    <div class="product-name">
+                                        <a href="@Url.Action("ChiTietSanPham","SanPham", new { MaSanPham = item.pro_ID})">
+                                            <strong>@item.pro_Description</strong>
+                                        </a>
+                                    </div>
+                                    <div class="product-quantity">
+                                        <span class="text">Số lượng:</span>
+                                        <span class="number quanty">@item.cart_Quanty</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="text">Giá/sp:</span>
+                                        <strong class="number total-price">@Html.Raw(string.Format("{0:#,#}", item.cart_TotalPrice))</strong><strong class="number">VNĐ</strong>
+                                    </div>
+                                </div>
+                            </li>
+                            <script>
+                                $('.popup-footer').css('display', 'flex');
+                                $('.popup-buttons').css('display', 'flex');
+                            </script>
+    }
+}
+else
+{
+    <p class="text-left empty">Bạn chưa có sản phẩm nào trong giỏ hàng!</p>
+}
+<script>
+    var $totalprice = 0;
+    var $listprice = $('.total-price');
+    var $cartquanty = 0;
+    var $listquanty = $('.quanty');
+    $listquanty.each(function () {
+        var x = Number($(this).text().replace(/,/g, ""));
+        $cartquanty += 1;
+        $('.total-cart').text($cartquanty);
+    });
+    $listprice.each(function () {
+        var x = Number($(this).text().replace(/,/g, ""));
+        $totalprice += x;
+        console.log($totalprice);
+        $('.cart-total').text($totalprice.toFixed(0).replace(/./g, function (c, i, a) {
+                return i && c !== "." && ((a.length - i) % 3 === 0) ? ',' + c : c;
+            }));
+    });
+
+</script>

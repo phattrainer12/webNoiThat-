@@ -1,0 +1,531 @@
+﻿@*@model HTML_UMA.ModelConfirm.OrderDetailValid*@
+@{
+    Layout = "~/Views/Shared/Payment_layout.cshtml";
+    var datauser = ViewBag.datauser as HTML_UMA.Models.User;
+    var itemview = ViewBag.cart as IEnumerable<HTML_UMA.Models.Order>;
+    var cartAnonymous = ViewBag.cartano as IEnumerable<HTML_UMA.Models.Order>;
+}
+<div id="checkout-step-billing" class="step a-item" style="">
+                <div class="checkout-box clearfix"> 
+    <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+        <h3 class="checkout-box-title text-uppercase">Thông tin vận chuyển</h3>
+        <p style="color: red">
+            @Html.ValidationMessage("error")
+        </p>
+        <fieldset class="">
+            <form id="co-billing-form" action="ShippingInformation" method="post">
+                <div class="form-list">
+                    <div id="billing-new-address-form">
+                        <div>
+                            <div class="checkout-section contact-info">
+                                <h4 class="section-title text-uppercase">Thông tin cá nhân</h4>
+                                <div class="customer-name">
+                                    <div class="form-group clearfix">
+                                        <div class="field name-firstname">
+                                            <div class="input-box">
+                                                <input type="text" id="billing:firstname" required name="detail_ShipName" maxlength="255" value="" title="Tên" placeholder="TÊN *" class="form-control input-text required-entry">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group clearfix">
+                                        <div class="field name-lastname">
+                                            <div class="input-box">
+                                                <input type="text" id="billing:lastname" required name="detail_ShipLastName" maxlength="255" value="" title="họ" placeholder="HỌ *" class="form-control input-text required-entry">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="detail_ShipEmail" id="billing:email" required value="" title="Email *" placeholder="EMAIL *" class="form-control input-text validate-non-unicode-email required-entry">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="detail_ShipPhone" id="billing:telephone" required value="" title="Điên thoại *" placeholder="ĐIỆN THOẠI *" class="form-control input-text  required-entry">
+                                </div>
+                            </div>
+                            <div class="checkout-section address-info" id="shipping-address-info">
+                                <h4 class="section-title text-uppercase">Địa chỉ giao hàng</h4>
+                                <div class="form-group">
+                                    <input type="text" name="detail_ShipStreet" id="shipping:street1" value="" required title="Địa chỉ" placeholder="ĐỊA CHỈ *" class="form-control input-text  required-entry">
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-box">
+                                        <select id="shipping:city_id" name="detail_ShipProvince"  required title="Thành phố" class="form-control validate-select" style="" defaultvalue="52">
+                                            <option value="">Vui lòng chọn Thành Phố/ Tỉnh</option>
+                                            <option value="Hà Nội" title="Hà Nội">Hà Nội</option>
+                                            <option value="Hồ Chí Minh" title="Hồ Chí Minh">Hồ Chí Minh</option>
+                                            <option value="An Giang" title="An Giang">An Giang</option>
+                                            <option value="Bà Rịa - Vũng Tàu" title="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu</option>
+                                            <option value="Bắc Giang" title="Bắc Giang">Bắc Giang</option>
+                                            <option value="Bắc Kạn" title="Bắc Kạn">Bắc Kạn</option>
+                                            <option value="Bạc Liêu" title="Bạc Liêu">Bạc Liêu</option>
+                                            <option value="Bắc Ninh" title="Bắc Ninh">Bắc Ninh</option>
+                                            <option value="Bến Tre" title="Bến Tre">Bến Tre</option>
+                                            <option value="Bình Định" title="Bình Định">Bình Định</option>
+                                            <option value="Bình Dương" title="Bình Dương">Bình Dương</option>
+                                            <option value="Bình Phước" title="Bình Phước">Bình Phước</option>
+                                            <option value="Bình Thuận" title="Bình Thuận">Bình Thuận</option>
+                                            <option value="Cà Mau" title="Cà Mau">Cà Mau</option>
+                                            <option value="Cần Thơ" title="Cần Thơ">Cần Thơ</option>
+                                            <option value="Cao Bằng" title="Cao Bằng">Cao Bằng</option>
+                                            <option value="Đà Nẵng" title="Đà Nẵng">Đà Nẵng</option>
+                                            <option value="Đắk Lắk" title="Đắk Lắk">Đắk Lắk</option>
+                                            <option value="Đắk Nông" title="Đắk Nông">Đắk Nông</option>
+                                            <option value="Điện Biên" title="Điện Biên">Điện Biên</option>
+                                            <option value="Đồng Nai" title="Đồng Nai">Đồng Nai</option>
+                                            <option value="Đồng Tháp" title="Đồng Tháp">Đồng Tháp</option>
+                                            <option value="Gia Lai" title="Gia Lai">Gia Lai</option>
+                                            <option value="Hà Giang" title="Hà Giang">Hà Giang</option>
+                                            <option value="Hà Nam" title="Hà Nam">Hà Nam</option>
+                                            <option value="Hà Tĩnh" title="Hà Tĩnh">Hà Tĩnh</option>
+                                            <option value="Hải Dương" title="Hải Dương">Hải Dương</option>
+                                            <option value="Hải Phòng" title="Hải Phòng">Hải Phòng</option>
+                                            <option value="Hậu Giang" title="Hậu Giang">Hậu Giang</option>
+                                            <option value="Hòa Bình" title="Hòa Bình">Hòa Bình</option>
+                                            <option value="Hưng Yên" title="Hưng Yên">Hưng Yên</option>
+                                            <option value="Khánh Hòa" title="Khánh Hòa">Khánh Hòa</option>
+                                            <option value="Kiên Giang" title="Kiên Giang">Kiên Giang</option>
+                                            <option value="Kon Tum" title="Kon Tum">Kon Tum</option>
+                                            <option value="Lai Châu" title="Lai Châu">Lai Châu</option>
+                                            <option value="Lâm Đồng" title="Lâm Đồng">Lâm Đồng</option>
+                                            <option value="Lạng Sơn" title="Lạng Sơn">Lạng Sơn</option>
+                                            <option value="Lào Cai" title="Lào Cai">Lào Cai</option>
+                                            <option value="Long An" title="Long An">Long An</option>
+                                            <option value="Nam Định" title="Nam Định">Nam Định</option>
+                                            <option value="Nghệ An" title="Nghệ An">Nghệ An</option>
+                                            <option value="Ninh Bình" title="Ninh Bình">Ninh Bình</option>
+                                            <option value="Ninh Thuận" title="Ninh Thuận">Ninh Thuận</option>
+                                            <option value="Phú Thọ" title="Phú Thọ">Phú Thọ</option>
+                                            <option value="Phú Yên" title="Phú Yên">Phú Yên</option>
+                                            <option value="Quảng Bình" title="Quảng Bình">Quảng Bình</option>
+                                            <option value="Quảng Nam" title="Quảng Nam">Quảng Nam</option>
+                                            <option value="Quảng Ngãi" title="Quảng Ngãi">Quảng Ngãi</option>
+                                            <option value="Quảng Ninh" title="Quảng Ninh">Quảng Ninh</option>
+                                            <option value="Quảng Trị" title="Quảng Trị">Quảng Trị</option>
+                                            <option value="Sóc Trăng" title="Sóc Trăng">Sóc Trăng</option>
+                                            <option value="Sơn La" title="Sơn La">Sơn La</option>
+                                            <option value="Tây Ninh" title="Tây Ninh">Tây Ninh</option>
+                                            <option value="Thái Bình" title="Thái Bình">Thái Bình</option>
+                                            <option value="Thái Nguyên" title="Thái Nguyên">Thái Nguyên</option>
+                                            <option value="Thanh Hóa" title="Thanh Hóa">Thanh Hóa</option>
+                                            <option value="Thừa Thiên Huế" title="Thừa Thiên Huế">Thừa Thiên Huế</option>
+                                            <option value="Tiền Giang" title="Tiền Giang">Tiền Giang</option>
+                                            <option value="Trà Vinh" title="Trà Vinh">Trà Vinh</option>
+                                            <option value="Tuyên Quang" title="Tuyên Quang">Tuyên Quang</option>
+                                            <option value="Vĩnh Long" title="Vĩnh Long">Vĩnh Long</option>
+                                            <option value="Vĩnh Phúc" title="Vĩnh Phúc">Vĩnh Phúc</option>
+                                            <option value="Yên Bái" title="Yên Bái">Yên Bái</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group field">
+                                    <div class="form-group">
+                                        <input type="text" name="detail_ShipDistrict" required id="shipping:district" value="" title="Quận" placeholder="QUẬN" class="form-control input-text">
+                                    </div>
+                                </div>
+                                <div class="form-group field">
+                                    <div class="form-group">
+                                        <input type="text" name="detail_ShipTown" required id="detail_ShipTown" value="" title="Phường" placeholder="PHƯỜNG" class="form-control input-text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group label-black">
+                                <div class="checkbox text-left">
+                                    <input type="checkbox" id="Pay-address" name="Pay-address" value="1" class="checkbox" checked="checked">
+                                    <label for="Pay-address">Thanh toán tại địa chỉ này</label>
+                                </div>
+                            </div>
+                            <div class="checkout-section address-info" id="paying-address-info" style="">
+                                <h4 class="section-title text-uppercase">Địa chỉ thanh toán</h4>
+                                <div class="form-group">
+                                    <div class="customer-name">
+                                        <div class="form-group clearfix">
+                                            <div class="field name-firstname">
+                                                <div class="input-box">
+                                                    <input type="text" id="detail_PayName" name="detail_PayName" required maxlength="255" value="" title="Tên" placeholder="TÊN *" class="form-control input-text required-entry">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group clearfix">
+                                            <div class="field name-lastname">
+                                                <div class="input-box">
+                                                    <input type="text" id="detail_PayLastName" name="detail_PayLastName"  maxlength="255" value="" title="họ" placeholder="HỌ *" class="form-control input-text required-entry">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" name="detail_PayEmail" id="detail_PayEmail" value="" title="Email *" placeholder="EMAIL *" class="form-control input-text validate-non-unicode-email required-entry">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="detail_PayPhone"  id="detail_PayPhone" value="" title="Điên thoại *" placeholder="ĐIỆN THOẠI *" class="form-control input-text  required-entry">
+                                    </div>
+                                    <input type="text" name="detail_PayStreet" id="detail_PayStreet" value="" title="Địa chỉ" placeholder="ĐỊA CHỈ *" class="form-control input-text  required-entry">
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-box">
+                                        <select id="detail_PayProvince" name="detail_PayProvince"  title="Thành phố" class="form-control validate-select" style="" defaultvalue="">
+                                            <option value="">Vui lòng chọn Thành Phố/ Tỉnh</option>
+                                            <option value="Hà Nội" title="Hà Nội">Hà Nội</option>
+                                            <option value="Hồ Chí Minh" title="Hồ Chí Minh">Hồ Chí Minh</option>
+                                            <option value="An Giang" title="An Giang">An Giang</option>
+                                            <option value="Bà Rịa - Vũng Tàu" title="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu</option>
+                                            <option value="Bắc Giang" title="Bắc Giang">Bắc Giang</option>
+                                            <option value="Bắc Kạn" title="Bắc Kạn">Bắc Kạn</option>
+                                            <option value="Bạc Liêu" title="Bạc Liêu">Bạc Liêu</option>
+                                            <option value="Bắc Ninh" title="Bắc Ninh">Bắc Ninh</option>
+                                            <option value="Bến Tre" title="Bến Tre">Bến Tre</option>
+                                            <option value="Bình Định" title="Bình Định">Bình Định</option>
+                                            <option value="Bình Dương" title="Bình Dương">Bình Dương</option>
+                                            <option value="Bình Phước" title="Bình Phước">Bình Phước</option>
+                                            <option value="Bình Thuận" title="Bình Thuận">Bình Thuận</option>
+                                            <option value="Cà Mau" title="Cà Mau">Cà Mau</option>
+                                            <option value="Cần Thơ" title="Cần Thơ">Cần Thơ</option>
+                                            <option value="Cao Bằng" title="Cao Bằng">Cao Bằng</option>
+                                            <option value="Đà Nẵng" title="Đà Nẵng">Đà Nẵng</option>
+                                            <option value="Đắk Lắk" title="Đắk Lắk">Đắk Lắk</option>
+                                            <option value="Đắk Nông" title="Đắk Nông">Đắk Nông</option>
+                                            <option value="Điện Biên" title="Điện Biên">Điện Biên</option>
+                                            <option value="Đồng Nai" title="Đồng Nai">Đồng Nai</option>
+                                            <option value="Đồng Tháp" title="Đồng Tháp">Đồng Tháp</option>
+                                            <option value="Gia Lai" title="Gia Lai">Gia Lai</option>
+                                            <option value="Hà Giang" title="Hà Giang">Hà Giang</option>
+                                            <option value="Hà Nam" title="Hà Nam">Hà Nam</option>
+                                            <option value="Hà Tĩnh" title="Hà Tĩnh">Hà Tĩnh</option>
+                                            <option value="Hải Dương" title="Hải Dương">Hải Dương</option>
+                                            <option value="Hải Phòng" title="Hải Phòng">Hải Phòng</option>
+                                            <option value="Hậu Giang" title="Hậu Giang">Hậu Giang</option>
+                                            <option value="Hòa Bình" title="Hòa Bình">Hòa Bình</option>
+                                            <option value="Hưng Yên" title="Hưng Yên">Hưng Yên</option>
+                                            <option value="Khánh Hòa" title="Khánh Hòa">Khánh Hòa</option>
+                                            <option value="Kiên Giang" title="Kiên Giang">Kiên Giang</option>
+                                            <option value="Kon Tum" title="Kon Tum">Kon Tum</option>
+                                            <option value="Lai Châu" title="Lai Châu">Lai Châu</option>
+                                            <option value="Lâm Đồng" title="Lâm Đồng">Lâm Đồng</option>
+                                            <option value="Lạng Sơn" title="Lạng Sơn">Lạng Sơn</option>
+                                            <option value="Lào Cai" title="Lào Cai">Lào Cai</option>
+                                            <option value="Long An" title="Long An">Long An</option>
+                                            <option value="Nam Định" title="Nam Định">Nam Định</option>
+                                            <option value="Nghệ An" title="Nghệ An">Nghệ An</option>
+                                            <option value="Ninh Bình" title="Ninh Bình">Ninh Bình</option>
+                                            <option value="Ninh Thuận" title="Ninh Thuận">Ninh Thuận</option>
+                                            <option value="Phú Thọ" title="Phú Thọ">Phú Thọ</option>
+                                            <option value="Phú Yên" title="Phú Yên">Phú Yên</option>
+                                            <option value="Quảng Bình" title="Quảng Bình">Quảng Bình</option>
+                                            <option value="Quảng Nam" title="Quảng Nam">Quảng Nam</option>
+                                            <option value="Quảng Ngãi" title="Quảng Ngãi">Quảng Ngãi</option>
+                                            <option value="Quảng Ninh" title="Quảng Ninh">Quảng Ninh</option>
+                                            <option value="Quảng Trị" title="Quảng Trị">Quảng Trị</option>
+                                            <option value="Sóc Trăng" title="Sóc Trăng">Sóc Trăng</option>
+                                            <option value="Sơn La" title="Sơn La">Sơn La</option>
+                                            <option value="Tây Ninh" title="Tây Ninh">Tây Ninh</option>
+                                            <option value="Thái Bình" title="Thái Bình">Thái Bình</option>
+                                            <option value="Thái Nguyên" title="Thái Nguyên">Thái Nguyên</option>
+                                            <option value="Thanh Hóa" title="Thanh Hóa">Thanh Hóa</option>
+                                            <option value="Thừa Thiên Huế" title="Thừa Thiên Huế">Thừa Thiên Huế</option>
+                                            <option value="Tiền Giang" title="Tiền Giang">Tiền Giang</option>
+                                            <option value="Trà Vinh" title="Trà Vinh">Trà Vinh</option>
+                                            <option value="Tuyên Quang" title="Tuyên Quang">Tuyên Quang</option>
+                                            <option value="Vĩnh Long" title="Vĩnh Long">Vĩnh Long</option>
+                                            <option value="Vĩnh Phúc" title="Vĩnh Phúc">Vĩnh Phúc</option>
+                                            <option value="Yên Bái" title="Yên Bái">Yên Bái</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group field">
+                                    <div class="form-group">
+                                        <input type="text" name="detail_PayDistrict" id="billing:district" value="" title="Quận" placeholder="QUẬN" class="form-control input-text">
+                                    </div>
+                                </div>
+                                <div class="form-group field">
+                                    <div class="form-group">
+                                        <input type="text" name="detail_PayTown"  id="billing:ward" value="" title="Phường" placeholder="PHƯỜNG" class="form-control input-text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group label-black">
+                                <div class="checkbox text-left">
+                                    <input type="checkbox" id="uma-term-and-condtion" name="uma-term-and-condition"  class="checkbox required-entry" checked="checked">
+                                    <label for="uma-term-and-condtion">Tôi đã đọc và chấp nhận các chính sách và điều khoản của SHOME</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkout-section buttons" id="billing-buttons-container">
+                    <input type="submit" class="button validation-passed" value="Tiếp tục"/>                        
+                </div>
+            </form>
+        </fieldset>
+    </div>
+    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+        <h3 class="checkout-box-title text-uppercase">Thông tin đơn đặt hàng</h3>
+        <span class="msg-coupon"></span>
+        
+        <div class="checkout-section order-review">
+            <form id="discount-coupon-form" action="" method="post">
+                <div class="discount">
+                    <div class="discount-form">
+                        <div class="coupon-box">
+                            <input type="hidden" name="remove" id="remove-coupone" value="0">
+                            <input class="form-control input-coupon-code" id="coupon_code" name="coupon_code" placeholder="NHẬP MÃ" value="">
+                            <button class="button btn-apply-coupon">
+                                <span class="text-uppercase">Sử dụng</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="order-items-info hidden-xs">
+                <!-- Freeze Header order-review container-->
+                <div class="order-items-info-header">
+                    <table>
+                        <thead class="header">
+                            <tr>
+                                <th width="25%"></th>
+                                <th class="text-center" width="35%">
+                                    <span class="text-uppercase"><strong>Sản phẩm</strong></span>
+                                </th>
+                                <th class="text-right" width="40%">
+                                    <span class="text-uppercase hidden-xs"><strong>Số lượng &amp; Đơn giá</strong></span>
+                                    <span class="text-uppercase visible-xs"><strong>Số lượng</strong></span>
+                                </th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <!-- Body order-review container-->
+                <div class="order-items-info-body mCustomScrollbar _mCS_2 mCS_no_scrollbar">
+                    <div id="mCSB_2" class="mCustomScrollBox mCS-dark mCSB_vertical mCSB_inside" style="max-height: none;" tabindex="0">
+                        <div id="mCSB_2_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+                            <table>
+                                <thead class="header">
+                                    <tr>
+                                        <th width="30%" style="padding:0px;"></th>
+                                        <th class="text-center" width="30%" style="padding:0px;"></th>
+                                        <th class="text-right" width="40%" style="padding:0px;"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (itemview != null)
+                                    {
+                                        foreach (var item in itemview)
+                                        {
+                                            <tr>
+                                                <td class="image">
+                                                    <a href="@Url.Action("ChiTietSanPham","SanPham", new { MaSanPham = item.pro_ID})" title="" class="product-image">
+                                                        <img class="img-responsive mCS_img_loaded" width="120px" src="@item.pro_Image" alt="AVATAR">
+                                                    </a>
+                                                </td>
+                                                <td class="name-function text-uppercase">
+                                                    <div class="product-function">@item.pro_Name</div>
+                                                    <div class="product-name">@item.pro_Description</div>
+                                                    <div class="visible-xs">
+                                                        <div>
+                                                            <span>@Html.Raw(string.Format("{0:#,#}", item.pro_Price))</span><span>Đ</span>
+                                                        </div>
+
+                                                        <div class="row-total">
+                                                            <span class="cart-price">
+                                                                <span class="price">@Html.Raw(string.Format("{0:#,#}", item.cart_TotalPrice))</span><span>VNĐ</span>
+                                                            </span>
+
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="price quantity total text-right">
+                                                    <span class="visible-xs">
+                                                        x @item.cart_Quanty
+                                                    </span>
+                                                    <div class="hidden-xs">
+                                                        <div>x @item.cart_Quanty</div>
+                                                        <div class="final-price">
+                                                            <span class="final-price-product">@Html.Raw(string.Format("{0:#,#}", item.cart_TotalPrice))</span><span>VNĐ</span>
+                                                        </div>
+                                                        <div class="row-total">
+                                                            <span class="cart-price">
+                                                                <span class="price">@Html.Raw(string.Format("{0:#,#}", item.cart_TotalPrice))</span><span>VNĐ</span>
+                                                            </span>
+
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        foreach (var item in cartAnonymous)
+                                        {
+                                            <tr>
+                                                <td class="image">
+                                                    <a href="@Url.Action("ChiTietSanPham","SanPham", new { MaSanPham = item.pro_ID})" title="" class="product-image">
+                                                        <img class="img-responsive mCS_img_loaded" width="120px" src="@item.pro_Image" alt="AVATAR">
+                                                    </a>
+                                                </td>
+                                                <td class="name-function text-uppercase">
+                                                    <div class="product-function">@item.pro_Name</div>
+                                                    <div class="product-name">@item.pro_Description</div>
+                                                    <div class="visible-xs">
+                                                        <div>
+                                                            <span>@Html.Raw(string.Format("{0:#,#}", item.pro_Price))</span><span>Đ</span>
+                                                        </div>
+
+                                                        <div class="row-total">
+                                                            <span class="cart-price">
+                                                                <span class="price">@Html.Raw(string.Format("{0:#,#}", item.cart_TotalPrice))</span><span>VNĐ</span>
+                                                            </span>
+
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="price quantity total text-right">
+                                                    <span class="visible-xs">
+                                                        x @item.cart_Quanty
+                                                    </span>
+                                                    <div class="hidden-xs">
+                                                        <div>x @item.cart_Quanty</div>
+                                                        <div class="final-price">
+                                                            <span class="final-price-product">@Html.Raw(string.Format("{0:#,#}", item.cart_TotalPrice))</span><span>VNĐ</span>
+                                                        </div>
+                                                        <div class="row-total">
+                                                            <span class="cart-price">
+                                                                <span class="price">@Html.Raw(string.Format("{0:#,#}", item.cart_TotalPrice))</span><span>VNĐ</span>
+                                                            </span>
+
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="order-checkout-info hidden-xs">
+                <table>
+                    <thead class="header">
+                        <tr>
+                            <th width="35%"></th>
+                            <th class="text-center" width="35%"></th>
+                            <th class="text-right" width="30%"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td align="left" class="total-text">
+                                <strong class="text-uppercase">Tổng tiền</strong>
+                            </td>
+                            <td align="right" class="total-value">
+                                <strong class="text-uppercase begin-total-price"></strong><strong>VNĐ</strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="left" class="total-text">
+                                <strong class="text-uppercase">Phí vận chuyển</strong>
+                            </td>
+                            <td align="right" class="total-value">
+                                <strong class="text-uppercase">Miễn phí</strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="left" class="total-text">
+                                <strong class="text-uppercase">Tổng thanh toán</strong>
+                            </td>
+                            <td align="right" class="total-value">
+                                <strong class="highlight total-price-cart"></strong><strong class="highlight">VNĐ</strong>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="order-checkout-info visible-xs">
+                <table>
+                    <thead class="header">
+                        <tr>
+                            <th width="50%"></th>
+                            <th class="text-center" width="20%"></th>
+                            <th class="text-right" width="30%"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+
+                            <td align="left" class="total-text">
+                                <strong class="text-uppercase">Tổng tiền</strong>
+                            </td>
+                            <td></td>
+                            <td align="right" class="total-value">
+                                <strong class="text-uppercase begin-total-price"></strong><strong>VNĐ</strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" class="total-text">
+                                <strong class="text-uppercase">Phí vận chuyển</strong>
+                            </td>
+                            <td></td>
+
+                            <td align="right" class="total-value">
+                                <strong class="text-uppercase">Miễn phí</strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" class="total-text">
+                                <strong class="text-uppercase">Tổng thanh toán</strong>
+                            </td>
+                            <td></td>
+
+                            <td align="right" class="total-value">
+                                <strong class="highlight total-price-cart"></strong><strong>VNĐ</strong>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>    </div>
+</div>
+</div>
+<script>
+    $('.infor-shipping').addClass('active');
+    $(function () {
+        var beginquanty = 0;
+        var $elementPrice = $('.final-price-product');
+        $elementPrice.each(function () {
+            var price = Number($(this).text().replace(/,/g, ""));
+            beginquanty += price;
+        })
+        $('.begin-total-price').text(beginquanty.toFixed(0).replace(/./g, function (c, i, a) {
+            return i && c !== "." && ((a.length - i) % 3 === 0) ? ',' + c : c;
+        }));
+        $('.total-price-cart').text(beginquanty.toFixed(0).replace(/./g, function (c, i, a) {
+            return i && c !== "." && ((a.length - i) % 3 === 0) ? ',' + c : c;
+        }));
+    });
+</script>
+<script type="text/javascript">
+    $j(".order-items-info-body").mCustomScrollbar({
+        theme: "dark",
+        axis: "y",
+    });
+    $('#paying-address-info').addClass("hidden");
+    $('#paying-address-info').find('input').removeAttr('required')
+    $('#Pay-address').click(function () {
+        if ($(this).is(':checked')) {
+            $('#paying-address-info').addClass("hidden");
+            $('#paying-address-info').find('input').removeAttr('required');
+        }
+        else {
+            $('#paying-address-info').removeClass("hidden");
+            $('#paying-address-info').find('input').attr('required', true);
+        }
+    })
+</script>

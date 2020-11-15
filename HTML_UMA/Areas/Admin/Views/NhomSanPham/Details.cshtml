@@ -1,0 +1,40 @@
+﻿@model HTML_UMA.Models.GroupProduct
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="text-center">
+    <h2>Chi tiết</h2>
+</div>
+
+<div>
+    <h4>@Model.group_Name</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên: @Html.DisplayFor(model => model.group_Name)
+        </dt>
+
+        <dt>
+            Hình ảnh: 
+        </dt>
+
+        <dd>
+            <img src="@Model.image" width="60" height="60"/>
+        </dd>
+
+        <dt>
+            Mô tả: 
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.group_ID }) |
+    @Html.ActionLink("Trở về", "Index")
+</p>

@@ -1,0 +1,72 @@
+﻿@model HTML_UMA.Models.Menu
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="text-center">
+    <h2>Chỉnh sửa</h2>
+</div>
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>@Model.Name</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Menu_ID)
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Tên: </label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Hình ảnh: </label>
+            <div class="col-md-10">
+                <img src="@Model.Image" width="60" height="60" />
+                <input name="Image" value="@Model.Image" type="hidden" />
+                <input name="ChangeImage" type="file" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Danh mục cha: </label>
+            <div class="col-md-10">
+                @Html.DropDownList("Menu_ID", null, htmlAttributes: new { @class = "form-control", Name = "ParentIid", Model.ParentIid })
+                @Html.ValidationMessageFor(model => model.ParentIid, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Vị trí hiển thị: </label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Status, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Chú thích: </label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Note, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Note, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Lưu" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Trở về", "Index")
+</div>

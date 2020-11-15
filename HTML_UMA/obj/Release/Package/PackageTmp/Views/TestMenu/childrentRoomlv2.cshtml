@@ -1,0 +1,20 @@
+﻿@model IEnumerable<HTML_UMA.Models.Menu>
+@{
+    Layout = null;
+}
+@if ((int)ViewBag.Count > 0)
+{
+
+    <div class="level1">
+        <ul class="level1">
+            @foreach(var item in Model)
+            {
+                    <li class="level2 nav-1-1-1 first">
+                        <a href="@Url.Action("DanhMucPhong", "Phong", new { IDPhong = item.Menu_ID })" class="level2">@item.Name</a>
+                    </li>
+            }
+        </ul>
+    </div>
+
+}
+

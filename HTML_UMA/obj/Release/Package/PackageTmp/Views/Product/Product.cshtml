@@ -1,0 +1,82 @@
+﻿@model IEnumerable<HTML_UMA.Models.Menu>
+@{
+    ViewBag.Title = "Product";
+}
+<div class="main-container col2-left-layout">
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="breadcrumb-wrapper">
+                        <ul class="breadcrumb">
+                            <li class="home">
+                                <a href="/" title="Quay lại trang chủ">
+                                    <span class="fa fa-home"></span>
+                                </a>
+                            </li>
+                            <li class="category9">
+                                <a href="/Product/Product" title="">
+                                    Sản phẩm
+                                </a>
+                            </li>
+                            <li class="category10">
+                                <a></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-top">
+    </div>
+    <div class="container">
+        <div class="main row">
+            <div class="col-left sidebar uma-lg-2 col-md-3 col-sm-4 col-xs-12">
+                <div class="block categories hidden-xs">
+                    <div class="block-contents">
+                        <style type="text/css">
+                            #cssmenu.two-level > ul > li > a:after {
+                                background-image: url("/skin/frontend/uma/default/images/icons/arrow.svg");
+                            }
+                        </style>
+                        @Html.Action("Menulv2", "Menu")
+                    </div>
+                </div>
+            </div>
+            <div class="col-main uma-lg-8 col-md-9 col-sm-8 col-xs-12">
+                <div class="container-fluid categories-landing-page nopadding">
+                    <div class="categories">
+                        @foreach (var item in Model)
+                        {
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 uma-xxs-6 category">
+                                <div class="contents">
+                                    <div class="image">
+                                        <a href="@Url.Action("CategoryProduct","Product", new { Menu_ID = item.Menu_ID})">
+                                            <img class="img-responsive hidden-xs" src="@item.Image" title="@item.Name" style="height: 280px; width: 100%">
+                                            <img class="img-responsive visible-xs" src="@item.Image" title="@item.Name" style="height: 160px; width: 100%">
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <p>
+                                            <a href="@Url.Action("CategoryProduct","Product", new { Menu_ID = item.Menu_ID})" class="name text-uppercase">@item.Name <span>@Html.Action("getCountProduct", new { Menu_ID = item.Menu_ID })</span> </a>
+                                        </p>
+                                        <p class="description"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        }                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-bottom">
+    </div>
+</div>
+<script>
+    $('.category:first-child').removeClass('col-lg-4');
+    $('.category:first-child').addClass('col-lg-8');
+</script>
+
+

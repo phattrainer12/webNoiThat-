@@ -1,0 +1,36 @@
+﻿@model IEnumerable<HTML_UMA.Models.Menu>
+@{
+    Layout = null;
+}
+<div id="cssmenu" class="two-level">
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li class="has-sub" data-id="@item.Menu_ID">
+                <a class="text" href="@Url.Action("DanhMucPhong","Phong", new { IDPhong = item.Menu_ID})">@item.Name</a>
+                @Html.Action("MenuRoomchildlv2", "Menu", new { parent_id = item.Menu_ID })
+            </li>
+        }
+    </ul>
+</div>
+<script>
+    $(function () {
+        //Fix categorys
+        $('.category:first-child').removeClass('col-lg-4 col-md-6')
+        $('.category:first-child').addClass('col-lg-8 col-md-8')
+        $('.has-sub').find('ul').removeClass('sub-menu')
+        //orhter
+        var $id = $('.page-title').data('menu-id');
+        var $list = $('li[class="has-sub"]');
+        $list.each(function (index, e) {
+            var $checkid = $(e).data('id');
+            console.log($checkid)
+            if ($checkid == $id) {
+                $(this).addClass('selected');
+                $(this).closest('li[class="has-sub"]').addClass('selected');
+            }
+        });
+    });
+</script>
+
+

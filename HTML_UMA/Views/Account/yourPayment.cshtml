@@ -1,0 +1,237 @@
+﻿@{
+    ViewBag.Title = "yourPayment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var UserAccount = Session["User"] as HTML_UMA.Models.User;
+    var detail = ViewBag.detail as HTML_UMA.Models.OrderDetail;
+    var listorder = ViewBag.listorder as IEnumerable<HTML_UMA.Models.Order>;
+}
+<div class="container">
+    <div class="main row">
+        <div class="col-left sidebar uma-lg-2 col-md-3 col-sm-4 col-xs-12">
+            <div class="block block-account">
+                <div class="block-title">
+                    <strong><span>Quản lý tài khoản</span></strong>
+                </div>
+                <div class="block-content">
+                    <ul>
+                        <li class="current"><strong>Thông tin chung</strong></li>
+                        <li><a href="@Url.Action("EditUser","Account")">Thông tin tài khoản</a></li>
+                        <li><a href="/Account/Order">Đơn hàng của tôi</a></li>
+                        <li><a href="/Account/listFavourist">Danh sách yêu thích</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-main uma-lg-8 col-md-9 col-sm-8 col-xs-12">
+            <div class="my-account">
+                <!-- TODO: layout of this page should be adjusted to look the same as others -->
+                <div class="order-view-details">
+                    <div class="page-title title-buttons">
+                        <h3>Đơn hàng số <b class="highlight">@detail.detail_ID</b>
+                        @if(detail.@checked == true)
+                        {
+                            <span>(Chờ xử lí)</span>
+                        }
+                        else
+                        {
+                            <span>(Đã xử lí)</span>
+                        }
+                        </h3>
+                        <p>Ngày: @detail.detail_dateorder</p>
+                    </div>
+                    <div class="box-info">
+                        <div class="order-info">
+                            <div class="box-head">
+                                <h2>Chi tiết đơn hàng:</h2>
+                            </div>
+                            <div class="box-contents">
+                                <ul id="order-info-tabs">
+                                    <li class="current first last">Thông tin đơn đặt hàng</li>
+                                </ul>
+                                <script type="text/javascript">decorateGeneric($('order-info-tabs').select('LI'),['first','last']);</script>
+                            </div>
+                        </div>
+                        <div class="order-info-box">
+                            <div class="box-head">
+                                <h2>Địa chỉ giao hàng và phương thức giao hàng</h2>
+                            </div>
+                            <div class="box-contents">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="box">
+                                                <div class="box-title">
+                                                    <h3>Địa chỉ giao hàng</h3>
+                                                </div>
+                                                <div class="box-content">
+                                                    <address>
+                                                        
+                                                        Tên: @detail.detail_ShipLastName @detail.detail_ShipName<br>        
+                                                        Đường: @detail.detail_ShipStreet<br />
+                                                        :QUận   @detail.detail_ShipDistrict, @detail.detail_ShipProvince<br>
+                                                        Tel:   T: @detail.detail_ShipPhone
+                                                    </address>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="box">
+                                                <div class="box-title">
+                                                    <h3>Phương thức vận chuyển</h3>
+                                                </div>
+                                                <div class="box-content">
+                                                    Free Shipping - Free
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-info-box">
+                            <div class="box-head">
+                                <h2>Địa chỉ thanh toán và phương thức thanh toán</h2>
+                            </div>
+                            <div class="box-contents">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="box">
+                                                <div class="box-title">
+                                                    <h3>Địa chỉ thanh toán</h3>
+                                                </div>
+                                                <div class="box-content">
+                                                    <address>
+                                                        
+                                                        Tên: @detail.detail_PayLastName @detail.detail_PayName<br>
+                                                        Đường: @detail.detail_PayStreet<br />
+                                                        QUận @detail.detail_PayDistrict, Tỉnh thành phố: @detail.detail_PayProvince<br>
+                                                        Tel: @detail.detail_PayPhone
+                                                    </address>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="box">
+                                                <div class="box-title">
+                                                    <h3>Phương thức thanh toán</h3>
+                                                </div>
+                                                <div class="box-content">
+                                                    <p><strong>Thanh toán tiền mặt</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-items order-details">
+                    <div class="box-info">
+                        <div class="order-items">
+                            <div class="box-head">
+                                <h2 class="table-caption">Các sản phẩm đã đặt</h2>
+                            </div>
+                            <div clas="box-contents">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-condensed data-table" id="my-orders-table" summary="Các sản phẩm đã đặt">
+                                        <colgroup>
+                                            <col>
+                                            <col width="1">
+                                            <col width="1">
+                                            <col width="1">
+                                            <col width="1">
+                                        </colgroup>
+                                        <thead>
+                                            <tr class="first last">
+                                                <th>Tên sản phẩm</th>
+                                                <th>Hình ảnh</th>
+                                                <th class="a-right">Giá</th>
+                                                <th class="a-center">SL</th>
+                                                <th class="a-right">Tổng cộng</th>
+                                            </tr>
+                                        </thead>s
+                                        <tfoot>
+                                            <tr class="subtotal first">
+                                                <td colspan="4" class="a-right">
+                                                    Tổng cộng
+                                                </td>
+                                                <td class="last a-right">
+                                                    <span class="price">@Html.Raw(string.Format("{0:#,#}", detail.detail_TotalBegin))</span><span>VNĐ</span>
+                                                </td >
+                                            </tr >
+                                            <tr class="shipping">
+                                                <td colspan = "4" class="a-right">
+                                                    Shipping &amp; Handling
+                                                </td>
+                                                <td class="last a-right">
+                                                    <span class="price">0 VNĐ</span>
+                                                </td>
+                                            </tr>
+                                            <tr class="salecode">
+                                                <td colspan = "4" class="a-right">
+                                                    Sale code
+                                                </td>
+                                                <td class="last a-right">
+                                                    <span class="price">0 VNĐ</span>
+                                                </td>
+                                            </tr>
+                                            <tr class="grand_total last">
+                                                <td colspan="4" class="a-right">
+                                                    <strong>Tổng tiền thanh toán</strong>
+                                                </td>
+                                                <td class="last a-right">
+                                                    <strong><span class="price">@Html.Raw(string.Format("{0:#,#}", detail.detail_Totalmoney))</span><span>VNĐ</span></strong>
+                                                </td>
+                                            </tr>
+                                        </tfoot>
+                                        <tbody class="odd">
+                                            @foreach (var item in listorder)
+                                    {
+                                        <tr class="border first last" id="order-item-row-26148">
+                                            <td>
+                                                <span class="product-name">@item.pro_Name</span>
+                                            </td>
+                                            <td>
+                                                <img src="@item.pro_Image" style="width: 80px; height:80px;"/>
+                                            </td>
+                                            <td class="a-right">
+                                                <span class="price-excl-tax">
+                                                    <span class="cart-price">
+
+                                                        <span class="price">@Html.Raw(string.Format("{0:#,#}", item.pro_Price))</span><span>VNĐ</span>
+                                                    </span>
+                                                </span>
+                                                <br>
+                                            </td>
+                                            <td class="a-right">
+                                                <span class="nobr">
+                                                    <strong>@item.cart_Quanty</strong><br>
+                                                </span>
+                                            </td>
+                                            <td class="a-right last">
+                                                <span class="price-excl-tax">
+                                                    <span class="cart-price">
+                                                        <span class="price">@Html.Raw(string.Format("{0:#,#}", item.cart_TotalPrice))</span><span>VNĐ</span>
+                                                    </span>
+                                                </span>
+                                                <br>
+                                            </td>
+                                        </tr>
+                                    }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buttons-set">
+                        <p class="back-link"><a href="/Account/Order"><small>« </small>Quay lại danh sách đơn hàng</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

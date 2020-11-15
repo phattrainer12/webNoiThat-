@@ -1,0 +1,7 @@
+C:\working\vng\zalopay\demo\ZaloPayHelper\bin\Release\ZaloPayHelper.dll
+C:\working\vng\zalopay\demo\ZaloPayHelper\bin\Release\ZaloPayHelper.pdb
+C:\working\vng\zalopay\demo\ZaloPayHelper\bin\Release\log4net.dll
+C:\working\vng\zalopay\demo\ZaloPayHelper\bin\Release\log4net.xml
+C:\working\vng\zalopay\demo\ZaloPayHelper\obj\Release\ZaloPayHelper.csprojResolveAssemblyReference.cache
+C:\working\vng\zalopay\demo\ZaloPayHelper\obj\Release\ZaloPayHelper.dll
+C:\working\vng\zalopay\demo\ZaloPayHelper\obj\Release\ZaloPayHelper.pdb

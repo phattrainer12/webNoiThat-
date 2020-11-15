@@ -1,0 +1,151 @@
+﻿@model IEnumerable<HTML_UMA.Models.Product>
+@{
+    ViewBag.Title = "Index";
+}
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-main">
+    <div class="std">
+        <div class="hidden page-title">
+            <h2>Home Page</h2>
+        </div>
+    </div>
+    @Html.Action("Slider", "Slider")
+    <div class="slider">
+        <h3 class="page-title homepage-block-title">Sản Phẩm Tiêu Biểu</h3>
+        <div class="container products-list-slider featured-products">
+            <div class="row">
+                <div class="products-list">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 product">
+                            <div class="wrapper text-center">
+                                @if (item.sale == true)
+                                {
+                                    <div class="product-sale sale">
+                                        <span>Sale</span>
+                                    </div>
+                                }
+                                <div class="product-set set">
+                                    <span>@item.OptionSale.Name</span>
+                                            </div>
+                                            <a href="@Url.Action("ChiTietSanPham","SanPham", new { MaSanPham = item.pro_ID})" title="" class="product-image">
+                                                <img width="100%" height="100%" class="img-responsive"
+                                                     src="@item.pro_Image"
+                                                     alt="" />
+                                            </a>
+                                            <div class="product-function">
+                                                <span>@item.pro_Name</span>
+                                            </div>
+                                            <div class="product-name text-uppercase">
+                                                <a href="@Url.Action("ChiTietSanPham","SanPham", new { MaSanPham = item.pro_ID})" title="BIANCA">
+                                                    <span>@item.pro_Description</span>
+                                                </a>
+                                            </div>
+                                            <div class="product-size">
+                                                <span>@item.pro_Size</span>
+                                            </div>
+                                            <div class="product-price">
+                                                <div class="price-box">
+                                                    <span class="regular-price" id="product-price-269">
+                                                        <span class="price">@Html.Raw(string.Format("{0:#,#}", item.pro_price)) VNĐ</span>
+                                                    </span>
+
+                                                </div>
+                                            </div>
+                                            <div class="actions">
+                                                <div title="Thêm vào Danh mục yêu thích" class="button btn-wishlist">
+                                                    <a href="@Url.Action("AddFavourist","Product", new { pro_ID = item.pro_ID})">Yêu Thích</a>
+                                                </div>
+                                                @if (item.pro_Status == true)
+                                                {
+                                                    <div title="Mua hàng" class="button btn-cart">
+                                                        <a href="@Url.Action("addcart", "Product", new { pro_ID = item.pro_ID })">Mua hàng</a>
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div title="Mua hàng" class="button btn-outofstock">
+                                                        <a href="@Url.Action("ChiTietSanPham","SanPham", new { MaSanPham = item.pro_ID})">Tạm hết hàng</a>
+                                                    </div>
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                    }
+                </div>
+            </div>
+            <script type="text/javascript">
+                $j(".products-list-slider.featured-products .products-list").slick({
+                    dots: true,
+                    infinite: true,
+                    rows: 2,
+                    arrows: true,
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                    speed: 2000,
+                    autoplay: true,
+                    autoplaySpeed: 6000,
+                    adaptiveHeight: true,
+                    prevArrow: "<img class='slick-prev' src='/skin/frontend/uma/default/images/sliders/dark/md-left.svg' />",
+                    nextArrow: "<img class='slick-next' src='/skin/frontend/uma/default/images/sliders/dark/md-right.svg' />",
+                    responsive: [
+                        {
+                            breakpoint: 992,
+                            settings: {
+                                rows: 2,
+                                slidesToShow: 3,
+                                slidesToScroll: 3
+                            }
+                        },
+                        {
+                            breakpoint: 768,
+                            settings: {
+                                rows: 2,
+                                slidesToShow: 2,
+                                slidesToScroll: 2,
+                                speed: 1000,
+                                autoplaySpeed: 4000,
+                                prevArrow: "<img class='slick-prev' src='/skin/frontend/uma/default/images/sliders/dark/sm-left.svg' />",
+                                nextArrow: "<img class='slick-next' src='/skin/frontend/uma/default/images/sliders/dark/sm-right.svg' />"
+                            }
+                        },
+                        {
+                            breakpoint: 425,
+                            settings: {
+                                rows: 2,
+                                slidesToShow: 2,
+                                slidesToScroll: 2,
+                                arrows: false,
+                                speed: 1000,
+                                autoplaySpeed: 4000,
+                            }
+                        }
+                    ]
+                });
+            </script>
+        </div>
+    </div>
+    <div class="our-address-block">
+        <div class="wrapper">
+            <h3 class="page-title text-center homepage-block-title">Địa chỉ</h3>
+            <div class="contents-wrapper">
+                <div class="contents">
+                    <p>
+                        CÔNG TY TNHH MTV SẢN XUẤT VÀ CUNG CẤP NỘI THẤT VIỆT TÂY ÂU
+                        Địa chỉ: 286 Phan Châu Trinh, Phường Bình Hiên, Quận Hải Châu, TP Đà Nẵng
+                    </p>
+                    <button class="button" type="button">
+                        <a href="/Support/Ourshop">Hệ thống cửa hàng </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

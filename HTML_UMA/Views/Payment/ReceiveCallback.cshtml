@@ -1,0 +1,151 @@
+﻿
+@{
+    ViewBag.Title = "ReceiveCallback";
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
+}
+
+@using HTML_UMA.Models.ZaloPayHelper;
+@using System.Drawing;
+@using HTML_UMA.Models;
+@{
+    Layout = null;
+
+
+    /*
+     * String data = "{\"data\":\"{
+     * \\\"appid\\\":2,
+     * \\\"zptransid\\\":160520000000081,
+     * \\\"apptransid\\\":\\\"160520176021926423825\\\",
+     * \\\"apptime\\\":1463711618132,
+     * \\\"appuser\\\":\\\"160514000002501\\\",
+     * \\\"item\\\":\\\"[{\\\\\\\"itemID\\\\\\\":\\\\\\\"it002\\\\\\\",\\\\\\\"itemName\\\\\\\":\\\\\\\"Color 50K\\\\\\\",\\\\\\\"itemQuantity\\\\\\\":1,\\\\\\\"itemPrice\\\\\\\":50000}]\\\",
+     * \\\"amount\\\":1000,
+     * \\\"embeddata\\\":\\\"1|1\\\",
+     * \\\"servertime\\\":1463711619269,
+     * \\\"channel\\\":38,
+     * \\\"merchantUserID\\\":\\\"v5sK8nv4fOkQkVIu8n1MvsCmnHcz9QWQQxukGByQ4Ds\\\"}\",
+     * \"mac\":\"16b369598e86411baf15421cff917610119f37d157c064109618496c937b9bc5\"}";
+     *
+     */
+    string CarstDetailSesstion = "CarstDetail";
+    string CartSesstion = "CarstSesstion";
+    string appid, apptransid, apptime, appuser, amount, embeddata, item, zptransid, servertime, channel, merchantuserid, userfeeamount, discountamount;
+    string processResultCode = "1";
+    string processResultMessage = "Succ";
+    string log = Request.HttpMethod + "->";
+    ZaloPayHelper zp = new ZaloPayHelper();
+
+    if (IsPost)
+    {
+        string input;
+        using (var reader = new StreamReader(Request.InputStream))
+        {
+            input = reader.ReadToEnd();
+        }
+        log += "input:" + input + "->";
+        Dictionary<string, object> rs = zp.ParseCallBackResult(input, out processResultCode);
+
+        if (rs != null && processResultCode == "1")
+        {
+            appid = rs["appid"].ToString();
+            apptransid = rs["apptransid"].ToString();
+            apptime = rs["apptime"].ToString();
+            appuser = rs["appuser"].ToString();
+            amount = rs["amount"].ToString();
+            embeddata = rs["embeddata"].ToString();
+            item = rs["item"].ToString();
+            zptransid = rs["zptransid"].ToString();
+            servertime = rs["servertime"].ToString();
+            channel = rs["channel"].ToString();
+            merchantuserid = rs["merchantuserid"].ToString();
+            userfeeamount = rs["userfeeamount"].ToString();
+            discountamount = rs["discountamount"].ToString();
+
+            log += string.Format("appid:{0},apptransid:{1},amount:{2},zptransid:{3},channel:{4}", appid, apptransid, amount, zptransid, channel);
+
+            try
+            {
+                if (processResultCode == "1")
+                {
+                    var PayID = Convert.ToInt32(Session["IDpayment"]);
+                    string sql = "UPDATE OrderDetail " +
+                                    "SET statuspay =" + processResultCode + " WHERE detail_ID =" + PayID;
+                    using (DB_UMAEntities db = new DB_UMAEntities())
+                    {
+                        var update = db.Database.ExecuteSqlCommand(sql);
+                        db.SaveChanges();
+                        Session.Contents.Remove(CartSesstion);
+                        Session.Contents.Remove(CarstDetailSesstion);
+                        Session.Contents.Remove("DetailOrder");
+                        Session.Contents.Remove("IDpayment");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            /*
+            1. Cập nhật trạng thái đơn hàng nếu chưa nhận thông tin redirecct từ ZaloPay
+            2. Trạng thái
+            - Thành công: Giao dịch vụ cho khách hàng
+            - Đang xử lý: Cập nhật thành đang chờ kết quả thanh toán, tạo cronjob đi hỏi lại trạng thái cuối cùng
+            - Thất bại: Cập nhật giao dịch thất bại
+            3. Thông báo kết quả thanh toán cho khách hàng
+            */
+        }
+    }
+    Logger.WriteInfo(log);
+    /*
+    processResultCode:
+    1: thành công
+    2: trùng mã giao dịch ZaloPay zptransid hoặc apptransid ( đã cung cấp dịch vụ cho user trước đó)
+    0: callback lại (tối đa 3 lần)
+    3: Refund vào tài khoản zalopay của user
+    mã lỗi khác : thất bại (không callback lại)
+    */
+    var returnJson = "{\"returncode\": \"" + processResultCode + "\",\"returnmessage\": \"" + processResultMessage + "\"}";
+
+}
+
+@{
+    ViewBag.Title = "CODmethod";
+    Layout = "~/Views/Shared/Payment_layout.cshtml";
+}
+
+<div id="opc-login" class="section allow active">
+    <div class="step-title"></div>
+    <div id="checkout-step-login" class="step a-item" style="">
+        <div class="checkout-box clearfix">
+            <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 box-left">
+                <div id="order-message-container">
+                    @if (processResultCode != null)
+                    {
+                        <h3 class="checkout-box-title">Cảm ơn bạn</h3>
+                        <div class="checkout-section review-info">
+                            <h4 class="section-title text-uppercase">Đơn hàng <span class="highlight"></span> đã được xác nhận!</h4>
+                            <div class="section-description order-info">
+                                <p>Chúc mừng bạn đã đặt hàng thành công! <br> Thời gian giao hàng dự kiến là 1 – 4 ngày làm việc. <br> Cám ơn bạn đã tin tưởng và mua hàng tại SHOME. <br> Vui lòng kiểm tra xác nhận đơn hàng đã được gửi qua email do bạn cung cấp. <br> Mọi thắc mắc xin liên hệ: <br> <b>  + ĐT: </b> 0905 717879 (Thời gian 8:00 – 21:00)<br> Chúng tôi sẽ liên hệ với bạn sớm nhất để hoàn tất việc vận chuyển đơn hàng, Xin cám ơn!</p>
+                            </div>
+                        </div>
+                        <div class="checkout-section buttons">
+                        </div>
+                        <button class="button" onclick="window.location.href='/'">
+                            <span class="text-uppercase">Quay về trang chủ</span>
+                        </button>
+                    }
+                    else
+                    {
+                        <h3 class="checkout-box-title">Truy cập không hợp lệ, vui lòng thử lại!</h3>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('.complete').addClass('active');
+</script>
+
+

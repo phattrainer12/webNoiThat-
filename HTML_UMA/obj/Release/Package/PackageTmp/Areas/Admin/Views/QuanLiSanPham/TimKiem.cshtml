@@ -1,0 +1,175 @@
+﻿@model PagedList.IPagedList<HTML_UMA.Models.Product>
+@using PagedList.Mvc
+
+@{
+    ViewBag.Title = "TimKiem";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="text-center">
+    <h2>Sản phẩm</h2>
+</div>
+<div class="form-group row">
+    <div class="col-md-6">
+        
+    </div>
+    <div class="col-md-6" style="text-align:right">
+        <button class="button-create" id="update-status">Cập nhật trạng thái</button>
+    </div>
+</div>
+<table class="table">
+    <tr>
+        <th class="text-center">
+            Mã sản phẩm
+        </th>
+        <th>
+            Hình ảnh
+        </th>
+        <th class="text-center">
+            Tên sản phẩm
+        </th>
+        <th class="text-center">
+            Giá
+        </th>
+        <th>
+            Số lượng
+        </th>
+        <th>
+            tình trạng
+        </th>
+        <th class="text-center">
+            Hàng bán chạy
+        </th>
+        <th class="text-center">
+            Hàng mới
+        </th>
+        <th class="text-center">
+            Thanh lí
+        </th>
+        <th class="text-center" colspan="3">
+            Chức năng
+        </th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr class="text-center item_product" data-id="@item.pro_ID">
+            <td>
+                @Html.DisplayFor(modelItem => item.pro_code)
+            </td>
+            <td>
+                <img src="@item.pro_Image" style="height:100px; width: 100px;" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pro_Name)
+            </td>
+            <td>
+                @Html.Raw(string.Format("{0:#,#}", item.pro_price))
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pro_Quanty)
+            </td>
+            <td>
+                @if (item.pro_Status == true)
+                {
+                    <span>còn hàng</span>
+                }
+                else
+                {
+                    <span>hết hàng</span>
+                }
+            </td>
+            <td>
+                @if (item.fastProduct == true)
+                {
+                    <input class="fastProduct" type="checkbox" checked="checked">
+                }
+                else
+                {
+                    <input class="fastProduct" type="checkbox">
+                }
+            </td>
+            <td>
+                @if (item.newProduct == true)
+                {
+                    <input class="newProduct" type="checkbox" checked="checked">
+                }
+                else
+                {
+                    <input class="newProduct" type="checkbox">
+                }
+            </td>
+            <td>
+                @if (item.sale == true)
+                {
+                    <input class="sale" type="checkbox" checked="checked">
+                }
+                else
+                {
+                    <input class="sale" type="checkbox">
+                }
+            </td>
+            <td>
+                @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.pro_ID })
+            </td>
+            <td>
+                @Html.ActionLink("Xóa sản phẩm", "Delete", new { id = item.pro_ID })
+            </td>
+        </tr>
+    }
+
+</table>
+<div class="text-center">
+    @Html.PagedListPager(Model, page => Url.Action("TimKiem",
+   new { search = ViewBag.search,page }))
+</div>
+<script>
+    $('#update-status').click(function () {
+        var listUpdate = getStatus();
+        console.log(listUpdate);
+        $.ajax({
+            url: "/Admin/QuanLiSanPham/UpdateStatus",
+            type: 'POST',
+            data: { updateStatus: JSON.stringify(listUpdate) },
+            success: function (data) {
+                alert(data);
+            }
+        })
+    })
+    function getStatus() {
+        var listItem = $(".item_product");
+        var listStatus = [];
+        listItem.each(function () {
+            var objStatus = new Object();
+            objStatus.id = getId(this);
+            objStatus.fastProduct = getFastProduct(this);
+            objStatus.newProduct = getnewProduct(this);
+            objStatus.sale = getSale(this);
+            listStatus.push(objStatus);
+        })
+        return listStatus;
+    };
+    function getId(item) {
+        var id = $(item).data('id');
+        return id;
+    };
+    function getFastProduct(item) {
+        var status = $(item).find('.fastProduct').is(':checked');
+        return status;
+    };
+    function getnewProduct(item) {
+        var status = $(item).find('.newProduct').is(':checked');
+        return status;
+    };
+    function getSale(item) {
+        var status = $(item).find('.sale').is(':checked');
+        return status;
+    };
+
+    $('option').each(function () {
+        if ($(this).val() == localStorage.getItem("selected")) {
+            $(this).attr("selected", "selected");
+        }
+    });
+</script>

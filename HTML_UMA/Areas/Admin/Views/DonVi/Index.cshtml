@@ -1,0 +1,51 @@
+﻿@model IEnumerable<HTML_UMA.Models.OptionSale>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="text-center">
+    <h2>Đơn vị</h2>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <p>
+            <a href="@Url.Action("Create")"><button class="button-create">Tạo mới</button></a>
+        </p>
+    </div>
+    <div class="col-md-4 text-right">
+        <form action="/Admin/DonVi/TimKiem">
+            <div class="input-group">
+                <input class="form-control ui-autocomplete-input" name="search" type="text" id="form-search" placeholder="Tìm kiếm đơn vị" autocomplete="off"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+                <span class="input-group-append">
+                    <button class="btn btn-primary" type="button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+<table class="table">
+    <tr>
+        <th>
+            Tên đơn vị
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Chỉnh sửa", "Edit", new { id=item.OptionID }) |
+            @Html.ActionLink("Xóa", "Delete", new { id=item.OptionID })
+        </td>
+    </tr>
+}
+
+</table>

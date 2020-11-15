@@ -1,0 +1,46 @@
+﻿@model PagedList.IPagedList<HTML_UMA.Models.Menu>
+@using PagedList.Mvc
+
+@{
+    ViewBag.Title = "TimKiem";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="text-center">
+    <h2>Danh mục</h2>
+</div>
+<table class="table">
+    <tr>
+        <th>
+            Tên danh mục
+        </th>
+        <th>
+            Hình ảnh
+        </th>
+        <th colspan="3">Chức năng</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                <img src="@item.Image" width="60" height="60" />
+            </td>
+            <td>
+                @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.Menu_ID }) |
+                @Html.ActionLink("Chi tiết", "Details", new { id = item.Menu_ID }) |
+                @Html.ActionLink("Xóa", "Delete", new { id = item.Menu_ID })
+            </td>
+        </tr>
+    }
+
+</table>
+    <div class="text-center">
+        @Html.PagedListPager(Model, page => Url.Action("TimKiem",
+   new { search = ViewBag.search, page }))
+    </div>
+
+

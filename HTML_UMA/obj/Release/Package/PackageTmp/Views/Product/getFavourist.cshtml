@@ -1,0 +1,52 @@
+﻿@{
+    Layout = null;
+    var data = ViewBag.favourist as IEnumerable<HTML_UMA.Models.Favourite>;
+    var message = ViewBag.Message;
+}
+@if (data != null)
+{
+                    foreach (var item in data)
+                    {
+
+                    <li class="item" data-id="@item.pro_ID">
+                        <div class="product-image">
+                            <a href="@Url.Action("ChiTietSanPham","SanPham", new { MaSanPham = item.pro_ID})" title="AVATAR" class="product-image">
+                                <img src="@item.Product.pro_Image" alt="" class="img-responsive mCS_img_loaded">
+                            </a>
+                        </div>
+                        <div class="product-details">
+                            <div class="product-function">
+                                <a href="@Url.Action("ChiTietSanPham","SanPham", new { MaSanPham = item.pro_ID})">
+                                    <strong>@item.Product.pro_Name</strong>
+                                </a>
+                            </div>
+                            <div class="product-name">
+                                <a href="@Url.Action("ChiTietSanPham","SanPham", new { MaSanPham = item.pro_ID})">
+                                    <strong>@item.Product.pro_Description</strong>
+                                </a>
+                            </div>
+                            <div class="product-price">
+                                <span class="text">Giá/sp:</span>
+                                <strong class="number total-price">@item.Product.pro_price</strong><strong class="number">VNĐ</strong>
+                            </div>
+                        </div>
+                    </li>
+
+                    }
+
+    <script>
+        $('.view-wishlist').show();
+    </script>
+}
+else
+{
+    <script>
+        $('.view-wishlist').hide();
+    </script>
+    <p class="text-left empty">@message</p>
+}
+
+
+
+
+

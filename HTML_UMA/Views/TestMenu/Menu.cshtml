@@ -1,0 +1,142 @@
+﻿@model IEnumerable<HTML_UMA.Models.Menu>
+@{
+    Layout = null;
+}
+<div class="wrapper">
+    <div class="page">
+        <header class="header-container">
+            <div class="bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9 col-md-9 col-sm-12 col-xs-12 wrapper">
+                            <!-- navigation -->
+                            <div class="navigation hidden-sm hidden-xs">
+                                <div class="nav-container">
+                                    <ul id="nav">
+                                            @foreach (var item in Model)
+                                            {
+                                            <li class="level0 nav-1 first parent">
+                                                <a href="@item.Link" class="level0 has-children">@item.Name</a>
+                                                @Html.Action("childrentlv1", "TestMenu", new { parent_id = item.Menu_ID })
+                                            </li>
+                                            }
+                                        </ul>
+                                </div>
+                                </div>
+                                <script type="text/javascript">
+                                    $j("#nav .level0").hover(function () {
+                                        $j(this).find(".scrollmenu").each(function () {
+                                            var divOffsetTop = $j(this).offset().top;
+                                            var windowHeight = $j(window).height();
+                                            var scrollDistance = $j(window).scrollTop();
+                                            var delta = Math.abs(divOffsetTop - (scrollDistance + windowHeight));
+
+                                            if (delta < $j(this).height()) {
+                                                $j(this).css("max-height", delta - 10);
+                                                $j(this).mCustomScrollbar({
+                                                    axis: "y",
+                                                    theme: "dark-thin",
+                                                    mouseWheel: {
+                                                        scrollAmount: "auto"
+                                                    },
+                                                    callbacks: {
+                                                        onInit: function () {
+                                                            this.mcs.content.css({ 'position': 'inherit', marginTop: this.mcs.top + 'px', top: this.mcs.top + 'px' });
+                                                        },
+                                                        onScrollStart: function () {
+                                                            this.mcs.content.css({ 'position': 'inherit', marginTop: this.mcs.top + 'px', top: '0' });
+                                                        },
+                                                        whileScrolling: function () {
+                                                            this.mcs.content.css({ 'position': 'relative', marginTop: '0', top: this.mcs.top + 'px' });
+                                                        },
+                                                        onScroll: function () {
+                                                            var marginTop = this.mcs.top;
+                                                            //                        if (Math.abs(marginTop) > this.mcs.content.height() - 400) {
+                                                            //                            marginTop = 0;
+                                                            //                        }
+                                                            this.mcs.content.css({ 'position': 'inherit', marginTop: marginTop + 'px', top: this.mcs.top + 'px' });
+                                                        }
+                                                    }
+                                                });
+                                            }
+                                        });
+                                    });
+                                </script>
+                            </div>
+                        <div class="search  col-lg-3 col-md-3 visible-sm visible-xs" style="padding-top:3px;">
+                            <div class="search-container">
+                                <form id="search_mini_form" action="/Product/Search" method="get">
+                                    <div class="form-search">
+                                        <input type="text" name="value" id="search2" class="input-text" maxlength="128" placeholder="TÌM KIẾM" />
+                                        <button class="submit" title="Tìm">
+                                            <img src="~/skin/frontend/uma/default/images/icons/magnifier-tool-white.svg" width="22px" height="22px" />
+                                        </button>
+                                        <ul class="list-group" id="result2">
+                                        </ul>
+                                        <style>
+                                            #result2 {
+                                                position: absolute;
+                                                top: 102%;
+                                                width: 100%;
+                                                width: 100%;
+                                                cursor: pointer;
+                                                overflow-y: auto;
+                                                max-height: 400px;
+                                                box-sizing: border-box;
+                                                z-index: 1001;
+                                            }
+                                            .link-class {
+                                                text-align: left;
+                                            }
+                                                .link-class:hover {
+                                                    background-color: #f1f1f1;
+                                                }
+                                        </style>
+                                        <script>
+                                            $(document).ready(function () {
+                                                var local = window.location.origin;
+                                                $.ajaxSetup({ cache: false });
+                                                $('#search2').keyup(function () {
+                                                    $('#result2').html('');
+                                                    $('#state').val('');
+                                                    var searchField = $('#search2').val();
+                                                    var expression = new RegExp(searchField, "i");
+                                                    if (searchField != '') {
+                                                        $.ajax({
+                                                            url: local+"/Product/GetSearchValue",
+                                                            type: 'GET',
+                                                            data: { search: searchField },
+                                                            async: false,
+                                                            success: function (data) {
+                                                                $('#result2').empty();
+                                                                $('#result2').html(data);
+                                                            }
+                                                        })
+                                                    }
+                                                    else {
+                                                        $('#result').empty();
+                                                    }
+                                                        //$.each(dt, function (key, value) {
+                                                        //    if (value.name.search(expression) != -1 || value.location.search(expression) != -1) {
+                                                        //        $('#result2').append('<li class="list-group-item link-class"><a href="/Product/ProductDetail?pro_ID=' + value.pro_ID + '"><img src="' + value.image + '" height="40" width="40" class="img-thumbnail" /> ' + value.name + ' | <span class="text-muted">' + value.pro_Name + '</span></a></li>');
+                                                        //    }
+                                                        //});
+                                                });
+                                                $('#result2').on('click', 'li', function () {
+                                                    var click_text = $(this).text().split('|');
+                                                    $('#search2').val($.trim(click_text[0]));
+                                                    $("#result2").html('');
+                                                });
+                                            });
+                                        </script>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+    </div>

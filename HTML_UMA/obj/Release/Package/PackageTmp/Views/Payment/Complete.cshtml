@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewBag.Title = "CODmethod";
+    Layout = "~/Views/Shared/Payment_layout.cshtml";
+    //var data = ViewBag.InforPay as HTML_UMA.Models.OrderDetail;
+}
+<div id="opc-login" class="section allow active">
+    <div class="step-title"></div>
+    <div id="checkout-step-login" class="step a-item" style="">
+        <div class="checkout-box clearfix">
+            <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 box-left">
+                <div id="order-message-container">
+                    <h3 class="checkout-box-title">Cảm ơn bạn</h3>
+                    <div class="checkout-section review-info">
+                        <h4 class="section-title text-uppercase">Đơn hàng <span class="highlight"></span> đã được xác nhận!</h4>
+                        <div class="section-description order-info">
+                            <p>Chúc mừng bạn đã đặt hàng thành công! <br> Thời gian giao hàng dự kiến là 1 – 4 ngày làm việc. <br> Cám ơn bạn đã tin tưởng và mua hàng tại SHOME. <br> Vui lòng kiểm tra xác nhận đơn hàng đã được gửi qua email do bạn cung cấp. <br> Mọi thắc mắc xin liên hệ: <br> <b>  + ĐT: </b> 0905 717879 (Thời gian 8:00 – 21:00)<br> Chúng tôi sẽ liên hệ với bạn sớm nhất để hoàn tất việc vận chuyển đơn hàng, Xin cám ơn!</p>
+                        </div>
+                    </div>
+                    <div class="checkout-section buttons">
+                    </div>
+                    <button class="button" onclick="window.location.href='/'">
+                        <span class="text-uppercase">Quay về trang chủ</span>
+                    </button>
+                </div>
+
+            </div>
+            @*<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                <div class="payment-address-details clearfix" id="checkout-payment-address-load">
+                    <div class="nopadding col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <h3 class="checkout-box-title text-uppercase">Thông tin vận chuyển</h3>
+                    </div>
+                    <table class="payment-info-address">
+                        <colgroup>
+                            <col width="25%">
+                            <col width="80%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td>Tên:</td>
+                                <td><span>@data.detail_ShipLastName</span> <span>@data.detail_ShipName</span></td>
+                            </tr>
+                            <tr>
+                                <td>Email:</td>
+                                <td>@data.detail_ShipEmail</td>
+                            </tr>
+                            <tr>
+                                <td>Mobile:</td>
+                                <td>@data.detail_ShipPhone</td>
+                            </tr>
+                            <tr>
+                                <td>Địa chỉ:</td>
+                                <td>@data.detail_ShipStreet, Phường/Xã: @data.detail_ShipTown, Quận: @data.detail_ShipDistrict</td>
+                            </tr>
+                            <tr>
+                                <td>Thành phố:</td>
+                                <td>@data.detail_ShipProvince</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 class="checkout-box-title text-uppercase">Thông tin đơn đặt hàng</h3>
+                <span class="msg-coupon"></span>               
+            </div>*@
+            </div>
+        </div>
+    </div>
+
+<script>
+    $('.complete').addClass('active');
+</script>
+

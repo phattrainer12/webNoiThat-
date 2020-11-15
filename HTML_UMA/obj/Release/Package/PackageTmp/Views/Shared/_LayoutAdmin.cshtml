@@ -1,0 +1,168 @@
+﻿@{
+    var UserAccount = Session["User"] as HTML_UMA.Models.User;
+    if(UserAccount == null)
+    {
+        Response.Redirect("/Account/Login");
+    }
+}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="vi" lang="vi">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>UMA |  Siêu thị Nội thất &amp; Trang trí UMA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="~/media/favicon/default/favicon_1_.ico" type="image/x-icon" />
+    <link href="~/font-awesome/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/media/css_secure/a128a7167c64f5a712150b71f7cf71a3.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="~/media/css_secure/f82d2130b692727fba6ade9cd5a84d3b.css" media="print" />
+    <script type="text/javascript" src="~/media/js/c6732d62162f0b7121d125f2f7494701.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="/CMS/ckfinder/ckfinder.js"></script>
+    <script type="text/javascript" src="~/js/ematic/ematix.min.js"></script>
+    <style>
+        body {
+            font-family: SFUFuturaRegular, 'Open Sans', Arial;
+        }
+        .menu-admin{
+            padding-left: 5px;
+            background-color: #fff;
+            font-size:20px;
+        }
+        .menu-admin > ul {
+            width: 100%;
+            padding:0;
+        }
+       .menu-admin > ul > li{
+           display: inline-block;
+           list-style-type:none;
+           margin-bottom: 10px;
+       }
+        .menu-admin > ul > li > a {
+            text-decoration: none;
+            color: #a6a6a6;
+        }
+        .menu-admin > ul > li > a > .btn-click-admin {
+            padding: 10px 15px 10px 15px;
+            vertical-align:middle;
+            background-color: #ebebeb;
+            border-radius: 6px;
+        }
+            .menu-admin > ul > li > a > .btn-click-admin:hover {
+                background-color: #c41230;
+                color: #fff;
+            }
+        .information-content-admin {
+            padding-top: 20px;
+            padding-left: 15px;
+            padding-right: 15px;
+            border: 1px solid #ebebeb;
+            border-radius: 4px;
+            width: 100%;
+            overflow: auto;
+        }
+        .active-btn {
+            background-color: #c41230!important;
+            color: #fff;
+        }
+        .submit {
+            vertical-align: top;
+            padding: 6px;
+            background: #C41231;
+            border: 0px;
+            margin-left: -5px;
+        }
+
+        #search {
+            padding: 5px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        .form-search {
+            display: inline-block;
+            border: 1px solid #C41231;
+        }
+        .shoping-cart-items > .header{
+           border-bottom: 1px solid;
+        }
+        .shoping-cart-items > .header > tr > th {
+            padding: 10px 0 10px;
+        }
+        .shoping-cart-items > .checkout-cart-item > tr > td > a > img{
+            padding: 2px;
+        }
+        .shoping-cart-items > .checkout-cart-item > tr{
+            border-bottom: 1px solid #ebebeb;
+        }
+        .check-infor {
+            display: flex;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ebebeb
+        }
+    </style>
+</head>
+<body>
+    <header class="header-container">
+        <div class="middle hidden-xs hidden-sm">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <!-- logo -->
+                        <a class="logo" href="/">
+                            <img src="~/media/LogoWebsite/Logo_lager.jpg" alt="UMA Design" class="img-responsive">
+                        </a>
+                        <!-- search -->
+                        <div class="search"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main-container col1-layout">
+        <div class="breadcrumbs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="main row">
+                <div class="opc" id="checkoutSteps">
+                    <div class="steps-heading" style="width:100%" >
+                            <div data-step="opc-login" class="title allow" onclick="">
+                                <span>Báo cáo</span>
+                            </div>
+                        <div data-step="opc-billing" class="title allow" onclick="javascript:location.href='/Admin'">
+                            <span>sản phẩm</span>
+                        </div>
+                        <div data-step="opc-payment" class="title allow" onclick="javascript:location.href='/Admin/Report'">
+                            <span>Đơn đặt hàng</span>
+                        </div>
+                        <div data-step="opc-review" class="title allow" onclick="javascript:location.href='/Admin/SliderManage'">
+                            <span>Slider</span>
+                        </div>
+                        <div data-step="opc-review" class="title allow" onclick="javascript:location.href='/Admin/MenuManage'">
+                            <span>Danh mục</span>
+                        </div>
+                        <div data-step="opc-review" class="title allow" onclick="javascript:location.href='/Admin/GroupManage'">
+                            <span>Nhóm sản phẩm</span>
+                        </div>
+                    </div>
+                    <div class="steps-content">
+                        <div id="checkout-step-billing" class="step a-item" style="">
+                            <div class="checkout-box clearfix">
+                                @RenderBody()
+                                
+                            </div>
+                        </div>
+                    </div>                
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

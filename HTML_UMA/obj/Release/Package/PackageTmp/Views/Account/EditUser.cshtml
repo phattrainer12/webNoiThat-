@@ -1,0 +1,113 @@
+﻿
+@{
+    ViewBag.Title = "EditUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var UserAccount = Session["User"] as HTML_UMA.Models.User;
+}
+<div class="container">
+    <div class="main row">
+        <div class="col-left sidebar uma-lg-2 col-md-3 col-sm-4 col-xs-12">
+            <div class="block block-account">
+                <div class="block-title">
+                    <strong><span>Quản lý tài khoản</span></strong>
+                </div>
+                <div class="block-content">
+                    <ul>
+                        <li><a href="@Url.Action("UserInformation","Account")">Thông tin chung</a></li>
+                        <li class="current"><strong>Thông tin tài khoản</strong></li>
+                        <li><a href="/Account/Order">Đơn hàng của tôi</a></li>
+                        <li><a href="/Account/listFavourist">Danh sách yêu thích</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-main uma-lg-8 col-md-9 col-sm-8 col-xs-12">
+            <div class="my-account">
+                <div class="account-information">
+                    <div class="page-title">
+                        <h3>Sửa thông tin tài khoản</h3>
+                    </div>
+                    <div class="box-info">
+                        <form action="@Url.Action("EditUser","Account")" method="post" id="form-validate" autocomplete="off">
+                            <input name="form_key" type="hidden">
+                            <div class="basic-info-change">
+                                <div class="box-head">
+                                    <h2>Thông tin tài khoản</h2>
+                                </div>
+                                <div class="box-contents">
+                                    <div class="fieldset">
+                                        <div class="customer-name">
+                                            <div class="form-group clearfix">
+                                                <div class="field name-firstname">
+                                                    <label for="firstname" class="required">
+                                                        <span>Tên</span>
+                                                        <span><em>*</em></span>
+                                                    </label>
+                                                    <div class="input-box">
+                                                        <input type="text" id="firstname" name="user_Name" maxlength="255" value="@UserAccount.user_Name" title="Tên" placeholder="Tên" class="form-control input-text required-entry">
+                                                    </div>
+                                                </div>
+                                                <div class="field name-lastname">
+                                                    <label for="lastname" class="required">
+                                                        <span>họ</span>
+                                                        <span><em>*</em></span>
+                                                    </label>
+                                                    <div class="input-box">
+                                                        <input type="text" id="lastname" name="user_LastName" maxlength="255" value="@UserAccount.user_LastName" title="họ" placeholder="Họ" class="form-control input-text required-entry">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email" class="required">
+                                                <span>Địa chỉ Email</span>
+                                                <span><em>*</em></span>
+                                            </label>
+                                            <div class="input-box">
+                                                <input type="text" disabled="disabled" value="@UserAccount.user_Email" title="Địa chỉ Email" class="form-control input-text required-entry validate-non-unicode-email">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="phone_number">
+                                                <span>Số điện thoại</span>
+                                            </label>
+                                            <div class="input-box">
+                                                <input type="text" name="user_Phone" id="phone_number" value="@UserAccount.user_Phone" title="Số điện thoại" placeholder="Nhập số điện thoại của bạn" class="form-control input-text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>@Html.ValidationMessage("error")</p>
+                            <div class="buttons-set">
+                                <p class="required">* Yêu cầu nhập thông tin</p>
+                                <p class="back-link"><a href="/Account/UserInformation"><small>« </small>Quay lại trang thông tin</a></p>
+                                <button type="submit" title="Lưu" class="button"><span><span>Lưu</span></span></button>
+                            
+                                </div>
+                        </form>
+                        <script type="text/javascript">
+        //<![CDATA[
+            var dataForm = new VarienForm('form-validate', true);
+            function setPasswordForm(arg){
+                if(arg){
+                    $('current_password').up(3).show();
+                    $('current_password').addClassName('required-entry');
+                    $('password').addClassName('required-entry');
+                    $('confirmation').addClassName('required-entry');
+
+                }else{
+                    $('current_password').up(3).hide();
+                    $('current_password').removeClassName('required-entry');
+                    $('password').removeClassName('required-entry');
+                    $('confirmation').removeClassName('required-entry');
+                }
+            }
+                    //]]>
+                        </script>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+

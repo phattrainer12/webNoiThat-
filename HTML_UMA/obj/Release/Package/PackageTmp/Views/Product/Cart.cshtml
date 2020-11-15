@@ -1,0 +1,388 @@
+﻿@model IEnumerable<HTML_UMA.Models.Order>
+@{
+    ViewBag.Title = "Cart";
+}
+<div class="main-container col1-layout">
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="breadcrumb-wrapper">
+                        <ul class="breadcrumb">
+                            <li class="Home">
+                                <a href="/" title="Home">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="Products">
+                                <a>Products</a>
+                            </li>
+                            <li class="Your cart">
+                                <a>Your cart</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-top">
+    </div>
+    @if(Model != null)
+    {
+         <div class="container">
+        <div class="main row">
+            <div class="col-main col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="cart shopping-cart">
+                    <div class="wrapper">
+                        <div class="row text-center">
+                            <h3 class="cart-header-title text-uppercase page-title">Giỏ hàng</h3>
+                            <h3 class="total-quantity text-center">
+                                <span>Có @Model.Count() sản phẩm trong giỏ hàng của bạn</span>
+                            </h3>
+                        </div>
+
+                        <div class="row top">
+                            <!-- Display coupon and total on top -->
+                            <div class="col-md-8 col-sm-6 col-xs-12">
+                                <div class="coupon-wrapper">
+                                    <form id="discount-coupon-form" action="" method="post">
+                                        <div class="discount">
+                                            <div class="discount-form">
+                                                <p class="text-uppercase">Dùng mã khuyến mãi hoặc thẻ quà tặng</p>
+                                                <div class="coupon-box">
+                                                    <input type="hidden" name="remove" id="remove-coupone" value="0">
+                                                    <input class="form-control input-coupon-code" id="coupon_code" name="coupon_code" placeholder="NHẬP MÃ" value="">
+                                                    <button class="button btn-apply-coupon">
+                                                        <span class="text-uppercase">Sử dụng</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- Display cart total information -->
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class="totals-wrapper">
+                                    <h3 class="page-title text-uppercase">Giỏ hàng</h3>
+                                    <table class="shopping-cart-totals-table">
+                                        <tbody>
+                                            <tr class="subtotal">
+                                                <td align="left" class="total-text">
+                                                    <span class="text-uppercase">Tạm tính</span>
+                                                </td>
+                                                <td align="right" class="total-value">
+                                                    <strong></strong>
+                                                </td>
+                                            </tr>
+                                            <tr class="discount">
+                                                <td align="left" class="total-text">
+                                                    <span class="text-uppercase">Giảm giá</span>
+                                                </td>
+                                                <td align="right" class="total-value">
+                                                    <strong>0Đ</strong>
+                                                </td>
+                                            </tr>
+                                            <tr class="shipping">
+                                                <td align="left" class="total-text">
+                                                    <span class="text-uppercase">Phí vận chuyển</span>
+                                                </td>
+                                                <td align="right" class="total-value">
+                                                    <strong class="text-uppercase">Miễn phí</strong>
+                                                </td>
+                                            </tr>
+                                            <tr class="grandtotal">
+                                                <td align="left" class="total-text">
+                                                    <span class="text-uppercase">Tổng thanh toán</span>
+                                                </td>
+                                                <td align="right" class="total-value">
+                                                    <strong class="highlight totalpayment"></strong><strong class="highlight">VNĐ</strong>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="buttons-wrapper">
+                                    <button class="button btn-checkout-cart" onclick="window.location.href='/Payment/Step1'">
+                                        <span class="text-uppercase">Thanh toán ngay</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <form action="" method="post" id="shopping-cart-form">
+                            <input name="form_key" type="hidden" value="vgcNE9ZXqptZqF1v">
+
+                            <table class="shoping-cart-items">
+                                <thead class="header">
+                                    <tr>
+                                        <th class="remove-button">
+                                            <span></span>
+                                        </th>
+                                        <th class="product-image">
+                                            <span></span>
+                                        </th>
+                                        <th class="product-info text-center">
+                                            <span class="text-uppercase"><strong>Sản phẩm</strong></span>
+                                        </th>
+                                        <th class="product-price hidden-xs text-center">
+                                            <span class="text-uppercase"><strong>Đơn giá</strong></span>
+                                        </th>
+                                        <th class="product-quantity text-center">
+                                            <span class="text-uppercase"><strong>Số lượng</strong></span>
+                                        </th>
+                                        <th class="product-total hidden-xs text-center">
+                                            <span class="text-uppercase"><strong>Tổng cộng</strong></span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                @foreach (var item in Model)
+                                {
+                                    <tbody class="body checkout-cart-item" data-id="@item.cart_ID" data-product-id="@item.pro_ID">
+                                        <tr>
+                                            <td align="center" class="remove-button">
+                                                <a href="" title="Loại bỏ mặt hàng" class="btn-remove">
+                                                    <img src="~/skin/frontend/uma/default/images/icons/close.svg">
+                                                </a>
+                                            </td>
+                                            <td align="center" class="product-image">
+                                                <a href="" title="BIANCA" class="product-image">
+                                                    <img class="img-responsive" src="@item.pro_Image" width="180px" height="180px" alt="BIANCA">
+                                                </a>
+                                            </td>
+                                            <td align="center" class="product-info text-center">
+                                                <div class="text-center">
+                                                    <a href="">
+                                                        <div class="product-function">@item.pro_Name</div>
+                                                        <div class="product-name text-uppercase">
+                                                            <strong>@item.pro_Description</strong>
+                                                        </div>
+                                                        <div class="hidden-xs product-material-color">
+                                                            <span class="product-material">@item.pro_Materials</span>
+                                                            <span class="product-color"></span>
+                                                        </div>
+                                                        <div class="hidden-xs product-size">@item.pro_Size</div>
+
+                                                        <div class="visible-xs product-price">
+                                                            <div class="price-box">
+                                                                <span class="regular-price">
+                                                                    <span class="price">@Html.Raw(string.Format("{0:#,#}", item.pro_Price))</span><span>VNĐ</span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                            <td align="center" class="hidden-xs text-center product-price">
+                                                <div class="price-box">
+                                                    <span class="regular-price">
+                                                        <span class="price">@Html.Raw(string.Format("{0:#,#}", item.pro_Price))</span><span>VNĐ</span>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td align="center" class="product-quantity text-center">
+                                                <div class="box-wrapper">
+                                                    <i class="fa fa-minus-circle qty-control btn-minus" aria-hidden="true"></i>
+                                                    <input value="@item.cart_Quanty" disabled="disabled" size="4" title="Số lượng" class="text-center input-text item-qty" maxlength="12">
+                                                    <i class="fa fa-plus-circle qty-control btn-plus" aria-hidden="true"></i>
+                                                </div>
+                                            </td>
+                                            <td align="center" class="hidden-xs text-center product-total">
+                                                <strong>
+                                                    <span class="cart-price">
+                                                        <span class="price">@Html.Raw(string.Format("{0:#,#}", item.cart_TotalPrice))</span><span>VNĐ</span>
+                                                    </span>
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                }
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="6" align="left">
+                                            <button type="button" class="button btn-continue-shopping text-uppercase" title="Tiếp tục mua hàng">
+                                                <a href="@Url.Action("Index","Product")">
+                                                    <span class="fa fa-plus-circle text-uppercase" aria-hidden="true"></span>
+                                                    <span>Tiếp tục mua hàng</span>
+                                                </a>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </form>
+                        <div class="row bottom">
+                            <div class="col-md-8 col-sm-6 col-xs-12">
+                                <div class="deliveryinfo-wrapper">
+                                    <p><strong>Điều kiện miễn phí vận chuyển:</strong></p>
+                                    <div><div><span style="color: #000000;">Cửa hàng trực tuyến SHOME miễn phí vận chuyển cho mọi đơn hàng trên toàn quốc với mọi giá trị đơn hàng.</span></div></div>
+                                </div>
+                                <div class="coupon-wrapper">
+                                    <form id="discount-coupon-form" action="" method="post">
+                                        <div class="discount">
+                                            <div class="discount-form">
+                                                <p class="text-uppercase">Dùng mã khuyến mãi hoặc thẻ quà tặng</p>
+                                                <div class="coupon-box">
+                                                    <input type="hidden" name="remove" id="remove-coupone" value="0">
+                                                    <input class="form-control input-coupon-code" id="coupon_code" name="coupon_code" placeholder="NHẬP MÃ" value="">
+                                                    <button class="button btn-apply-coupon">
+                                                        <span class="text-uppercase">Sử dụng</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class="totals-wrapper">
+
+
+                                    <h3 class="page-title text-uppercase">Giỏ hàng</h3>
+                                    <table class="shopping-cart-totals-table">
+                                        <tbody>
+                                            <tr class="subtotal">
+                                                <td align="left" class="total-text">
+                                                    <span class="text-uppercase">Tạm tính</span>
+                                                </td>
+                                                <td align="right" class="total-value">
+                                                    <strong class="beginprice"></strong><strong>VNĐ</strong>
+                                                </td>
+                                            </tr>
+                                            <tr class="discount">
+                                                <td align="left" class="total-text">
+                                                    <span class="text-uppercase">Giảm giá</span>
+                                                </td>
+                                                <td align="right" class="total-value">
+                                                    <strong class="sale">0</strong><strong>VNĐ</strong>
+                                                </td>
+                                            </tr>
+                                            <tr class="shipping">
+                                                <td align="left" class="total-text">
+                                                    <span class="text-uppercase">Phí vận chuyển</span>
+                                                </td>
+                                                <td align="right" class="total-value">
+                                                    <strong class="text-uppercase fee"></strong>
+                                                    <strong class="text-uppercase">Miễn phí</strong>
+                                                </td>
+                                            </tr>
+                                            <tr class="grandtotal">
+                                                <td align="left" class="total-text">
+                                                    <span class="text-uppercase">Tổng thanh toán</span>
+                                                </td>
+                                                <td align="right" class="total-value">
+                                                    <strong class="highlight totalpayment"></strong><strong class="highlight"> VNĐ</strong>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="buttons-wrapper">
+                                    <button class="button btn-checkout-cart">
+                                        <a href="@Url.Action("CheckUser","Product")" style="color: #fff; text-decoration: none">
+                                            <span class="text-uppercase">Thanh toán ngay</span>
+                                        </a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript" src=""></script>
+                <script type="text/javascript">
+
+                </script>
+            </div>
+        </div>
+    </div>
+    }
+    <script>
+        function refreshPage() {
+            location.reload();
+        }
+        $(function () {
+            //Parameter of event;
+            var cartitem = $('.checkout-cart-item');
+            var check = $('.checkout-cart-item').data('id');
+            var listprice = $('.cart-price');
+            var totalvalue = 0;
+            var totalpayment = 0;
+            var sale = Number($('.shopping-cart-totals-table').find('.sale').text().replace(/,/g,""));
+            var fee = Number($('.shopping-cart-totals-table').find('.fee').text().replace(/,/g, ""));
+            listprice.each(function () {
+                totalvalue += Number($(this).find('.price').text().replace(/,/g, ""));
+            });
+            totalpayment += totalvalue + sale;
+            totalpayment.toFixed(0).replace(/./g, function (c, i, a) {
+                return i && c !== "." && ((a.length - i) % 3 === 0) ? ',' + c : c;
+            });
+            $('.beginprice').text(totalvalue.toFixed(0).replace(/./g, function (c, i, a) {
+                return i && c !== "." && ((a.length - i) % 3 === 0) ? ',' + c : c;
+            }));
+            $('.totalpayment').text(totalpayment.toFixed(0).replace(/./g, function (c, i, a) {
+                return i && c !== "." && ((a.length - i) % 3 === 0) ? ',' + c : c;
+            }));
+            //Event click change quanty of product in cart
+            $('.btn-plus').click(function () {
+                var check = $(this).closest('.checkout-cart-item').data('product-id');
+                cartitem.each(function (index, e) {
+                    if ($(this).closest('.checkout-cart-item').data('product-id') == check) {
+                        var quanty = Number($(this).closest('.checkout-cart-item').find('.item-qty').prop('value'));
+                        var cart_ID = $(this).closest('.checkout-cart-item').data('id');
+                        var pro_ID = $(this).closest('.checkout-cart-item').data('product-id');
+                        var x = quanty + 1;
+                        if (x >= 1 && x <= 6) {
+                            $(this).closest('.checkout-cart-item').find('.item-qty').prop('value', x)
+                            $.ajax({
+                                url: '@Url.Action("ChangeQuanty", "Product")',
+                                type: 'GET',
+                                data: { newquanty: x, cart_ID: cart_ID, pro_ID: pro_ID }
+                            });
+                        }
+                        setInterval('refreshPage()', 3000);
+                    }
+                });                
+            });
+            $('.btn-minus').click(function () {
+                var check = $(this).closest('.checkout-cart-item').data('product-id');
+                cartitem.each(function (index, e) {
+                    if ($(this).closest('.checkout-cart-item').data('product-id') == check) {
+                        var quanty = Number($(this).closest('.checkout-cart-item').find('.item-qty').prop('value'));
+                        var cart_ID = $(this).closest('.checkout-cart-item').data('id');
+                        var pro_ID = $(this).closest('.checkout-cart-item').data('product-id');
+                        var x = quanty - 1;
+                        if (x >= 1 && x <= 6) {
+                            $(this).closest('.checkout-cart-item').find('.item-qty').prop('value', x)
+                            $.ajax({
+                                url: '@Url.Action("ChangeQuanty", "Product")',
+                                type: 'GET',
+                                data: { newquanty: x, cart_ID: cart_ID, pro_ID: pro_ID }
+                            });
+                        }
+                    }
+                    setInterval('refreshPage()', 3000);
+                });                
+            });
+            $('.btn-remove').click(function () {
+                var check = $(this).closest('.checkout-cart-item').data('product-id');
+                cartitem.each(function (index, e) {
+                    if ($(this).closest('.checkout-cart-item').data('product-id') == check) {
+                        var cart_ID = $(this).closest('.checkout-cart-item').data('id');
+                        var pro_ID = $(this).closest('.checkout-cart-item').data('product-id');
+                        $('.regions').removeClass('active');
+                        $.ajax({
+                            url: '@Url.Action("DeleteItemCart", "Product")',
+                            type: 'GET',
+                            data: { cart_ID: cart_ID, pro_ID: pro_ID }
+                        });
+                    }
+                });
+            });
+        });
+</script>
+    <div class="container-bottom">
+    </div>
+</div>
+

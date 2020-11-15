@@ -1,0 +1,30 @@
+﻿@model HTML_UMA.Models.OptionSale
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div>
+    <h2>Xóa</h2>
+</div>
+
+<h3>Bạn có muốn xóa đơn vị này?</h3>
+<div>
+    <h4>@Model.Name</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên đơn vị: @Html.DisplayFor(model => model.Name)
+        </dt>
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Trở về", "Index")
+        </div>
+    }
+</div>

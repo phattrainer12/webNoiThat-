@@ -1,0 +1,17 @@
+﻿@{
+    var data = ViewBag.data as List<HTML_UMA.Models.Product>;
+    Layout = null;
+}
+@foreach (var item in data)
+{
+    <li class="list-group-item link-class">
+        <a href="@Url.Action("ChiTietSanPham","SanPham", new { MaSanPham = item.pro_ID})" style="display:block">
+            <img src="@item.pro_Image" height="40" width="40" class="img-thumbnail" />
+            <span class="text-muted">
+                @item.pro_Name |
+            </span>
+            <span>@item.pro_Description</span>
+        </a>
+    </li>
+}
+

@@ -1,0 +1,636 @@
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\ApplicationInsights.config
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\csc.exe
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\csc.exe.config
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\csc.rsp
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\csi.exe
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\csi.exe.config
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\csi.rsp
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\System.AppContext.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\System.Console.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\System.IO.Compression.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Claims.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\System.Threading.Thread.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\System.ValueTuple.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\vbc.exe
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\vbc.exe.config
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\vbc.rsp
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\VBCSCompiler.exe
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\HTML_UMA.dll.config
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\HTML_UMA.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\HTML_UMA.pdb
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\Antlr3.Runtime.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\Microsoft.AI.Web.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\Newtonsoft.Json.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\System.Web.Helpers.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\System.Web.Mvc.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\System.Web.Optimization.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\System.Web.Razor.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.Razor.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\WebGrease.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\System.Web.Helpers.xml
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\System.Web.Mvc.xml
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\System.Web.Optimization.xml
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\System.Web.Razor.xml
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.xml
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.Razor.xml
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\Antlr3.Runtime.pdb
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\Newtonsoft.Json.xml
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\Microsoft.AI.Web.xml
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.pdb
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\EntityFramework.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\EntityFramework.SqlServer.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\EntityFramework.xml
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\EntityFramework.SqlServer.xml
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\Facebook.dll
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\bin\Facebook.xml
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.Resource1.resources
+C:\Users\Administrator\source\repos\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\ApplicationInsights.config
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\csc.exe
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\csc.exe.config
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\csc.rsp
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\csi.exe
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\csi.exe.config
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\csi.rsp
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\System.AppContext.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\System.Console.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\System.IO.Compression.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Claims.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\System.Threading.Thread.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\System.ValueTuple.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\vbc.exe
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\vbc.exe.config
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\vbc.rsp
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\VBCSCompiler.exe
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\HTML_UMA.dll.config
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\HTML_UMA.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\HTML_UMA.pdb
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\Antlr3.Runtime.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\EntityFramework.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\EntityFramework.SqlServer.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\Facebook.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\Microsoft.AI.Web.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\Newtonsoft.Json.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\System.Web.Helpers.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\System.Web.Mvc.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\System.Web.Optimization.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\System.Web.Razor.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.Razor.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\WebGrease.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\EntityFramework.xml
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\EntityFramework.SqlServer.xml
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\Facebook.xml
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\System.Web.Helpers.xml
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\System.Web.Mvc.xml
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\System.Web.Optimization.xml
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\System.Web.Razor.xml
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.xml
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.Razor.xml
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\Antlr3.Runtime.pdb
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\Newtonsoft.Json.xml
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\bin\Microsoft.AI.Web.xml
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.Resource1.resources
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.dll
+C:\Users\Administrator\Desktop\PublicUMA\HTML_UMA\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.pdb
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\ApplicationInsights.config
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\csc.exe
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\csc.exe.config
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\csc.rsp
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\csi.exe
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\csi.exe.config
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\csi.rsp
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\System.AppContext.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\System.Console.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\System.IO.Compression.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Claims.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\System.Threading.Thread.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\System.ValueTuple.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\vbc.exe
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\vbc.exe.config
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\vbc.rsp
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\VBCSCompiler.exe
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\HTML_UMA.dll.config
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\HTML_UMA.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\HTML_UMA.pdb
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\Antlr3.Runtime.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\EntityFramework.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\EntityFramework.SqlServer.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\Facebook.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\Microsoft.AI.Web.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\Newtonsoft.Json.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\System.Web.Helpers.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\System.Web.Mvc.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\System.Web.Optimization.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\System.Web.Razor.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.Razor.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\WebGrease.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\EntityFramework.xml
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\EntityFramework.SqlServer.xml
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\Facebook.xml
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\System.Web.Helpers.xml
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\System.Web.Mvc.xml
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\System.Web.Optimization.xml
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\System.Web.Razor.xml
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.xml
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.Razor.xml
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\Antlr3.Runtime.pdb
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\Newtonsoft.Json.xml
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\Microsoft.AI.Web.xml
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.Resource1.resources
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.pdb
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\PagedList.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\PagedList.Mvc.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\PagedList.xml
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\PagedList.Mvc.xml
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\EPPlus.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\EPPlus.xml
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.csproj.CopyComplete
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\log4net.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\log4net.xml
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\QRCoder.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\System.Drawing.Common.dll
+C:\Users\Administrator\Desktop\cheptam\HTML_UMA\HTML_UMA\bin\UnityEngine.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\ApplicationInsights.config
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\csc.exe
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\csc.exe.config
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\csc.rsp
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\csi.exe
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\csi.exe.config
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\csi.rsp
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\System.AppContext.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\System.Console.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\System.IO.Compression.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Claims.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\System.Threading.Thread.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\System.ValueTuple.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\vbc.exe
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\vbc.exe.config
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\vbc.rsp
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\VBCSCompiler.exe
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\HTML_UMA.dll.config
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\HTML_UMA.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\HTML_UMA.pdb
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\Antlr3.Runtime.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\EntityFramework.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\EntityFramework.SqlServer.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\EPPlus.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\Facebook.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\log4net.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\Microsoft.AI.Web.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\Newtonsoft.Json.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\PagedList.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\PagedList.Mvc.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\QRCoder.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\System.Drawing.Common.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\System.Web.Helpers.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\System.Web.Mvc.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\System.Web.Optimization.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\System.Web.Razor.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.Razor.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\UnityEngine.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\WebGrease.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\EntityFramework.xml
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\EntityFramework.SqlServer.xml
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\EPPlus.xml
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\Facebook.xml
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\log4net.xml
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\PagedList.xml
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\PagedList.Mvc.xml
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\System.Web.Helpers.xml
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\System.Web.Mvc.xml
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\System.Web.Optimization.xml
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\System.Web.Razor.xml
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.xml
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.Razor.xml
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\Antlr3.Runtime.pdb
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\Newtonsoft.Json.xml
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\bin\Microsoft.AI.Web.xml
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.csprojAssemblyReference.cache
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.Resource1.resources
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.csproj.GenerateResource.cache
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.csproj.CoreCompileInputs.cache
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.csproj.CopyComplete
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.dll
+C:\Users\Phat Trainer\Downloads\Compressed\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.pdb
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\ApplicationInsights.config
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\csc.exe
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\csc.exe.config
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\csc.rsp
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\csi.exe
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\csi.exe.config
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\csi.rsp
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\System.AppContext.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\System.Console.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\System.IO.Compression.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Claims.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\System.Threading.Thread.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\System.ValueTuple.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\vbc.exe
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\vbc.exe.config
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\vbc.rsp
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\VBCSCompiler.exe
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\HTML_UMA.dll.config
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\HTML_UMA.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\HTML_UMA.pdb
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\Antlr3.Runtime.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\EntityFramework.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\EntityFramework.SqlServer.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\EPPlus.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\Facebook.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\log4net.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\Microsoft.AI.Web.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\Newtonsoft.Json.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\PagedList.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\PagedList.Mvc.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\QRCoder.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\System.Drawing.Common.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\System.Web.Helpers.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\System.Web.Mvc.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\System.Web.Optimization.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\System.Web.Razor.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.Razor.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\UnityEngine.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\WebGrease.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\EntityFramework.xml
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\EntityFramework.SqlServer.xml
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\EPPlus.xml
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\Facebook.xml
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\log4net.xml
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\PagedList.xml
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\PagedList.Mvc.xml
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\System.Web.Helpers.xml
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\System.Web.Mvc.xml
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\System.Web.Optimization.xml
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\System.Web.Razor.xml
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.xml
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.Razor.xml
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\Antlr3.Runtime.pdb
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\Newtonsoft.Json.xml
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\bin\Microsoft.AI.Web.xml
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.csprojAssemblyReference.cache
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.Resource1.resources
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.csproj.GenerateResource.cache
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.csproj.CoreCompileInputs.cache
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.csproj.CopyComplete
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.dll
+C:\Users\Phat Trainer\Desktop\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.pdb
+D:\HTML_UMA\HTML_UMA\bin\ApplicationInsights.config
+D:\HTML_UMA\HTML_UMA\bin\roslyn\csc.exe
+D:\HTML_UMA\HTML_UMA\bin\roslyn\csc.exe.config
+D:\HTML_UMA\HTML_UMA\bin\roslyn\csc.rsp
+D:\HTML_UMA\HTML_UMA\bin\roslyn\csi.exe
+D:\HTML_UMA\HTML_UMA\bin\roslyn\csi.exe.config
+D:\HTML_UMA\HTML_UMA\bin\roslyn\csi.rsp
+D:\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\HTML_UMA\HTML_UMA\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\System.AppContext.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\System.Collections.Immutable.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\System.Console.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\System.Diagnostics.Process.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\System.IO.Compression.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\System.IO.FileSystem.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\System.IO.Pipes.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\System.Reflection.Metadata.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.AccessControl.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Claims.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\System.Security.Principal.Windows.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\System.Threading.Thread.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\System.ValueTuple.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\System.Xml.XmlDocument.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\System.Xml.XPath.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\HTML_UMA\HTML_UMA\bin\roslyn\vbc.exe
+D:\HTML_UMA\HTML_UMA\bin\roslyn\vbc.exe.config
+D:\HTML_UMA\HTML_UMA\bin\roslyn\vbc.rsp
+D:\HTML_UMA\HTML_UMA\bin\roslyn\VBCSCompiler.exe
+D:\HTML_UMA\HTML_UMA\bin\roslyn\VBCSCompiler.exe.config
+D:\HTML_UMA\HTML_UMA\bin\HTML_UMA.dll.config
+D:\HTML_UMA\HTML_UMA\bin\HTML_UMA.dll
+D:\HTML_UMA\HTML_UMA\bin\HTML_UMA.pdb
+D:\HTML_UMA\HTML_UMA\bin\Antlr3.Runtime.dll
+D:\HTML_UMA\HTML_UMA\bin\EntityFramework.dll
+D:\HTML_UMA\HTML_UMA\bin\EntityFramework.SqlServer.dll
+D:\HTML_UMA\HTML_UMA\bin\EPPlus.dll
+D:\HTML_UMA\HTML_UMA\bin\Facebook.dll
+D:\HTML_UMA\HTML_UMA\bin\log4net.dll
+D:\HTML_UMA\HTML_UMA\bin\Microsoft.AI.Agent.Intercept.dll
+D:\HTML_UMA\HTML_UMA\bin\Microsoft.AI.DependencyCollector.dll
+D:\HTML_UMA\HTML_UMA\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\HTML_UMA\HTML_UMA\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\HTML_UMA\HTML_UMA\bin\Microsoft.AI.Web.dll
+D:\HTML_UMA\HTML_UMA\bin\Microsoft.AI.WindowsServer.dll
+D:\HTML_UMA\HTML_UMA\bin\Microsoft.ApplicationInsights.dll
+D:\HTML_UMA\HTML_UMA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\HTML_UMA\HTML_UMA\bin\Microsoft.Web.Infrastructure.dll
+D:\HTML_UMA\HTML_UMA\bin\Newtonsoft.Json.dll
+D:\HTML_UMA\HTML_UMA\bin\PagedList.dll
+D:\HTML_UMA\HTML_UMA\bin\PagedList.Mvc.dll
+D:\HTML_UMA\HTML_UMA\bin\QRCoder.dll
+D:\HTML_UMA\HTML_UMA\bin\System.Drawing.Common.dll
+D:\HTML_UMA\HTML_UMA\bin\System.Web.Helpers.dll
+D:\HTML_UMA\HTML_UMA\bin\System.Web.Mvc.dll
+D:\HTML_UMA\HTML_UMA\bin\System.Web.Optimization.dll
+D:\HTML_UMA\HTML_UMA\bin\System.Web.Razor.dll
+D:\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.Deployment.dll
+D:\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.dll
+D:\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.Razor.dll
+D:\HTML_UMA\HTML_UMA\bin\UnityEngine.dll
+D:\HTML_UMA\HTML_UMA\bin\WebGrease.dll
+D:\HTML_UMA\HTML_UMA\bin\EntityFramework.xml
+D:\HTML_UMA\HTML_UMA\bin\EntityFramework.SqlServer.xml
+D:\HTML_UMA\HTML_UMA\bin\EPPlus.xml
+D:\HTML_UMA\HTML_UMA\bin\Facebook.xml
+D:\HTML_UMA\HTML_UMA\bin\log4net.xml
+D:\HTML_UMA\HTML_UMA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\HTML_UMA\HTML_UMA\bin\PagedList.xml
+D:\HTML_UMA\HTML_UMA\bin\PagedList.Mvc.xml
+D:\HTML_UMA\HTML_UMA\bin\System.Web.Helpers.xml
+D:\HTML_UMA\HTML_UMA\bin\System.Web.Mvc.xml
+D:\HTML_UMA\HTML_UMA\bin\System.Web.Optimization.xml
+D:\HTML_UMA\HTML_UMA\bin\System.Web.Razor.xml
+D:\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.xml
+D:\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.Deployment.xml
+D:\HTML_UMA\HTML_UMA\bin\System.Web.WebPages.Razor.xml
+D:\HTML_UMA\HTML_UMA\bin\Antlr3.Runtime.pdb
+D:\HTML_UMA\HTML_UMA\bin\Newtonsoft.Json.xml
+D:\HTML_UMA\HTML_UMA\bin\Microsoft.ApplicationInsights.xml
+D:\HTML_UMA\HTML_UMA\bin\Microsoft.AI.DependencyCollector.xml
+D:\HTML_UMA\HTML_UMA\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\HTML_UMA\HTML_UMA\bin\Microsoft.AI.WindowsServer.xml
+D:\HTML_UMA\HTML_UMA\bin\Microsoft.AI.Web.xml
+D:\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.csprojAssemblyReference.cache
+D:\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.Resource1.resources
+D:\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.csproj.GenerateResource.cache
+D:\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.csproj.CoreCompileInputs.cache
+D:\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.csproj.CopyComplete
+D:\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.dll
+D:\HTML_UMA\HTML_UMA\obj\Debug\HTML_UMA.pdb

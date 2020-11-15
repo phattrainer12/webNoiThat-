@@ -1,0 +1,120 @@
+﻿@model IEnumerable<HTML_UMA.Models.Menu>
+@{
+    Layout = null;
+}
+<div class="bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-sm-9 col-xs-12 wrapper">
+                <!-- navigation -->
+                <div class="navigation hidden-sm hidden-xs">
+                    <div class="nav-container">
+                        <ul class="nav">
+                            @foreach (var item in Model)
+                            {
+                                <li>
+                                    <a href="@item.Link">@item.Name</a>
+                                    @Html.Action("childrent", "Menu", new { parent_id = item.Menu_ID })
+                                </li>
+                            }
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="search visible-sm visible-xs" style="padding-top:3px;">
+                <div class="search-container">
+                    <form id="search_mini_form" action="/Product/Search" method="get">
+                        <div class="form-search">
+                            <input id="search" type="text" autocomplete="off" placeholder="TÌM KIẾM" name="value" value="" class="input-text" maxlength="128">
+                            <button class="submit" title="Tìm">
+                                <img src="/skin/frontend/uma/default/images/icons/magnifier-tool-white.svg" width="22px" height="22px">
+                            </button>
+                            <div id="search_autocomplete" class="search-autocomplete"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .nav {
+        margin-left: -15px;
+        margin-top: 0px;
+        padding: 0px;
+        background-color: #fff;
+    }
+
+        .nav > li {
+            display: inline-block !important;
+            border-bottom: 2px solid #fff;
+            position: relative;
+            list-style-type: circle;
+        }
+
+            .nav > li:hover {
+                color: #c51230;
+                border-bottom: 2px solid #c51230;
+            }
+
+            .nav > li > a {
+                text-decoration: none;
+                color: #000;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+        .nav li a {
+            line-height: 20px;
+            display: inline-block;
+        }
+
+        .nav .sub-menu {
+            display: none;
+            position: absolute;
+            left: 100%;
+            width: 250px;
+            border: 0.5px solid #DDD;
+            background-color: #fff;
+            padding: 0;
+            z-index: 50;
+        }
+
+    .sub-menu > li {
+        position: relative;
+        padding: 10px 0;
+        list-style-type: none;
+    }
+
+        .sub-menu > li > a {
+            padding: 5px 20px;
+            text-decoration: none;
+            color: #6f6f6f;
+            text-transform: uppercase;
+        }
+
+        .sub-menu > li:hover {
+            background-color: #eeeeee;
+            color: #c51230;
+        }
+
+    .nav li:hover > .sub-menu {
+        display: block;
+    }
+
+    .nav > li > .sub-menu {
+        top: 42px;
+        left: 0;
+        z-index: 5;
+    }
+
+        .nav > li > .sub-menu > li > .sub-menu {
+            top: 0px;
+        }
+
+            .nav > li > .sub-menu > li > .sub-menu > li > .sub-menu {
+                top: 0px;
+            }
+</style>

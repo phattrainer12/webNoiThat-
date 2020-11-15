@@ -1,0 +1,27 @@
+﻿@model IEnumerable<HTML_UMA.Models.Menu>
+@{
+    Layout = null;
+}
+@if ((int)ViewBag.Count > 0)
+{
+    <ul class="sub-menu">
+        @foreach (var item in Model)
+        {
+            if (item.Menu_ID == 1)
+            {
+                <li class="level0 scrollmenu mCustomScrollbar _mCS_1 mCS_no_scrollbar" style="max-height: 381px;">
+                    <a href="@Url.Action("DanhMucSanPham","SanPham",new {IDDanhMuc = item.Menu_ID })">@item.Name</a>
+                    @Html.Action("childrent", "Menu", new { parent_id = item.Menu_ID })
+                </li>
+            }
+            else
+            {
+                <li>
+                    <a href="@Url.Action("DanhMucPhong","Phong",new {IDPhong = item.Menu_ID })">@item.Name</a>
+                    @Html.Action("MenuRoomlv2", "Menu", new { parent_id = item.Menu_ID })
+                </li>
+            }
+        }
+
+    </ul>
+}

@@ -1,0 +1,157 @@
+﻿
+@{
+    ViewBag.Title = "Sigin";
+}
+
+<div class="main-container col1-layout">
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="breadcrumb-wrapper">
+                        <ul class="breadcrumb">
+                            <li class="Home">
+                                <a href="/" title="Home">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="Sign up">
+                                <a>Sign up</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-top">
+    </div>
+    <div class="container">
+        <div class="main row">
+            <div class="col-main col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="account-create">
+                    <h2 class="page-title">Đăng ký</h2>
+
+                    <div class="container-fluid account-panel">
+                        <div class="row">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-10 col-xs-12 col-md-offset-3 col-sm-offset-1 col-xs-offset-0">
+                                <div class="content">
+                                    <form action="@Url.Action("Signin","Account")" method="post" id="form-validate" autocomplete="off">
+                                        <div class="fieldset">
+                                            <input type="hidden" name="location" class="form-control" value="">
+                                            <input type="hidden" name="success_url" value="">
+                                            <input type="hidden" name="error_url" value="">
+                                            <input type="hidden" name="form_key" value="VPCJibOXLBFXYhG4">
+
+                                            <div class="row">
+
+                                                <div class="form-group field col-md-12 col-sm-12 col-xs-12">
+                                                    <label for="email_address" class="required hidden">
+                                                        <span>Địa chỉ Email</span>
+                                                        <span><em>*</em></span>
+                                                    </label>
+                                                    <div class="input-box">
+                                                        <input type="text" name="Email" id="Email" value="" title="Địa chỉ Email" class="form-control input-text validate-non-unicode-email required-entry" placeholder="Nhập địa chỉ email của bạn">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group field col-md-12 col-sm-12 col-xs-12">
+                                                    <label for="phone_number" class="hidden">
+                                                        <span>Số điện thoại</span>
+                                                    </label>
+                                                    <div class="input-box">
+                                                        <input type="text" name="Phone" id="Phone" value="" title="Số điện thoại" placeholder="Nhập số điện thoại di động" class="phone-number-form form-control input-text  required-entry">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group clearfixcustomer-name">
+
+                                                <div style="display: flex;">
+                                                    <div class="field name-firstname" style="flex-grow: 1; padding-right: 7px;">
+                                                        <div class="input-box">
+                                                            <input type="text" id="Name" name="Name" maxlength="255" value="" title="Tên" placeholder="Tên" class="form-control input-text required-entry">
+                                                        </div>
+                                                    </div>
+                                                    <div class="field name-lastname" style="flex-grow: 1; padding-left: 7px;">
+                                                        <div class="input-box">
+                                                            <input type="text" id="LastName" name="LastName" maxlength="255" value="" title="họ" placeholder="Họ" class="form-control input-text required-entry">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                            </div>
+                                            <div class="row">
+
+                                                <div class="form-group field col-md-12 col-sm-12 col-xs-12">
+                                                    <label for="password" class="required hidden">
+                                                        <span>mật khẩu</span>
+                                                        <span><em>*</em></span>
+                                                    </label>
+                                                    <div class="input-box">
+                                                        <input type="password" name="Password" id="Password" title="mật khẩu" class="form-control input-text required-entry validate-password" placeholder="Nhập mật khẩu">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group field col-md-12 col-sm-12 col-xs-12">
+                                                    <label for="confirmation" class="required hidden">
+                                                        <span>xác nhận mật khẩu</span>
+                                                        <span><em>*</em></span>
+                                                    </label>
+                                                    <div class="input-box">
+                                                        <input type="password" name="confirmation" id="confirmation" title="xác nhận mật khẩu" class="form-control input-text required-entry validate-cpassword" placeholder="Nhập lại mật khẩu">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fieldset">
+                                            <div>
+                                                <p style="color:red">@Html.ValidationMessage("error")</p>
+                                            </div>
+                                            <div class="form-group field">
+                                                <div class="checkbox">
+                                                    <input type="checkbox" name="Accept" class="checkbox" value="1" id="is_subscribed" checked="checked">
+                                                    <label for="is_subscribed">Nhận các thông tin và chương trình khuyến mãi của SHome qua email</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group field">
+                                                <p>
+                                                    Việc tạo tài khoản này đồng nghĩa với việc tôi đã đọc và chấp nhận các <a href="" class="highlight">điều khoản</a> và <a href="" class="highlight">chính sách</a> của Shome.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="buttons text-left">
+                                            <button type="submit" title="Đăng ký" class="button btn-signup">
+                                                <span class="text-uppercase">
+                                                    <strong>Đăng ký</strong>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </form>
+                                    <script type="text/javascript">
+                    //<![CDATA[
+                        var dataForm = new VarienForm('form-validate', true);
+                                            //]]>
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+    var cleave = new Cleave('.phone-number-form', {
+        phone: true,
+        phoneRegionCode: 'VN'
+    });
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="container-bottom">
+    </div>
+</div>

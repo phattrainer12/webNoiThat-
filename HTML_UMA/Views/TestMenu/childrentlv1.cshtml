@@ -1,0 +1,44 @@
+﻿@model IEnumerable<HTML_UMA.Models.Menu>
+@{
+    Layout = null;
+}
+@if ((int)ViewBag.Count > 0)
+{
+<div class="level0">
+    <!--lv2-->
+    <ul class="level0 scrollmenu" style="width: 50%; float: left">
+        @foreach (var item in Model)
+        {
+            if (item.Status < 200)
+            {
+                if (item.ParentIid == 1)
+                {
+                    <li class="level1 nav-1-1 first parent">
+                        <a href="@Url.Action("DanhMucSanPham", "SanPham", new { IDDanhMuc = item.Menu_ID })" class="level1 has-children">@item.Name</a>
+                        @Html.Action("childrentCategorylv2", "TestMenu", new { parent_id = item.Menu_ID })
+                    </li>
+                }
+
+            }
+        }
+
+    </ul>
+    <ul class="level0 scrollmenu" style="width: 50%; float: left">
+        @foreach (var item in Model)
+        {
+            if (item.Status > 200)
+            {
+                if (item.ParentIid == 1)
+                {
+                    <li class="level1 nav-1-1 first parent">
+                        <a href="@Url.Action("DanhMucSanPham", "SanPham", new { IDDanhMuc = item.Menu_ID })" class="level1 has-children">@item.Name</a>
+                        @Html.Action("childrentCategorylv2", "TestMenu", new { parent_id = item.Menu_ID })
+                    </li>
+                }
+
+            }
+        }
+
+    </ul>
+</div>
+}

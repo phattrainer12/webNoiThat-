@@ -1,0 +1,195 @@
+﻿@model HTML_UMA.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.pro_code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pro_code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pro_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pro_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pro_price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pro_price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pro_Quanty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pro_Quanty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pro_Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pro_Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pro_View)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pro_View)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pro_Image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pro_Image)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pro_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pro_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pro_Materials)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pro_Materials)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pro_Size)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pro_Size)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pro_Designer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pro_Designer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pro_Source)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pro_Source)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pro_Instruction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pro_Instruction)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pro_Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pro_Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.note)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.note)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.removeproduct)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.removeproduct)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sale)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sale)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Color.NameColor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Color.NameColor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GroupProduct.group_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GroupProduct.group_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Menu.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Menu.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OptionSale.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OptionSale.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OptionSale1.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OptionSale1.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.pro_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

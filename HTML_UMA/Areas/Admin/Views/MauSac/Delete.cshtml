@@ -1,0 +1,31 @@
+﻿@model HTML_UMA.Models.Color
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Bạn có muốn xóa màu sắc này?</h3>
+<div>
+    <h4>Color</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Màu sắc: @Html.DisplayFor(model => model.NameColor)
+        </dt>
+        <dt>
+            Mã màu: @Html.DisplayFor(model => model.Code)
+        </dt>
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Trở về", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,125 @@
+﻿@using HTML_UMA.Models.ZaloPayHelper;
+@using QRCoder;
+@using System.Drawing;
+@using HTML_UMA.Models;
+@{
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
+    Page.Title = "Checkout Result";
+}
+
+@{
+    ZaloPayHelper zp = new ZaloPayHelper();
+    //PaymentResult.cshtml?appid=201
+    //&apptransid = 180710 - 511022 &
+    //    bankcode = VTB & pmcid = 39 &
+    //    amount = 50000
+    //    & discountamount = 0 & status = -80 &
+    //    checksum = dd456882c874c0530fd718d763127f5b2ee92ea8634b4f2e12c597d33c7038a3
+    string appid, apptransid, amount, checksum, status, discountamount, pmcid, bankcode;
+    string CarstDetailSesstion = "CarstDetail";
+    string CartSesstion = "CarstSesstion";
+    appid = Request["appid"];
+    apptransid = Request["apptransid"];
+    amount = Request["amount"];
+    checksum = Request["checksum"];
+    status = Request["status"];
+    discountamount = Request["discountamount"];
+    pmcid = Request["pmcid"];
+    bankcode = Request["bankcode"];
+
+    string message = "";
+    string ckMessage = "URL không hợp lệ";
+    if (!string.IsNullOrEmpty(status))
+    {
+        message = zp.Config.ReturnCode[status];
+    }
+
+    //Validate checksum
+    if (zp.IsValidRedirectLink(checksum, appid, apptransid, pmcid, bankcode, amount, discountamount, status))
+    {
+        ckMessage = "URL hợp lệ";
+        //valid redirect
+        /*
+            1. Cập nhật trạng thái đơn hàng nếu chưa nhận thông tin callback từ ZaloPay
+            2. Trạng thái
+            - Thành công: Giao dịch vụ cho khách hàng
+            - Đang xử lý: Cập nhật thành đang chờ kết quả thanh toán, tạo cronjob đi hỏi lại trạng thái cuối cùng
+            - Thất bại: Cập nhật giao dịch thất bại
+            3. Thông báo kết quả thanh toán cho khách hàng
+        */
+        try
+        {
+            if (status == "1")
+            {
+                var PayID = Convert.ToInt32(Session["IDpayment"]);
+                string sql = "UPDATE OrderDetail " +
+                                "SET apptransid =" + appid + " WHERE detail_ID =" + PayID;
+                using (DB_UMAEntities db = new DB_UMAEntities())
+                {
+                    var update = db.Database.ExecuteSqlCommand(sql);
+                    db.SaveChanges();
+                    Session.Contents.Remove(CartSesstion);
+                    Session.Contents.Remove(CarstDetailSesstion);
+                    Session.Contents.Remove("DetailOrder");
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+
+        }
+    }
+    Logger.WriteInfo(message);
+
+}
+
+<hgroup class="title">
+    <h1>@Page.Title.</h1>
+</hgroup>
+
+<section id="loginForm1">
+    <h2>
+        Payment message:
+        <br />
+        <span style="color:green">@message</span>
+        <br />
+        <span style="color:green">@ckMessage</span>
+    </h2>
+    <form method="post">
+        <fieldset>
+            <h3>Transactionn information</h3>
+            <ol>
+                <li class="email">
+                    <label>appid: @appid</label>
+                </li>
+                <li class="email">
+                    <label>apptransid: @apptransid</label>
+                </li>
+                <li class="email">
+                    <label>pmcid: @pmcid</label>
+                </li>
+                <li class="email">
+                    <label>bankcode: @bankcode</label>
+                </li>
+                <li class="email">
+                    <label>amount: @amount</label>
+                </li>
+                <li class="email">
+                    <label>discountamount: @discountamount</label>
+                </li>
+                <li class="email">
+                    <label>status: @status</label>
+                </li>
+            </ol>
+        </fieldset>
+    </form>
+    @if(apptransid == "1")
+    {
+    <a href="/Payment/Complete">Hoàn thành</a>
+    }
+    else
+    {
+        <p>Chuyển phương thức: Thanh toán tiền mặt <a href="/Payment/Change" style="color: cornflowerblue">Tại đây.</a></p>
+    }
+
+</section>

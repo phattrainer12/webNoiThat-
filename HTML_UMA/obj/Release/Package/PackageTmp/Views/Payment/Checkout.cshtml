@@ -1,0 +1,77 @@
+﻿@using HTML_UMA.Models.ZaloPayHelper;
+@{
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
+    Page.Title = "Checkout";
+}
+@{
+    ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+    var infor = ViewBag.amout as HTML_UMA.Models.OrderDetail;
+    var amount = infor.detail_Totalmoney.ToString();
+    string url = "";
+    ZaloPayHelper zp = new ZaloPayHelper();
+    
+    Dictionary<string, object> banks = zp.GetBanks();
+
+
+
+    if (IsPost)
+    {
+        amount = Request.Form["amount"];
+
+        string transId = new Random().Next(111111, 999999) + "";
+        string apptransid = DateTime.Now.ToString("yyMMdd") + "-" + transId;
+        string apptime = (ZaloPayHelper.GetTimeStamp(DateTime.UtcNow) * 1000).ToString();
+
+        string appuser = "",
+         embeddata = "{}", item = "Đơn hàng số" + infor.detail_ID, description = "Thanh toán sản phẩm",
+         phone = "0909888777", email = "a@a.com", address = "ZaloPay", bankcode = Request.Form["bankcode"] ?? "CC";
+        url = zp.CreateOrderURL(appuser, apptime, amount, apptransid,
+                 embeddata, item, description,
+                 phone, email, address, bankcode);
+
+
+    }
+}
+
+
+<hgroup class="title">
+    <h1>@Page.Title.</h1>
+</hgroup>
+
+<section id="loginForm1">
+    <h2>Input amout and click Checkout button to enjoy ZaloPay payment demo.</h2>
+    <form method="post">
+        <fieldset>
+            <legend>Log in to Your Account</legend>
+            <ol>
+                <li class="email">
+                    <label for="bankcode">Choose bank</label>
+                    <select id="bankcode" name="bankcode">
+                        @foreach (KeyValuePair<string, object> kv in banks)
+                        {
+                            object[] bank = (object[])kv.Value;
+                            foreach (var item in bank)
+                            {
+                                Dictionary<string, object> b = (Dictionary<string, object>)item;
+                                <option value="@b["bankcode"]">@b["name"]</option>
+                            }
+
+                        }
+                    </select>
+                </li>
+                <li class="email">
+                    <label for="amount">Price</label>
+                    <input type="number" id="amount" name="amount" value="@amount" />
+                </li>
+            </ol>
+            <input type="submit" value="Checkout" />
+            @if (!string.IsNullOrEmpty(url))
+            {
+                <p>
+                    <a href="@url" target="_blank" style="color:red; font-weight:bold">Click me to start to pay!</a>
+                </p>
+            }
+
+        </fieldset>
+    </form>
+</section>

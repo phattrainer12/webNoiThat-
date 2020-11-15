@@ -1,0 +1,138 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+}
+<div class="main-container col1-layout">
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="breadcrumb-wrapper">
+                        <ul class="breadcrumb">
+                            <li class="Home">
+                                <a href="/" title="Home">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="Contact Us">
+                                <a>Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-top">
+    </div>
+    <div class="container">
+        <div class="main row">
+            <div class="col-main col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="contact-us-page-contents">
+
+                    <h3 class="page-title">Liên hệ</h3>
+                    <div id="messages_product_view"></div>
+
+                    <div class="clearfix">
+                        <div class="col-lg-10 col-md-9 col-sm-8 col-xs-12 uma-xxs-12 contact-form">
+                            <form action="" id="contactForm" method="post" class="comment">
+                                <div class="fieldset">
+                                    <h4 class="legend">LIÊN HỆ VỚI CHÚNG TÔI</h4>
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <label for="name" class="form-lable">Họ tên</label>
+                                                <em>*</em>
+                                                <input name="name" id="name" class="form-control bg-input required-entry" type="text">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="telephone" class="form-lable">Điện thoại</label>
+                                                <input name="telephone" id="telephone" type="phone" class="form-control bg-input">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <label for="email" class="form-lable">Email</label>
+                                                <em>*</em>
+                                                <div class="input-box">
+                                                    <input type="text" name="email" id="email" class="form-control bg-input required-entry">
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="address" class="form-lable">Địa chỉ</label>
+                                                <div class="input-box">
+                                                    <input name="address" id="address" class="form-control bg-input">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-12">
+                                                <label for="comment" class="form-lable">Tin nhắn</label>
+                                                <textarea name="comment" id="comment" class="form-control bg-input required-entry" rows="9"></textarea>
+                                            </div>
+
+                                            <input type="checkbox" name="hideit" id="hideit" style="display:none !important;">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="buttons-set">
+                                    <button class="btn-send" type="submit">
+                                        <span>Gửi tin nhắn</span>
+                                    </button>
+                                </div>
+                            </form>
+                            <script type="text/javascript">
+            //<![CDATA[
+            var contactForm = new VarienForm('contactForm', true);
+            //]]>
+                            </script>
+                        </div>
+
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12 uma-xxs-12 customer-service">
+                            <h4 class="text-uppercase">Chăm sóc khách hàng</h4>
+                            <div>
+                                <h5>Điện thoại</h5>
+                                <p>0236 3575179</p>
+                            </div>
+                            <div>
+                                <h5>Đường dây nóng</h5>
+                                <p>0905 717879</p>
+                                <p>0931 993179</p>
+                            </div>
+                            <div>
+                                <h5>Hỗ trợ giao hàng</h5>
+                                <p>Đà Nẵng: </p>
+                            </div>
+                            <div>
+                                <h5>Email</h5>
+                                <p>pkd@shomevietnam.vn</p>
+                            </div>
+                            <div>
+                                <h5>Facebook</h5>
+                                <p>https://www.facebook.com/shomevietnam</p>
+                            </div>
+                            <div>
+                                <h5>Mạng xã hội</h5>
+                                <p>
+                                    <a target="_blank" href="https://www.facebook.com/shomevietnam">
+                                        <span class="icon facebook" style="background: url('https://uma.vn/skin/frontend/uma/default/images/icons/social-media-icons-24x24.svg') no-repeat;"></span>
+                                    </a>
+                                    <a target="_blank" href="">
+                                        <span class="icon twiter" style="background: url('https://uma.vn/skin/frontend/uma/default/images/icons/social-media-icons-24x24.svg') no-repeat;"></span>
+                                    </a>
+                                    <a target="_blank" href="">
+                                        <span class="icon google-plus" style="background: url('https://uma.vn/skin/frontend/uma/default/images/icons/social-media-icons-24x24.svg') no-repeat;"></span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-bottom">
+    </div>
+</div>
+

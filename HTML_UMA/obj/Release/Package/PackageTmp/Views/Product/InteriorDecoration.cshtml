@@ -1,0 +1,43 @@
+﻿@model IEnumerable<HTML_UMA.Models.Menu>
+    @{ 
+        Layout = null;
+    }
+<div class="slider">
+    <h3 class="page-title text-center">Trang trí nội thất</h3>
+    <div class="magestore-bannerslider">
+        <div class="magestore-bannerslider-standard">
+            <div class="container happy-furniture-to-you" data-slider-id="2">
+                <div class="items">
+                    <div class="row clearfix">
+                        @foreach (var item in Model)
+                        {
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 wrapper imgInterior" style="padding-bottom: 20px;">
+                                <div class="item-image">
+                                    <div class="" style="position: absolute;width:100%;top: 20%;left: 50%; transform:translateX(-50%) translateY(0)">
+                                       <div class="text-center" style="color: #fff">
+                                           <h3>@item.Name</h3>
+                                       </div>
+                                        <div class="text-center">
+                                            <a href="@Url.Action("DanhMucSanPham","SanPham", new { IDDanhMuc = item.Menu_ID})">
+                                                <button class="btn" style="padding: 5px 30px 10px;background-color: #4e7218;color: #fff;">Xem ngay</button>
+                                            </a>                                        </div>
+                                    </div>
+                                    <a href="@Url.Action("DanhMucSanPham","SanPham", new {IDDanhMuc = item.Menu_ID })" target="_self"
+                                       onclick="bannerClicks('2','2')">
+                                        <img class="img-responsive hidden-xs" alt="" src="@item.Image" style="height:300px; width:100%;" />
+                                        <img class="img-responsive visible-xs" alt="" src="@item.Image" style="height:250px; width:100%;" />
+                                    </a>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('.imgInterior:first-child').removeClass('col-lg-6 col-md-6');
+    $('.imgInterior:first-child').addClass('col-lg-12 col-md-12');
+</script>
+

@@ -1,0 +1,36 @@
+﻿@model IEnumerable<HTML_UMA.Models.GroupProduct>
+@{
+    
+    ViewBag.Title = "Group";
+    Layout = null;
+}
+                    <div class="categories">
+                        @foreach (var item in Model)
+                        {
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 uma-xxs-6 category">
+                                <div class="contents">
+                                    <div class="image">
+                                        <a href="@Url.Action("BoSuuTapSanPham","SanPham", new { IDBoSuuTap = item.group_ID})">
+                                            <img class="img-responsive hidden-xs" src="@item.image" title="@item.group_Name" width="100%">
+                                            <img class="img-responsive visible-xs" src="@item.image" title="@item.group_Name" width="100%">
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <p>
+                                            <a href="@Url.Action("BoSuuTapSanPham","SanPham", new { IDBoSuuTap = item.group_ID})" class="name text-uppercase">@item.group_Name <span>@Html.Action("getCountGroup", new { Group_ID = item.group_ID })</span> </a>
+                                            
+                                        </p>
+                                        <p class="description">@item.Description</p>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+<script>
+    $('.category:first-child').removeClass('col-lg-4');
+    $('.category:first-child').addClass('col-lg-8');
+</script>
+
+
+
+

@@ -1,0 +1,70 @@
+﻿@model PagedList.IPagedList<HTML_UMA.Models.GroupProduct>
+@using PagedList.Mvc
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="text-center">
+    <h2>Nhóm sản phẩm</h2>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <p>
+            <a href="@Url.Action("Create")"><button class="button-create">Tạo mới</button></a>
+        </p>
+    </div>
+    <div class="col-md-6 text-right">
+        <form action="TimKiem">
+            <div class="input-group">
+                <input class="form-control ui-autocomplete-input" name="search" type="text" id="form-search" placeholder="Tìm kiếm nhóm sản phẩm" autocomplete="off"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+                <span class="input-group-append">
+                    <button class="btn btn-primary" type="button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+            </div>
+            </form>
+    </div>
+</div>
+<table class="table">
+    <tr>
+        <th>
+            Tên
+        </th>
+        <th>
+            Hình ảnh
+        </th>
+        <th>
+            Mô tả
+        </th>
+        <th colspan="3"></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.group_Name)
+        </td>
+        <td>
+            <img src="@item.image" width="60" height="60"/>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.ActionLink("Chỉnh sửa", "Edit", new { id=item.group_ID }) |
+            @Html.ActionLink("Chi tiết", "Details", new { id=item.group_ID }) |
+            @Html.ActionLink("Xóa", "Delete", new { id=item.group_ID })
+        </td>
+    </tr>
+}
+
+</table>
+<div class="text-center">
+    @Html.PagedListPager(Model, page => Url.Action("Index",
+   new { page }))
+</div>
+

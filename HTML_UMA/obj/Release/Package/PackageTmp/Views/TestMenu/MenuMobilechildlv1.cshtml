@@ -1,0 +1,39 @@
+﻿@model IEnumerable<HTML_UMA.Models.Menu>
+@{ 
+    Layout = null;
+}
+@if ((int)ViewBag.Count > 0)
+{
+<ul class="dl-submenu">
+@foreach (var item in Model)
+{
+    if (item.ParentIid == 1)
+    {
+        <li class="has-sub" data-id="10">
+            <a href="@Url.Action("DanhMucSanPham", "SanPham", new { Menu_ID = item.Menu_ID })">
+                <span>@item.Name</span>
+                <div class="btn-show-child">
+                    <span class="fa fa-chevron-right"></span>
+                </div>
+            </a>
+            @Html.Action("MenuMobilechildCategorylv2", "TestMenu", new { parent_id = item.Menu_ID })
+        </li>
+    }
+    else
+    {
+        if (item.ParentIid == 2)
+        {
+            <li class="has-sub" data-id="10">
+                <a href="@Url.Action("DanhMucPhong", "Phong", new { Menu_ID = item.Menu_ID })">
+                    <span>@item.Name</span>
+                    <div class="btn-show-child">
+                        <span class="fa fa-chevron-right"></span>
+                    </div>
+                </a>
+                @Html.Action("MenuMobilechildRoomlv2", "TestMenu", new { parent_id = item.Menu_ID })
+            </li>
+        }
+    }
+}
+</ul>
+}

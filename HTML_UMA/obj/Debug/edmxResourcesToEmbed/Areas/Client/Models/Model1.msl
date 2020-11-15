@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_UMAModelStoreContainer" CdmEntityContainer="DB_UMAEntities">
+    <EntitySetMapping Name="Colors">
+      <EntityTypeMapping TypeName="DB_UMAModel.Color">
+        <MappingFragment StoreEntitySet="Color">
+          <ScalarProperty Name="Color_ID" ColumnName="Color_ID" />
+          <ScalarProperty Name="NameColor" ColumnName="NameColor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Color_statusProduct">
+      <EntityTypeMapping TypeName="DB_UMAModel.Color_statusProduct">
+        <MappingFragment StoreEntitySet="Color_statusProduct">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Color_ID" ColumnName="Color_ID" />
+          <ScalarProperty Name="Pro_ID" ColumnName="Pro_ID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contacts">
+      <EntityTypeMapping TypeName="DB_UMAModel.Contact">
+        <MappingFragment StoreEntitySet="Contact">
+          <ScalarProperty Name="contact_ID" ColumnName="contact_ID" />
+          <ScalarProperty Name="contact_LastName" ColumnName="contact_LastName" />
+          <ScalarProperty Name="contact_Name" ColumnName="contact_Name" />
+          <ScalarProperty Name="contact_Address" ColumnName="contact_Address" />
+          <ScalarProperty Name="contact_Phone" ColumnName="contact_Phone" />
+          <ScalarProperty Name="contact_Email" ColumnName="contact_Email" />
+          <ScalarProperty Name="contactt_Content" ColumnName="contactt_Content" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Favourites">
+      <EntityTypeMapping TypeName="DB_UMAModel.Favourite">
+        <MappingFragment StoreEntitySet="Favourite">
+          <ScalarProperty Name="favourite_ID" ColumnName="favourite_ID" />
+          <ScalarProperty Name="pro_ID" ColumnName="pro_ID" />
+          <ScalarProperty Name="user_ID" ColumnName="user_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GroupProducts">
+      <EntityTypeMapping TypeName="DB_UMAModel.GroupProduct">
+        <MappingFragment StoreEntitySet="GroupProduct">
+          <ScalarProperty Name="group_ID" ColumnName="group_ID" />
+          <ScalarProperty Name="group_Name" ColumnName="group_Name" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="History_Product">
+      <EntityTypeMapping TypeName="DB_UMAModel.History_Product">
+        <MappingFragment StoreEntitySet="History_Product">
+          <ScalarProperty Name="history_ID" ColumnName="history_ID" />
+          <ScalarProperty Name="pro_ID" ColumnName="pro_ID" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="quanty" ColumnName="quanty" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Information_Company">
+      <EntityTypeMapping TypeName="DB_UMAModel.Information_Company">
+        <MappingFragment StoreEntitySet="Information_Company">
+          <ScalarProperty Name="infor_ID" ColumnName="infor_ID" />
+          <ScalarProperty Name="infor_Namecompany" ColumnName="infor_Namecompany" />
+          <ScalarProperty Name="infor_Address" ColumnName="infor_Address" />
+          <ScalarProperty Name="infor_Email" ColumnName="infor_Email" />
+          <ScalarProperty Name="infor_Hotline" ColumnName="infor_Hotline" />
+          <ScalarProperty Name="infor_Fax" ColumnName="infor_Fax" />
+          <ScalarProperty Name="infor_Description" ColumnName="infor_Description" />
+          <ScalarProperty Name="Infor_maps" ColumnName="Infor_maps" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LinkImages">
+      <EntityTypeMapping TypeName="DB_UMAModel.LinkImage">
+        <MappingFragment StoreEntitySet="LinkImage">
+          <ScalarProperty Name="imgSmall_ID" ColumnName="imgSmall_ID" />
+          <ScalarProperty Name="pro_ID" ColumnName="pro_ID" />
+          <ScalarProperty Name="link_ImageSmall" ColumnName="link_ImageSmall" />
+          <ScalarProperty Name="link_ImageLager" ColumnName="link_ImageLager" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menus">
+      <EntityTypeMapping TypeName="DB_UMAModel.Menu">
+        <MappingFragment StoreEntitySet="Menu">
+          <ScalarProperty Name="Menu_ID" ColumnName="Menu_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="ParentIid" ColumnName="ParentIid" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+          <ScalarProperty Name="DelFlg" ColumnName="DelFlg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="News">
+      <EntityTypeMapping TypeName="DB_UMAModel.News">
+        <MappingFragment StoreEntitySet="News">
+          <ScalarProperty Name="news_ID" ColumnName="news_ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OptionSales">
+      <EntityTypeMapping TypeName="DB_UMAModel.OptionSale">
+        <MappingFragment StoreEntitySet="OptionSale">
+          <ScalarProperty Name="OptionID" ColumnName="OptionID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="DB_UMAModel.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="cart_ID" ColumnName="cart_ID" />
+          <ScalarProperty Name="pro_ID" ColumnName="pro_ID" />
+          <ScalarProperty Name="user_ID" ColumnName="user_ID" />
+          <ScalarProperty Name="detail_ID" ColumnName="detail_ID" />
+          <ScalarProperty Name="cart_Quanty" ColumnName="cart_Quanty" />
+          <ScalarProperty Name="cart_TotalPrice" ColumnName="cart_TotalPrice" />
+          <ScalarProperty Name="pro_Price" ColumnName="pro_Price" />
+          <ScalarProperty Name="pro_Name" ColumnName="pro_Name" />
+          <ScalarProperty Name="pro_Description" ColumnName="pro_Description" />
+          <ScalarProperty Name="pro_View" ColumnName="pro_View" />
+          <ScalarProperty Name="pro_Image" ColumnName="pro_Image" />
+          <ScalarProperty Name="pro_Date" ColumnName="pro_Date" />
+          <ScalarProperty Name="pro_Materials" ColumnName="pro_Materials" />
+          <ScalarProperty Name="Color_ID" ColumnName="Color_ID" />
+          <ScalarProperty Name="pro_Size" ColumnName="pro_Size" />
+          <ScalarProperty Name="pro_Designer" ColumnName="pro_Designer" />
+          <ScalarProperty Name="pro_Source" ColumnName="pro_Source" />
+          <ScalarProperty Name="pro_Instruction" ColumnName="pro_Instruction" />
+          <ScalarProperty Name="paid" ColumnName="paid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderDetails">
+      <EntityTypeMapping TypeName="DB_UMAModel.OrderDetail">
+        <MappingFragment StoreEntitySet="OrderDetail">
+          <ScalarProperty Name="detail_ID" ColumnName="detail_ID" />
+          <ScalarProperty Name="user_ID" ColumnName="user_ID" />
+          <ScalarProperty Name="cart_ID" ColumnName="cart_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="detail_TotalBegin" ColumnName="detail_TotalBegin" />
+          <ScalarProperty Name="detail_fee" ColumnName="detail_fee" />
+          <ScalarProperty Name="detail_Totalmoney" ColumnName="detail_Totalmoney" />
+          <ScalarProperty Name="detail_ShipName" ColumnName="detail_ShipName" />
+          <ScalarProperty Name="detail_ShipLastName" ColumnName="detail_ShipLastName" />
+          <ScalarProperty Name="detail_ShipPhone" ColumnName="detail_ShipPhone" />
+          <ScalarProperty Name="detail_ShipEmail" ColumnName="detail_ShipEmail" />
+          <ScalarProperty Name="detail_ShipProvince" ColumnName="detail_ShipProvince" />
+          <ScalarProperty Name="detail_ShipDistrict" ColumnName="detail_ShipDistrict" />
+          <ScalarProperty Name="detail_ShipTown" ColumnName="detail_ShipTown" />
+          <ScalarProperty Name="detail_ShipStreet" ColumnName="detail_ShipStreet" />
+          <ScalarProperty Name="detail_PayName" ColumnName="detail_PayName" />
+          <ScalarProperty Name="detail_PayLastName" ColumnName="detail_PayLastName" />
+          <ScalarProperty Name="detail_PayPhone" ColumnName="detail_PayPhone" />
+          <ScalarProperty Name="detail_PayEmail" ColumnName="detail_PayEmail" />
+          <ScalarProperty Name="detail_PayProvince" ColumnName="detail_PayProvince" />
+          <ScalarProperty Name="detail_PayDistrict" ColumnName="detail_PayDistrict" />
+          <ScalarProperty Name="detail_PayTown" ColumnName="detail_PayTown" />
+          <ScalarProperty Name="detail_PayStreet" ColumnName="detail_PayStreet" />
+          <ScalarProperty Name="detail_dateorder" ColumnName="detail_dateorder" />
+          <ScalarProperty Name="detail_note" ColumnName="detail_note" />
+          <ScalarProperty Name="checked" ColumnName="checked" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Other_Address">
+      <EntityTypeMapping TypeName="DB_UMAModel.Other_Address">
+        <MappingFragment StoreEntitySet="Other_Address">
+          <ScalarProperty Name="user_ID" ColumnName="user_ID" />
+          <ScalarProperty Name="other_Name" ColumnName="other_Name" />
+          <ScalarProperty Name="other_Adress" ColumnName="other_Adress" />
+          <ScalarProperty Name="other_Email" ColumnName="other_Email" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="DB_UMAModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="pro_ID" ColumnName="pro_ID" />
+          <ScalarProperty Name="pro_code" ColumnName="pro_code" />
+          <ScalarProperty Name="Menu_ID" ColumnName="Menu_ID" />
+          <ScalarProperty Name="group_ID" ColumnName="group_ID" />
+          <ScalarProperty Name="pro_Name" ColumnName="pro_Name" />
+          <ScalarProperty Name="pro_price" ColumnName="pro_price" />
+          <ScalarProperty Name="pro_Quanty" ColumnName="pro_Quanty" />
+          <ScalarProperty Name="pro_Description" ColumnName="pro_Description" />
+          <ScalarProperty Name="pro_View" ColumnName="pro_View" />
+          <ScalarProperty Name="pro_Image" ColumnName="pro_Image" />
+          <ScalarProperty Name="pro_Date" ColumnName="pro_Date" />
+          <ScalarProperty Name="pro_Materials" ColumnName="pro_Materials" />
+          <ScalarProperty Name="Color_ID" ColumnName="Color_ID" />
+          <ScalarProperty Name="pro_Size" ColumnName="pro_Size" />
+          <ScalarProperty Name="pro_Designer" ColumnName="pro_Designer" />
+          <ScalarProperty Name="pro_Source" ColumnName="pro_Source" />
+          <ScalarProperty Name="pro_Instruction" ColumnName="pro_Instruction" />
+          <ScalarProperty Name="pro_Status" ColumnName="pro_Status" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="removeproduct" ColumnName="removeproduct" />
+          <ScalarProperty Name="OptionID" ColumnName="OptionID" />
+          <ScalarProperty Name="sale" ColumnName="sale" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Provinces">
+      <EntityTypeMapping TypeName="DB_UMAModel.Province">
+        <MappingFragment StoreEntitySet="Province">
+          <ScalarProperty Name="province_ID" ColumnName="province_ID" />
+          <ScalarProperty Name="province_Name" ColumnName="province_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="DB_UMAModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="role_ID" ColumnName="role_ID" />
+          <ScalarProperty Name="role_Name" ColumnName="role_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SaleCodes">
+      <EntityTypeMapping TypeName="DB_UMAModel.SaleCode">
+        <MappingFragment StoreEntitySet="SaleCode">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="sale_code" ColumnName="sale_code" />
+          <ScalarProperty Name="sale_price" ColumnName="sale_price" />
+          <ScalarProperty Name="used" ColumnName="used" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sliders">
+      <EntityTypeMapping TypeName="DB_UMAModel.Slider">
+        <MappingFragment StoreEntitySet="Slider">
+          <ScalarProperty Name="slide_ID" ColumnName="slide_ID" />
+          <ScalarProperty Name="slide_Image" ColumnName="slide_Image" />
+          <ScalarProperty Name="slide_Title" ColumnName="slide_Title" />
+          <ScalarProperty Name="slide_Description" ColumnName="slide_Description" />
+          <ScalarProperty Name="slide_Note" ColumnName="slide_Note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="DB_UMAModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeRegisters">
+      <EntityTypeMapping TypeName="DB_UMAModel.TypeRegister">
+        <MappingFragment StoreEntitySet="TypeRegister">
+          <ScalarProperty Name="type_register" ColumnName="type_register" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="DB_UMAModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="user_ID" ColumnName="user_ID" />
+          <ScalarProperty Name="role_ID" ColumnName="role_ID" />
+          <ScalarProperty Name="type_register" ColumnName="type_register" />
+          <ScalarProperty Name="user_PassWord" ColumnName="user_PassWord" />
+          <ScalarProperty Name="token" ColumnName="token" />
+          <ScalarProperty Name="user_Name" ColumnName="user_Name" />
+          <ScalarProperty Name="user_LastName" ColumnName="user_LastName" />
+          <ScalarProperty Name="user_Phone" ColumnName="user_Phone" />
+          <ScalarProperty Name="user_Email" ColumnName="user_Email" />
+          <ScalarProperty Name="Accept" ColumnName="Accept" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="DB_UMAModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="DB_UMAModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="DB_UMAModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="DB_UMAModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_UMAModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="DB_UMAModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_UMAModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="DB_UMAModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="DB_UMAModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

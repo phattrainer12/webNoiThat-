@@ -1,0 +1,147 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="~/Scripts/GoogleLogin.js"></script>
+<div class="main-container col1-layout">
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="breadcrumb-wrapper">
+                        <ul class="breadcrumb">
+                            <li class="Home">
+                                <a href="/" title="Home">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="Login">
+                                <a>Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-top">
+    </div>
+    <div class="container">
+        <div class="main row">
+            <div class="col-main col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="account-login">
+                    <h2 class="page-title">Đăng nhập</h2>
+                    <div></div>
+                    <div class="container-fluid account-panel">
+                        <div class="row login-panel">
+                            <div class="website col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="content">
+                                    <h4 class="text-left text-uppercase">Đăng nhập bằng địa chỉ email của bạn</h4>
+                                    <form action="@Url.Action("Login","Account")" method="post" id="login-form" autocomplete="off">
+                                        <input name="form_key" type="hidden" value="vgcNE9ZXqptZqF1v">
+
+                                        <div class="form-input">
+                                            <div>
+                                                <div class="form-group">
+                                                    <label for="email" class="required hidden">Email</label>
+                                                    <input type="text" name="Email" id="Email" value="" class="input-text required-entry validate-non-unicode-email form-control" placeholder="Nhập địa chỉ email của bạn..." title="Email">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="pass" class="required hidden">mật khẩu</label>
+                                                    <input type="password" name="PassWord" id="PassWord" class="input-text required-entry validate-password form-control" placeholder="Nhập mật khẩu" title="mật khẩu">
+                                                </div>
+                                                <div id="remember-me-box" class="form-group field">
+                                                    <p style="color: red">@Html.ValidationMessage("error")</p>
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" name="persistent_remember_me" class="checkbox" id="remember_meIQEgWMf5vN" checked="checked" title="Remember Me">
+                                                        <label for="remember_meIQEgWMf5vN">Nhớ mật khẩu</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-actions">
+                                            <div class="row">
+                                                <div class="buttons col-lg-4 col-md-4 col-sm-12 col-xs-12 hidden-sm hidden-xs text-left">
+                                                    <button type="submit" class="button btn-login" title="Đăng nhập" name="send" id="send2">
+                                                        <span class="text-uppercase">
+                                                            <strong>Đăng nhập</strong>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                <div class="links col-lg-8 col-md-8 col-sm-12 col-xs-12 text-left">
+                                                    <div>
+                                                        <a href="@Url.Action("Badrequest","Support")" class="f-left">
+                                                            <span class="highlight">Quên mật khẩu?</span>
+                                                        </a>
+                                                    </div>
+                                                    <div>
+                                                        <span>Bạn chưa có tài khoản?</span>
+                                                        <a href="@Url.Action("Signin","Account")">
+                                                            <span class="highlight text-uppercase">
+                                                                <strong>Đăng ký</strong>
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="buttons col-lg-4 col-md-4 col-sm-12 col-xs-12 visible-sm visible-xs text-center">
+                                                    <button type="submit" class="button btn-login" title="Đăng nhập" name="send" id="send2">
+                                                        <span class="text-uppercase">
+                                                            <strong>Đăng nhập</strong>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <script type="text/javascript">
+                                        //<![CDATA[
+                                        var dataForm = new VarienForm('login-form', true);
+                    //]]>
+                                    </script>
+                                </div>
+                            </div>
+                            <div class="separator hidden-sm hidden-xs">
+                                <div class="content">
+                                    <span class="text text-uppercase">Hoặc</span>
+                                </div>
+                            </div>
+
+                            <div class="social col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="content">
+                                    <h4 class="text-center text-uppercase">Đăng nhập bằng tài khoản xã hội của bạn</h4>
+                                    <p class="text-center ">Chúng tôi sẽ không đăng hoặc chia sẻ <br> bất cứ thông tin gì bằng tài khoản của bạn nếu bạn không cho phép.</p>
+
+                                    <div class="container-fluid">
+                                        <div class="row buttons text-center">
+                                            <div class="social-button facebook">
+                                                <a class="btn-facebook" id="facebook_login" href="@Url.Action("LoginFaceBook","Account")">
+                                                    <span>Đăng nhập bằng</span>
+                                                    <img src="/skin/frontend/uma/default/images/icons/socials/fb-icon.svg">
+                                                </a>
+                                            </div>
+                                            <div class="social-button google">
+                                                <a class="btn-google" id="google_login" onclick="login()">
+                                                    <span>Đăng nhập bằng</span>
+                                                    <img src="/skin/frontend/uma/default/images/icons/socials/google-icon.svg">                                                  
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-bottom">
+    </div>
+</div>
